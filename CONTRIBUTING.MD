@@ -3,18 +3,24 @@ This document plans to outline the following for *all* contributors of the CodeD
 
 ### Table of Contents
 1. [Chain of Command](#chain-of-command)
-1. [Git Flow Overview](#git-flow)
-1. [Workflow Contribution Requirements](#contribution-requirements)
-1. [Workflow Examples](#workflow-examples)
+1. [Git Flow](#git-flow)
+    - [Workflow Overview](#Overview)
+    - [Workflow Contribution Requirements](#contribution-requirements)
+    - [Workflow Examples](#workflow-examples)
+1. [Setup Development Environment](#setup-development-environment)
 1. [Git Cheatsheet](#git-cheatsheet)
 1. [Other Resources](#other-resources)
 
 ---
 
+<br/>
+
 # Chain of Command
 The CodeDevils Website project managers are Ian Castellanos ([@IMBCIT](https://github.com/imbcit)). He controls the day-to-day operation of this project, with oversight and policy dictated by the CodeDevil Officers.
 
 > To see your CodeDevil officers, visit the `#about` channel of the CodeDevils Slack workspace.
+
+<br/>
 
 # Git Flow
 Forking is not necessary - use the origin repo's branches for your own code bases. You have full control over your own development branches and Git flow. That said, there are some general guidelines you need to follow.
@@ -34,15 +40,15 @@ Observe the following in your git flow:
 - Comment in your code following the functionality and process within it.
 - Make sure that you have tested your code using your personal AWS account and personal Slack development bot. Be sure to include in your PR a link to a screen capture of you testing your feature. **NO CODE WILL BE APPROVED WITHOUT BEING TESTED FIRST**.
 
-### Workflow Examples
-#### Marlee's Quick Patch (Simple)
+## Workflow Examples
+### Marlee's Quick Patch (Simple)
 > My name is Marlee, and I noticed a misspelling in the README.
 >
 > I would create a GitHub issue for this, then create a branch called `marlee-hotfix`, make the correction, then submit a pull request to `main` making sure to request review from [@IMBCIT](https://github.com/imbcit).
 
 Good job Marlee!
 
-#### Clyde & Darryl's Calendar (Collab)
+### Clyde & Darryl's Calendar (Collab)
 > My name is Clyde, and I'm working with Darryl on a sweet new command that allows something to do with calendars.
 >
 > I would create a GitHub issue for the new feature, then checkout a new branch entitled `calendar-dev`, acting as the default branch for the calendar between Darryl and I, making sure to keep it updated with `main`. Darryl and I would then have our own branches whatever we want to call them following the guideline, say  `darryl-calendar` and `clyde-dev`. We push and pull from `calendar-dev` for development.
@@ -52,6 +58,54 @@ Good job Marlee!
 Nicely done!
 
 ---
+<br/>
+
+# Setup Development Environment
+## Requirements
+- pnpm - [Install Instructions](https://pnpm.io/installation)
+- Node.js
+
+## Environment Variables
+You need to create a `.env` file in root directory with the following environment variables:
+```
+# Prisma
+DATABASE_URL=file:./db.sqlite
+
+# Discord Secret
+DISCORD_CLIENT_ID=<Client ID>
+DISCORD_CLIENT_SECRET=<Client Secret>
+
+# Next Auth
+NEXTAUTH_SECRET=<Next Auth Secret>
+NEXTAUTH_URL=<Host of the application>
+
+```
+`NEXTAUTH_SECRET` is optional during developement; however, it is best practice to fill it with a randomly generated string. You can quickly create a secret string using `openssl`:
+```
+openssl rand -base64 32
+```
+
+`NEXTAUTH_URL` would be `http://localhost:3000` during local development. During production, it would be the domain of the host.
+
+To aquire the **discord client id and secret**, you need to create a new application through the [discord developer portal](https://discord.com/developers/applications). Refer to [NextAuth's documentation](https://next-auth.js.org/providers/discord) for additional information.
+
+## Getting Started
+Once you have the local environment variables set, it is time to install the packages/dependencies.
+```
+pnpm install
+```
+
+Once the packages/dependencies have been installed, you need to initialize the database with `prisma`.
+```
+pnpm prisma db push
+```
+Now you can start the development server with the following command:
+```
+pnpm dev
+```
+
+---
+<br/>
 
 # Git Cheatsheet
 #### Checkout Existing Branch
