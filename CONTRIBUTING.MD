@@ -63,7 +63,9 @@ Nicely done!
 # Setup Development Environment
 ## Requirements
 - pnpm - [Install Instructions](https://pnpm.io/installation)
-- Node.js
+- Node.js - [Install Instructions](https://nodejs.org/en/)
+
+Alternatively, you can install both requirements with a package manager - [homebrew](https://brew.sh/) (macOS) or [chocolatey](https://chocolatey.org/) (Windows).
 
 ## Environment Variables
 You need to create a `.env` file in root directory with the following environment variables:
