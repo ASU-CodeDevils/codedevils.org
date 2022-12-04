@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <>
         <Head>
-            <title>CodeDevils</title>
-            <meta name="description" content="CodeDevils - An ASU student organization" />
+            <title>CodeDevils - Develop. Network. Create.</title>
+            <meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together." />
+            <meta name="author" content="Frank J. Lin (Full-Stack Developer)" />
             <link rel="icon" href="/favicon.png" />
         </Head>
         <Navbar />
