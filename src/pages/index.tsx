@@ -1,9 +1,17 @@
 //** Home page */
 
+import Head from "next/head";
+import Navbar from "../components/navbar";
+
 export default function Home() {
   return (
-    <div className="flex justify-center">
-      <h1 className="text-3xl">Home</h1>
-    </div>
+    <>
+        <Head>
+            <title>CodeDevils</title>
+            <meta name="description" content="CodeDevils - An ASU student organization" />
+            <link rel="icon" href="/favicon.png" />
+        </Head>
+        <Navbar />
+    </>
   );
 }
