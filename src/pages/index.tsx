@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { signIn } from "next-auth/react";
 import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
@@ -53,6 +54,9 @@ const Home: NextPage = () => {
         <div className="flex w-full items-center justify-center pt-6 text-2xl text-blue-500">
           {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
         </div>
+        <button onClick={()=>signIn()} className="text-md mt-6 rounded-lg bg-purple-500 px-4 py-2 font-semibold text-white shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75">
+          Sign in
+        </button>
       </main>
     </>
   );
