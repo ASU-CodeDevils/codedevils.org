@@ -5,6 +5,12 @@ module.exports = {
     fontFamily: {
       'sans': ['Arial', 'sans-serif'],
     },
+    fontSize: {
+      sm: ['14px', '20px'],
+      base: ['16px', '24px'],
+      lg: ['20px', '28px'],
+      xl: ['24px', '32px'],
+    },
     extend: {
       colors: {
         'asu-maroon': '#8c1d40',
