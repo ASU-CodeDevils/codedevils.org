@@ -8,6 +8,7 @@ import type { AppType } from "next/app";
 import type { AppRouter } from "../server/router";
 import type { Session } from "next-auth";
 import "../styles/globals.css";
+import Head from "next/head";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -15,6 +16,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
+      <Head>
+            <title>CodeDevils - Develop. Network. Create.</title>
+            <meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together." />
+            <meta name="author" content="Frank J. Lin (Full-Stack Developer)" />
+            <link rel="icon" href="/favicon.png" />
+        </Head>
       <Component {...pageProps} />
     </SessionProvider>
   );
