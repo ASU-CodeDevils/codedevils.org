@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      'sans': ['Arial', 'sans-serif'],
+    },
     extend: {
       colors: {
         'asu-maroon': '#8c1d40',
