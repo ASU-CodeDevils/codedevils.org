@@ -3,7 +3,7 @@ import Link from "next/link";
 //** Navbar component */
 export default function Navbar() {
     return (
-        <nav className="flex justify-between items-center h-16 bg-red-800 text-white relative shadow-sm font-mono" role="navigation">
+        <nav className="flex justify-between items-center h-16 text-lg bg-asu-maroon text-white relative shadow-sm font-mono" role="navigation">
             <Link href="/">
                 <a className="pl-8">Home</a>
             </Link>
