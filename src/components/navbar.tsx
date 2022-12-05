@@ -5,28 +5,29 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav
-      className="font-mono relative flex h-16 items-center justify-start bg-asu-maroon text-lg text-white shadow-sm"
+      className="font-mono relative flex h-16 items-center justify-start bg-asu-maroon px-5 text-lg text-white shadow-sm"
       role="navigation"
     >
-      <Link className="ml-5" href="/">
-          <Image
-            src="/logo-light.png"
-            alt="CodeDevils Logo"
-            width="100"
-            height="41"
-          />
+      <Link className="mx-3" href="/">
+        <Image
+          src="/logo-light.png"
+          alt="CodeDevils Logo"
+          width="100"
+          height="41"
+        />
       </Link>
-
-      <div className="ml-4">
-        <Link className="ml-4" href="/">Home
-        </Link>
-        <Link className="ml-4" href="/about">About
-        </Link>
-        <Link className="ml-4" href="/contact">Contact
-        </Link>
-        <Link className="ml-4" href="/help">Help
-        </Link>
-      </div>
+      <Link className="pl-5 hover:text-asu-gold" href="/">
+        Home
+      </Link>
+      <Link className="pl-5 hover:text-asu-gold" href="/about">
+        About
+      </Link>
+      <Link className="pl-5 hover:text-asu-gold" href="/contact">
+        Contact
+      </Link>
+      <Link className="pl-5 hover:text-asu-gold" href="/help">
+        Help
+      </Link>
     </nav>
   );
 }
