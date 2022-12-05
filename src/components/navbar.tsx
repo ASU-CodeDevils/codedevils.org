@@ -8,29 +8,23 @@ export default function Navbar() {
       className="font-mono relative flex h-16 items-center justify-start bg-asu-maroon text-lg text-white shadow-sm"
       role="navigation"
     >
-      <Link href="/">
-        <a className="ml-5">
+      <Link className="ml-5" href="/">
           <Image
             src="/logo-light.png"
             alt="CodeDevils Logo"
             width="100"
             height="41"
           />
-        </a>
       </Link>
 
       <div className="ml-4">
-        <Link href="/">
-          <a className="p-4">Home</a>
+        <Link className="ml-4" href="/">Home
         </Link>
-        <Link href="/about">
-          <a className="p-4">About</a>
+        <Link className="ml-4" href="/about">About
         </Link>
-        <Link href="/contact">
-          <a className="p-4">Contact</a>
+        <Link className="ml-4" href="/contact">Contact
         </Link>
-        <Link href="/help">
-          <a className="p-4">Help</a>
+        <Link className="ml-4" href="/help">Help
         </Link>
       </div>
     </nav>
