@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react";
 import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
+  const hello = trpc.hello.useQuery({text:'World'});
 
   return (
     <>
@@ -50,7 +51,9 @@ const Home: NextPage = () => {
             documentation="https://www.prisma.io/docs/"
           />
         </div>
-      
+        <p className="text-xl text-gray-700 mt-6">
+          {hello.data?.greeting}
+        </p>      
         <button onClick={()=>signIn()} className="text-md mt-6 rounded-lg bg-purple-500 px-4 py-2 font-semibold text-white shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75">
           Sign in
         </button>
