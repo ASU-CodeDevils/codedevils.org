@@ -1,10 +1,12 @@
-// src/pages/_app.tsx
+// // file src: ./src/pages/_app.tsx
+import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import type { AppType } from "next/app";
+import Layout from "../components/layout";
 import { trpc } from "../utils/trpc";
-import type { Session } from "next-auth";
+// gobal styles
 import "../styles/globals.css";
-import App from "./App";
+
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -12,8 +14,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      {/* <Component {...pageProps} /> */}
-      <App />
+      <Layout>
+        {/* This becomes the chidlren of the layout component because it's nested within layout */}
+        <Component {...pageProps} />
+      </Layout>
     </SessionProvider>
   );
 };
