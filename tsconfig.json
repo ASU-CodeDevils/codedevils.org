@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -14,8 +18,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "strict": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs"
+, "src/index.js", "src/App.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

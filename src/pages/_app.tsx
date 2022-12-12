@@ -4,7 +4,7 @@ import type { AppType } from "next/app";
 import { trpc } from "../utils/trpc";
 import type { Session } from "next-auth";
 import "../styles/globals.css";
-import Head from "next/head";
+import App from "./App";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -12,13 +12,8 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Head>
-            <title>CodeDevils - Develop. Network. Create.</title>
-            <meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together." />
-            <meta name="author" content="Frank J. Lin (Full-Stack Developer)" />
-            <link rel="icon" href="/favicon.png" />
-        </Head>
-      <Component {...pageProps} />
+      {/* <Component {...pageProps} /> */}
+      <App />
     </SessionProvider>
   );
 };

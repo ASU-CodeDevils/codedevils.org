@@ -26,6 +26,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-query: 3.39.2
+  react-router-dom: ^6.4.5
   react^10.4.3: link:@trpc/react^10.4.3
   superjson: ^1.11.0
   tailwindcss: ^3.2.4
@@ -46,6 +47,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-query: 3.39.2_biqbaboplfbrettd7655fr4n2y
+  react-router-dom: 6.4.5_biqbaboplfbrettd7655fr4n2y
   react^10.4.3: link:@trpc/react^10.4.3
   superjson: 1.11.0
   zod: 3.19.1
@@ -314,6 +316,11 @@ packages:
   /@prisma/engines/4.7.1:
     resolution: {integrity: sha512-zWabHosTdLpXXlMefHmnouhXMoTB1+SCbUU3t4FCmdrtIOZcarPKU3Alto7gm/pZ9vHlGOXHCfVZ1G7OIrSbog==}
     requiresBuild: true
+
+  /@remix-run/router/1.0.5:
+    resolution: {integrity: sha512-my0Mycd+jruq/1lQuO5LBB6WTlL/e8DTCYWp44DfMTDcXz8DcTlgF0ISaLsGewt+ctHN+yA8xMq3q/N7uWJPug==}
+    engines: {node: '>=14'}
+    dev: false
 
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
@@ -2330,6 +2337,29 @@ packages:
       match-sorter: 6.3.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /react-router-dom/6.4.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-a7HsgikBR0wNfroBHcZUCd9+mLRqZS8R5U1Z1mzLWxFXEkUT3vR1XXmSIVoVpxVX8Bar0nQYYYc9Yipq8dWwAA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.0.5
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-router: 6.4.5_react@18.2.0
+    dev: false
+
+  /react-router/6.4.5_react@18.2.0:
+    resolution: {integrity: sha512-1RQJ8bM70YEumHIlNUYc6mFfUDoWa5EgPDenK/fq0bxD8DYpQUi/S6Zoft+9DBrh2xmtg92N5HMAJgGWDhKJ5Q==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.0.5
+      react: 18.2.0
     dev: false
 
   /react-ssr-prepass/1.5.0_react@18.2.0:
