@@ -1,33 +1,62 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// icons
+import { FaLanguage } from "react-icons/fa";
+import { HiUserAdd } from "react-icons/hi";
+import { FiLogIn } from "react-icons/fi";
+
+// styles
+import navbarStyles from "./../styles/components/navbar.module.scss";
+
 //** Navbar component */
 export default function Navbar() {
   return (
-    <nav
-      className="font-mono relative flex h-16 items-center justify-start bg-asu-maroon px-5 text-lg text-white shadow-sm"
-      role="navigation"
-    >
-      <Link className="mx-3" href="/">
-        <Image
-          src="/logo-light.png"
-          alt="CodeDevils Logo"
-          width="100"
-          height="41"
-        />
+    <nav id={navbarStyles.navbar_wrapper}>
+      <Link href="/">
+        <Image id={navbarStyles.logo} src="/logo-light.png" alt="CodeDevils Logo" width="100" height="100" />
       </Link>
-      <Link className="pl-5 hover:text-asu-gold" href="/">
-        Home
+
+      <ul id={navbarStyles.link_wrapper}>
+        <li>
+          <Link href="/">
+            <span>Home</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <span>About</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact">
+            <span>Contact Us</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/help">
+            <span>Help</span>
+          </Link>
+        </li>
+      </ul>
+
+      <div id={navbarStyles.navbar_button_wrapper}>
+      <Link href="/accounts/signup" className={navbarStyles.button}>
+        <HiUserAdd />
+        <span>Register</span>
       </Link>
-      <Link className="pl-5 hover:text-asu-gold" href="/about">
-        About
+
+      <Link href="/accounts/login" id={navbarStyles.login_button} className={navbarStyles.button}>
+        <FiLogIn />
+        <span>Login</span>
       </Link>
-      <Link className="pl-5 hover:text-asu-gold" href="/contact">
-        Contact
-      </Link>
-      <Link className="pl-5 hover:text-asu-gold" href="/help">
-        Help
-      </Link>
+
+      <button>
+        <FaLanguage />
+      </button>
+      </div>
     </nav>
+
+    
   );
 }

@@ -1,0 +1,61 @@
+@use "./../util/vars.scss" as *;
+
+#navbar_wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 8rem;
+  min-height: 5.563rem;
+  // margin: 0 auto;
+  color: $asu_white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  #link_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: fit-content;
+    width: 25vw;
+    align-items: center;
+    margin: auto 1rem;
+    // flex: 1;
+    * {
+      font-size: large;
+      // padding: 0.2rem 0;
+      &:hover {
+        color: $asu_grey;
+      }
+    }
+  }
+
+  #navbar_button_wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: fit-content;
+    width: 30vw;
+    font-family: "Poppins", sans-serif;
+    * {
+      margin: 0 0.25rem;
+    }
+    .button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      border: 2px solid $asu_white;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+    #login_button {
+      background: $asu_white;
+      color: $asu_black;
+    }
+  }
+}

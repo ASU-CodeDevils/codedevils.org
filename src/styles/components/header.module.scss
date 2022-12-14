@@ -1,0 +1,29 @@
+@use "./../util/vars.scss" as *;
+
+#header_wrapper {
+  // background: url(./../../../public/bg/code-grid.png) no-repeat center center;
+  // background-color: $asu_maroon;
+  background-size: cover;
+  height: 50vh;
+  width: 100vw;
+  color: $asu_white;
+  #header_content {
+    // center content in the middle of the header
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 70vw;
+    padding: 1rem;
+    margin: 0 auto;
+
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+
+    * {
+    }
+  }
+}
