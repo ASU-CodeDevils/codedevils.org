@@ -7,7 +7,7 @@ const HomeHeader = () => {
       CodeDevils - An ASU Student Organization{" "}
       <Typewriter
         options={{
-          strings: ["Devlope", "Create", "Network"],
+          strings: ["Develop.", "Create.", "Network."],
           autoStart: true,
           delay: 50,
           cursor: "|",
