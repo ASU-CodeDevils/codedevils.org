@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import HomeHeader from "../components/homeHeader";
 
 const HomePage: NextPage = () => {
   return (
@@ -7,6 +8,7 @@ const HomePage: NextPage = () => {
       <p className="text-2xl mt-3">
         Welcome to CodeDevils! We are a virtual club that aims to bring ASU students together.
       </p>
+      <HomeHeader />
     </main>
   );
 };
