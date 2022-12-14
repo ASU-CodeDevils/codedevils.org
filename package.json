@@ -26,6 +26,7 @@
     "react-router-dom": "^6.4.5",
     "react^10.4.3": "link:@trpc/react^10.4.3",
     "superjson": "^1.11.0",
+    "typewriter-effect": "^2.19.0",
     "zod": "^3.19.1"
   },
   "devDependencies": {
