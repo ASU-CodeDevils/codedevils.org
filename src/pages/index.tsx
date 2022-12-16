@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import { Link } from "react-router-dom";
+import React from "react";
 // import HomeHeader from "../components/header";
 
 const HomePage: NextPage = () => {
@@ -11,10 +12,6 @@ const HomePage: NextPage = () => {
       </p> */}
       {/* <HomeHeader /> */}
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       {/* <Link to="/help">moved help to this link</Link> */}
     </div>
   );

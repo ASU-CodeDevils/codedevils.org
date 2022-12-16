@@ -11,7 +11,7 @@ const Header = () => {
       <div id={headerStyles.header_content}>
         {/* <div id={headerStyles.}> */}
         CodeDevils - An ASU Student Organization
-      <Typewriter
+      <Typewriter 
         options={{
           strings: ["Develop.", "Create.", "Network."],
           autoStart: true,

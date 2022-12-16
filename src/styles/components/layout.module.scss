@@ -1,6 +1,15 @@
 @use "./../util/vars.scss" as *;
-#bg_img {
-  background: url(./../../../public/bg/code-grid.png) no-repeat center center;
-  // background-color: #8c1d40;
-  // opacity: 0.5;
-}
+
+// #page_layout {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// #bg_img {
+// background-image: // linear-gradient(-135deg, hsl(341, 66%, 33%, 0.4) 25%, hsl(341, 66%, 33%, 0.4)) 100%,
+//   linear-gradient(-135deg, hsla(341, 66%, 33%, 0.75) 25%, hsla(341, 66%, 33%, 0.75) 100%),
+//   url(./../../../public/bg/code-grid.png);
+// background-size: cover;
+// background-position: center;
+// background-repeat: no-repeat;
+// }

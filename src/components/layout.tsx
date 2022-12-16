@@ -3,13 +3,14 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import Header from "./header";
-import Navbar from './navbar'
+import Navbar from './navbar';
 // import Footer from './footer'
 
-import favicon from './../../public/favicon.png'
+// import favicon from './../../public/favicon.png';
 
 // styles
 import layoutStyles from "./../styles/components/layout.module.scss";
+import React from "react";
 
 
 export default function Layout({ children }) {
@@ -26,22 +27,24 @@ export default function Layout({ children }) {
   }, [asPath]);
 
   return (
-    <>
+    <div id={layoutStyles.page_layout}>
       <Head>
         <title>CodeDevils - Develop. Network. Create.</title>
         <meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together." />
         <meta name="author" content="" /> {/* TODO: add all the developers that worked on the website at the end */}
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <link rel="icon" href="./../../public/favicon.png" /> {/* TODO: Add website favicon */}
+        <link rel="icon" href="/favicon.png" /> {/* TODO: Add website favicon */}
       </Head>
-      <div id={layoutStyles.bg_img}>
-      {navbar && <Navbar />}
-      <Header />
-      </div>
+      {/* <div id={layoutStyles.bg_img}> */}
+      
+        {navbar && <Navbar />}
+        <Header />
+       
+      {/* </div> */}
       
       <main>{children}</main>
       {/* <Footer /> */}
-    </>
+    </div>
   )
 }

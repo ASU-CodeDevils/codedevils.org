@@ -1,29 +1,30 @@
 @use "./../util/vars.scss" as *;
 
 #header_wrapper {
-  // background: url(./../../../public/bg/code-grid.png) no-repeat center center;
-  // background-color: $asu_maroon;
+  background-image: // linear-gradient(-135deg, hsl(341, 66%, 33%, 0.4) 25%, hsl(341, 66%, 33%, 0.4)) 100%,
+    linear-gradient(-135deg, hsla(341, 66%, 33%, 0.75) 25%, hsla(341, 66%, 33%, 0.75) 100%),
+    url(./../../../public/bg/code-grid.png);
+
   background-size: cover;
-  height: 50vh;
+  height: fit-content;
   width: 100vw;
   color: $asu_white;
+  // when you change the 120px, change the handleScroll function in header.js to always be half of what you set padding top to be
+  padding: 120px 3rem; // top/bottom, left/right
   #header_content {
     // center content in the middle of the header
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: 100%;
-    width: 70vw;
-    padding: 1rem;
-    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: left;
+    // height: fit-content;
+    width: 60vw;
+    // padding: 1rem;
+    // padding: 6rem 3rem;
 
     font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
-    text-align: left;
-
-    * {
-    }
+    // text-align: left;
   }
 }
