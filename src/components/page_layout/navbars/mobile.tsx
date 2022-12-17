@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // styles
-import navbarStyles from "./../../../styles/components/page_layout/navbars/moblie.module.scss";
+import navbarStyles from "./../../../styles/components/page_layout/navbars/mobile.module.scss";
 
 // icon
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -14,7 +14,7 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 
-const MoblieNavbar = () => {
+const MobileNavbar = () => {
   const [showNavbarLinks, setShowNavbarLinks] = useState(false);
 
   return (
@@ -118,4 +118,4 @@ const MoblieNavbar = () => {
   );
 };
 
-export default MoblieNavbar;
+export default MobileNavbar;

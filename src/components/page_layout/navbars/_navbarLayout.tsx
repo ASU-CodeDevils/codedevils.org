@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // navbars
 import DesktopNavbar from "./desktop";
-import MoblieNavbar from "./moblie";
+import MobileNavbar from "./mobile";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
     };
   }, []);
 
-  return <>{isMobile ? <MoblieNavbar /> : <DesktopNavbar />}</>;
+  return <>{isMobile ? <MobileNavbar /> : <DesktopNavbar />}</>;
 };
 
 export default Navbar;
