@@ -122,14 +122,6 @@ const MobileNavbar = () => {
               <span>Contact Us</span>
             </Link>
           </li>
-
-          {/* <Link
-            href="/help"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <span>Help</span>
-          </Link> */}
         </ul>
         <div id={navbarStyles.account_link_wrapper}>
           <Link
