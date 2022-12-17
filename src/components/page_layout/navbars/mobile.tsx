@@ -12,6 +12,7 @@ import {
   AiOutlineHome,
   AiOutlineInfoCircle,
   AiOutlineMail,
+  AiOutlineArrowRight,
 } from "react-icons/ai";
 
 const MobileNavbar = () => {
@@ -77,28 +78,6 @@ const MobileNavbar = () => {
             </div>
           </Link>
 
-          <Link
-            href="/accounts/signup"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
-              <AiOutlineMail />
-
-              <span>Register</span>
-            </div>
-          </Link>
-          <Link
-            href="/accounts/login"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
-              <AiOutlineMail />
-
-              <span>Login</span>
-            </div>
-          </Link>
           {/* <Link
             href="/help"
             className={navbarStyles.list_item}
@@ -107,6 +86,28 @@ const MobileNavbar = () => {
             <span>Help</span>
           </Link> */}
         </ul>
+        <div id={navbarStyles.account_link_wrapper}>
+          <Link
+            href="/accounts/signup"
+            className={navbarStyles.list_item}
+            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
+          >
+            <div className={navbarStyles.item_wrapper}>
+              <span>Register</span>
+              <AiOutlineArrowRight />
+            </div>
+          </Link>
+          <Link
+            href="/accounts/login"
+            className={navbarStyles.list_item}
+            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
+          >
+            <div className={navbarStyles.item_wrapper}>
+              <span>Login</span>
+              <AiOutlineArrowRight />
+            </div>
+          </Link>
+        </div>
       </div>
 
       <div
