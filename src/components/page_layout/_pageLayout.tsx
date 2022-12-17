@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 // import Header from "../headers/home";
-import PageHedaer from "../headers/_headerLayout";
+import PageHeader from "./../headers/_headerLayout";
 import Navbar from "./navbars/_navbarLayout";
 // import Footer from './footer'
 
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
       </Head>
 
       {navbar && <Navbar />}
-      <PageHedaer />
+      <PageHeader />
 
       <main>{children}</main>
       {/* <Footer /> */}

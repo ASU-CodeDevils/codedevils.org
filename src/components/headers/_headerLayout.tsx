@@ -13,7 +13,7 @@ import ContactPageHeader from "./contact";
 // wave divider
 import Divider from "../page_layout/pageDivider";
 
-const PageHedaer = () => {
+const PageHeader = () => {
   const [header, setHeader] = useState(<></>);
   const [showDivider, setShowDivider] = useState(false);
   const { asPath } = useRouter();
@@ -49,4 +49,4 @@ const PageHedaer = () => {
   );
 };
 
-export default PageHedaer;
+export default PageHeader;

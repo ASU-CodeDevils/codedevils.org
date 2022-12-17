@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import { useInView } from 'react-intersection-observer';
 // icons
 import { FaLanguage } from "react-icons/fa";

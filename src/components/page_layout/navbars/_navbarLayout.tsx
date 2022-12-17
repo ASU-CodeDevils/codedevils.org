@@ -11,9 +11,7 @@ const Navbar = () => {
     // Check if the user is on a mobile device
     const checkIfMobile = () => {
       if (typeof window !== "undefined" && window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
+        setIsMobile(typeof window !== "undefined" && window.innerWidth < 768);
       }
     };
     // Call the function once to set the initial value of isMobile

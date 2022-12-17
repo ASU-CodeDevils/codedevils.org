@@ -113,7 +113,7 @@
           flex-wrap: nowrap;
           align-items: center;
           width: 60%;
-          // styles that will be appied to bothe the icon and the text
+          // styles that will be applied to both the icon and the text
           font-size: larger;
           color: $asu_white;
           span {
@@ -137,10 +137,7 @@
     transition: all 700ms ease-in-out;
     position: absolute;
     top: 0;
-    // left: 0;
     width: 100vw;
     height: 100vh;
-    // background: $asu_grey;
-    // opacity: 0.3;
   }
 }
