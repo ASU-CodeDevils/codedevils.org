@@ -3,18 +3,13 @@ import Typewriter from "typewriter-effect";
 
 import headerStyles from "./../../styles/components/headers/home.module.scss";
 
-
 const HomePageHeader = () => {
-  
   return (
-      
-      <div id={headerStyles.header_content}>
-        {/* <div id={headerStyles.}> */}
-        <h1>
-        <strong>CodeDevils</strong> {" "}
-        - An ASU Student Organization
-        </h1>
-      <Typewriter 
+    <div id={headerStyles.header_content}>
+      <h1>
+        <strong>CodeDevils</strong> - An ASU Student Organization
+      </h1>
+      <Typewriter
         options={{
           strings: ["Develop.", "Create.", "Network."],
           autoStart: true,
@@ -28,11 +23,7 @@ const HomePageHeader = () => {
           // cursorClassName: 'typewriter__cursor',
         }}
       />
-      
-      {/* </div> */}
-      
-      </div>
-    // </div>
+    </div>
   );
 };
 

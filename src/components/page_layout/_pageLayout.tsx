@@ -10,25 +10,16 @@ import Navbar from "./navbars/_navbarLayout";
 // styles
 import layoutStyles from "./../../styles/components/page_layout/_pageLayout.module.scss";
 import React from "react";
-import Divider from "./pageDivider";
 
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(true);
-  const [showWave, setShowWave] = useState(false);
   const { asPath } = useRouter();
-  // console.log(asPath);
 
   useEffect(() => {
     if (asPath == "/accounts/login" || asPath == "/accounts/signup") {
       setNavbar(false);
     } else {
       setNavbar(true);
-    }
-    // showWave
-    if (asPath != "/") {
-      setShowWave(true);
-    } else {
-      setShowWave(false);
     }
   }, [asPath]);
 
@@ -46,15 +37,9 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.png" />{" "}
         {/* TODO: Add website favicon */}
       </Head>
-      {/* <div id={layoutStyles.bg_img}> */}
 
       {navbar && <Navbar />}
-      {/* <Header /> */}
       <PageHedaer />
-      {/* {
-          showWave && <WavesDivider />
-        } */}
-      {/* </div> */}
 
       <main>{children}</main>
       {/* <Footer /> */}

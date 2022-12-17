@@ -17,7 +17,6 @@ const PageHedaer = () => {
   const [header, setHeader] = useState(<></>);
   const [showDivider, setShowDivider] = useState(false);
   const { asPath } = useRouter();
-  // console.log(asPath);
 
   useEffect(() => {
     switch (asPath) {
@@ -41,8 +40,6 @@ const PageHedaer = () => {
       setShowDivider(false);
     }
   }, [asPath]);
-
-  // console.log(header);
 
   return (
     <div id={headerStyles.header_wrapper}>

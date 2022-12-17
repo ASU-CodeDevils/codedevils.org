@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -44,39 +44,38 @@ const MobileNavbar = () => {
         className={`${showNavbarLinks ? navbarStyles.show : navbarStyles.hide}`}
       >
         <ul id={navbarStyles.link_wrapper}>
-          <Link
-            href="/"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
+          <li className={navbarStyles.list_item}>
+            <Link
+              href="/"
+              className={navbarStyles.item_wrapper}
+              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
+            >
               <AiOutlineHome />
               <span>Home</span>
-            </div>
-          </Link>
+            </Link>
+          </li>
 
-          <Link
-            href="/about"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
+          <li className={navbarStyles.list_item}>
+            <Link
+              href="/about"
+              className={navbarStyles.item_wrapper}
+              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
+            >
               <AiOutlineInfoCircle />
               <span>About</span>
-            </div>
-          </Link>
+            </Link>
+          </li>
 
-          <Link
-            href="/contact"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
+          <li className={navbarStyles.list_item}>
+            <Link
+              href="/contact"
+              className={navbarStyles.item_wrapper}
+              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
+            >
               <AiOutlineMail />
-
               <span>Contact Us</span>
-            </div>
-          </Link>
+            </Link>
+          </li>
 
           {/* <Link
             href="/help"
@@ -97,6 +96,7 @@ const MobileNavbar = () => {
               <AiOutlineArrowRight />
             </div>
           </Link>
+          <hr />
           <Link
             href="/accounts/login"
             className={navbarStyles.list_item}

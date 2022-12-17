@@ -31,13 +31,16 @@
     flex-direction: row;
     justify-content: space-between;
     min-width: fit-content;
-    width: 30vw;
+    width: fit-content;
     align-items: center;
     margin: auto 2rem;
     // list item styles
     * {
       font-size: large;
       font-weight: 400;
+    }
+    #linkItemStyles {
+      margin: 0 0.5rem;
     }
   }
 
@@ -146,7 +149,7 @@
     #langBtnStyles {
       background: $asu_white;
       &:hover {
-        color: #212529;
+        color: $asu_black;
         background-color: #ececec;
         border-color: #e6e6e6;
       }
