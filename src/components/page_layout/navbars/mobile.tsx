@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,6 +17,52 @@ import {
 
 const MobileNavbar = () => {
   const [showNavbarLinks, setShowNavbarLinks] = useState(false);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (showNavbarLinks) {
+        // disable scrolling when showNavbarLinks is true
+        document.addEventListener("wheel", disableScroll);
+        const htmlElement = document.querySelector("html");
+        // null checks
+        if (htmlElement) {
+          htmlElement.style.overflow = "hidden";
+        }
+        const bodyElement = document.querySelector("body");
+        if (bodyElement) {
+          bodyElement.style.overflow = "hidden";
+        }
+      } else {
+        // enable scrolling when showNavbarLinks is false
+        document.removeEventListener("wheel", disableScroll);
+        const htmlElement = document.querySelector("html");
+        if (htmlElement) {
+          htmlElement.style.overflow = "auto";
+        }
+        const bodyElement = document.querySelector("body");
+        if (bodyElement) {
+          bodyElement.style.overflow = "auto";
+        }
+      }
+
+      // return a cleanup function to remove the event listener and reset the overflow property when the component unmounts
+      return () => {
+        document.removeEventListener("wheel", disableScroll);
+        const htmlElement = document.querySelector("html");
+        if (htmlElement) {
+          htmlElement.style.overflow = "auto";
+        }
+        const bodyElement = document.querySelector("body");
+        if (bodyElement) {
+          bodyElement.style.overflow = "auto";
+        }
+      };
+    }
+  }, [showNavbarLinks]); // only run the effect when showNavbarLinks changes
+
+  function disableScroll(event) {
+    event.preventDefault();
+  }
 
   return (
     <nav id={navbarStyles.navbar_wrapper}>
