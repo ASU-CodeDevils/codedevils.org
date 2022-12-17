@@ -2,7 +2,7 @@
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import type { AppType } from "next/app";
-import Layout from "../components/layout";
+import Layout from "../components/page_layout/_pageLayout";
 import { trpc } from "../utils/trpc";
 import React from "react";
 // gobal styles

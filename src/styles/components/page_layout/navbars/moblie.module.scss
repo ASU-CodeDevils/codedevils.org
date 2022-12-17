@@ -1,0 +1,99 @@
+@use "./../../../util/vars.scss" as *;
+
+#navbar_wrapper {
+  position: fixed;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  z-index: 100;
+  box-shadow: $box_shadow;
+  .navbar_item {
+    margin: 0.5rem 1rem;
+  }
+  #icon {
+    font-size: xx-large;
+  }
+
+  #link_container {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    background: $asu_white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #link_wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      height: fit-content;
+      width: 80%;
+
+      .list_item {
+        border: 1px solid $asu_maroon;
+        padding: 0.5rem 1rem;
+        min-width: 80%;
+        text-align: center;
+        border-radius: 1rem;
+        color: $asu_maroon;
+        font-size: larger;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0.5rem 0;
+
+        &:active {
+          color: $asu_white;
+          background: $asu_maroon;
+        }
+
+        .item_wrapper {
+          display: flex;
+          min-width: fit-content;
+          width: 60%;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          span {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .show {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .hide {
+    transform: translateX(-100%);
+    opacity: 0.9;
+  }
+
+  // close styles
+  #close {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    top: 0;
+    // left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background: $asu_grey;
+    // opacity: 0.3;
+  }
+}

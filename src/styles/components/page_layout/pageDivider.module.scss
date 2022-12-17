@@ -1,0 +1,64 @@
+// .custom_shape_divider_top_1671265070 {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   overflow: hidden;
+//   line-height: 0;
+// }
+
+// .custom_shape_divider_top_1671265070 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(161% + 1.3px);
+//   height: 235px;
+// }
+
+// .custom_shape_divider_top_1671265070 .shape_fill {
+//   fill: #ffffff;
+// }
+
+// other wave styles
+// .custom-shape-divider-bottom-1671265681 {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   overflow: hidden;
+//   line-height: 0;
+//   transform: rotate(180deg);
+// }
+
+// .custom-shape-divider-bottom-1671265681 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(161% + 1.3px);
+//   height: 235px;
+// }
+
+// .custom-shape-divider-bottom-1671265681 .shape-fill {
+//   fill: #ffffff;
+// }
+
+@use "./../../util/vars.scss" as *;
+// another svg styles
+
+.divider {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 207px;
+}
+
+.divider .shape-fill {
+  fill: $asu_white;
+}

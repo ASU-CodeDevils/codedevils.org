@@ -7,18 +7,12 @@ import { FaLanguage } from "react-icons/fa";
 import { HiUserAdd } from "react-icons/hi";
 import { FiLogIn } from "react-icons/fi";
 
-
-
-
-
 // styles
-import navbarStyles from "./../styles/components/navbar.module.scss";
-
-// logos
+import navbarStyles from "./../../../styles/components/page_layout/navbars/desktop.module.scss";
 
 
-//** Navbar component */
-function Navbar() {
+//** Desktop Navbar component */
+const DesktopNavbar = () => {
 
   const [isUserScrolling, setIsUserScrolling] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +37,14 @@ function Navbar() {
     }
   }
 
+  const [isDropdownShowing, setIsDropdownShowing] = useState(false)
+  const showDropdown = () => {
+    setIsDropdownShowing(true)
+  }
+  const hideDropdown = () => {
+    setIsDropdownShowing(false)
+  }
+
   useEffect(() => {
     // Check if the user is on a mobile device
     const checkIfMobile = () => {
@@ -63,39 +65,31 @@ function Navbar() {
     };
   }, []);
 
-  console.log('isMobile', isMobile);
-
-
-
-
-
-
-
   return (
-    <nav id={`${navbarStyles.navbar_wrapper}`} className={`${isUserScrolling && navbarStyles.navbar_wrapper__scrolled}`}> {/* className={`${navbarIsVisible && console.log('navbarIsVisible', navbarIsVisible)}`}> */}
+    <nav id={`${isUserScrolling ? navbarStyles.navbar_scrolled : navbarStyles.navbar_nonScrolled}`} className={navbarStyles.navbar_wrapper}> {/* className={`${navbarIsVisible && console.log('navbarIsVisible', navbarIsVisible)}`}> */}
 
        {/* className={`${navbarIsVisible && console.log('navbarIsVisible', navbarIsVisible)}`}> */}
       <Link href="/">
         <Image id={navbarStyles.logo} src={isUserScrolling? "/logo-dark.png" : "/logo-light.png"} alt="CodeDevils Logo" width="180" height="100" />
       </Link>
 
-      <ul id={navbarStyles.link_wrapper} className={`${isUserScrolling && navbarStyles.link_wrapper_dark}`} >
-        <li>
+      <ul id={navbarStyles.link_wrapper} >
+        <li id={`${isUserScrolling ? navbarStyles.scrolledLinkItemStyles : navbarStyles.linkItemStyles}`}>
           <Link href="/">
             <span>Home</span>
           </Link>
         </li>
-        <li>
+        <li id={`${isUserScrolling ? navbarStyles.scrolledLinkItemStyles : navbarStyles.linkItemStyles}`}>
           <Link href="/about">
             <span>About</span>
           </Link>
         </li>
-        <li>
+        <li id={`${isUserScrolling ? navbarStyles.scrolledLinkItemStyles : navbarStyles.linkItemStyles}`}>
           <Link href="/contact">
             <span>Contact Us</span>
           </Link>
         </li>
-        <li>
+        <li id={`${isUserScrolling ? navbarStyles.scrolledLinkItemStyles : navbarStyles.linkItemStyles}`}>
           <Link href="/help">
             <span>Help</span>
           </Link>
@@ -103,24 +97,45 @@ function Navbar() {
       </ul>
 
       <div id={navbarStyles.navbar_button_wrapper}>
-      <Link href="/accounts/signup" className={navbarStyles.button}>
+      <Link href="/accounts/signup" id={`${isUserScrolling ? navbarStyles.registerScrollStyle : navbarStyles.registerStyle }`} className={`${navbarStyles.button}`}>
         <HiUserAdd />
         <span>Register</span>
       </Link>
-
-      <Link href="/accounts/login" id={navbarStyles.login_button} className={navbarStyles.button}>
+    
+      <Link href="/accounts/login" id={`${isUserScrolling ? navbarStyles.loginScrollStyle : navbarStyles.loginStyle }`} className={`${navbarStyles.button}`}>
+        {/* id={navbarStyles.login_button} */}
         <FiLogIn />
         <span>Login</span>
       </Link>
 
-      <button>
-        <FaLanguage />
-      </button>
+      
       </div>
+      <div 
+        id={navbarStyles.dropdown} 
+        onMouseEnter={showDropdown} 
+        onMouseLeave={hideDropdown}
+      >
+        <button 
+        className={navbarStyles.languageButton} 
+        id={`${isUserScrolling ? navbarStyles.langBtnScrollStyles : navbarStyles.langBtnStyles}`}
+        >
+          <FaLanguage />
+        </button>
+        {
+          isDropdownShowing ? (
+          <div id={navbarStyles.dropdown_content}>
+            <button>
+              English
+            </button>
+          </div> 
+          ) : null
+        }
+      </div>
+      
     </nav>
 
     
   );
 }
 
-export default Navbar;
+export default DesktopNavbar;

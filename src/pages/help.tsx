@@ -10,11 +10,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div>
-        ashbdhsadbjhasbj
-        <button onClick={()=>signIn()}>Sign in</button>
-      </div>
-
       <div className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
         <h1 className="text-5xl font-extrabold leading-normal text-gray-700 md:text-[5rem]">
           Create <span className="text-purple-300">T3</span> App

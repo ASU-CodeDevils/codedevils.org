@@ -1,0 +1,28 @@
+@use "./../../util/vars.scss" as *;
+
+#header_content {
+  // center content in the middle of the header
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: left;
+  width: 100vw; // ----
+
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 0 1rem 120px; // ----
+
+  strong,
+  .typewriter_wrapper {
+    font-weight: 900;
+  }
+}
+
+@media screen and (min-width: $desktop_size) {
+  #header_content {
+    width: 70vw;
+    padding: 0 3rem 120px;
+  }
+}
