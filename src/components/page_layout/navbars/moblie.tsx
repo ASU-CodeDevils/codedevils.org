@@ -8,6 +8,7 @@ import navbarStyles from "./../../../styles/components/page_layout/navbars/mobli
 // icon
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
+  AiOutlineClose,
   AiOutlineHome,
   AiOutlineInfoCircle,
   AiOutlineMail,
@@ -29,10 +30,12 @@ const MoblieNavbar = () => {
 
       <div
         id={navbarStyles.icon}
-        className={navbarStyles.navbar_item}
+        className={`${navbarStyles.navbar_item}
+        ${showNavbarLinks ? navbarStyles.close : navbarStyles.open}
+        `}
         onClick={() => setShowNavbarLinks(!showNavbarLinks)}
       >
-        <RxHamburgerMenu />
+        {showNavbarLinks ? <AiOutlineClose /> : <RxHamburgerMenu />}
       </div>
 
       <div

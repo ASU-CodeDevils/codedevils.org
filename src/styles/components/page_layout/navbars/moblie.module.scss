@@ -14,8 +14,23 @@
   .navbar_item {
     margin: 0.5rem 1rem;
   }
+
+  // icon styles
   #icon {
     font-size: xx-large;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+  }
+  .close {
+    background: $asu_maroon;
+    color: $asu_white;
+  }
+  .open {
+    background: transparent;
+    color: $asu_maroon;
   }
 
   #link_container {
