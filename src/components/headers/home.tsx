@@ -1,10 +1,14 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const HomeHeader = () => {
+import headerStyles from "./../../styles/components/headers/home.module.scss";
+
+const HomePageHeader = () => {
   return (
-    <div>
-      CodeDevils - An ASU Student Organization{" "}
+    <div id={headerStyles.header_content}>
+      <h1>
+        <strong>CodeDevils</strong> - An ASU Student Organization
+      </h1>
       <Typewriter
         options={{
           strings: ["Develop.", "Create.", "Network."],
@@ -13,7 +17,7 @@ const HomeHeader = () => {
           cursor: "|",
           loop: true,
           // for styling the typewriter wrapper
-          wrapperClassName: "typewriter__wrapper",
+          wrapperClassName: `${headerStyles.typewriter_wrapper}`,
           // for styling the cursor
           // NOTE: this will remove the default cursor style, which include the blinking. So make sure to add that back in.
           // cursorClassName: 'typewriter__cursor',
@@ -23,4 +27,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default HomePageHeader;
