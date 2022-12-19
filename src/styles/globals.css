@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*, *::before, *::after {
+/* *, *::before, *::after {
   font-family: "Poppins", sans-serif;
-}
+} */

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import DesktopNavbar from "./desktop";
 import MobileNavbar from "./mobile";
 
-const Navbar = () => {
+const Navbar = ({ currentPagePath }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,15 @@ const Navbar = () => {
     };
   }, []);
 
-  return <>{isMobile ? <MobileNavbar /> : <DesktopNavbar />}</>;
+  return (
+    <>
+      {isMobile ? (
+        <MobileNavbar />
+      ) : (
+        <DesktopNavbar currentPagePath={currentPagePath} />
+      )}
+    </>
+  );
 };
 
 export default Navbar;

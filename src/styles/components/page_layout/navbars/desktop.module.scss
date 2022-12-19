@@ -1,6 +1,6 @@
 @use "./../../../util/vars.scss" as *;
 
-// fundumental styles for the navbar no matter if the user has past the threshold or not
+// fundumental styles for the navbar no matter if the user has past the scroll threshold or not
 .navbar_wrapper {
   display: flex;
   align-items: center;
@@ -39,7 +39,30 @@
       font-size: large;
       font-weight: 400;
     }
-    #linkItemStyles {
+    .linkItem {
+      // transition: all 300ms ease-in-out;
+      display: inline-block;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    li {
       margin: 0 0.5rem;
     }
   }
@@ -57,7 +80,6 @@
       transition: all 300ms ease-out;
     }
     // login & signup styles
-    //
     .button {
       display: flex;
       flex-direction: row;
@@ -87,31 +109,45 @@
 
     // dropdown content styles
     #dropdown_content {
+      $background: $asu_white;
+      transition: all 300ms ease-in-out;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       position: absolute;
       right: 1rem;
-      top: 4.5rem;
-      background: $asu_white;
+      top: 5rem;
+      background: $background;
       box-shadow: 0 1px 10px rgb(26 26 26 / 40%);
       padding: 20px;
+      min-width: 2em;
+      height: auto;
       &::before {
-        content: " ";
+        content: "";
         position: fixed;
         /*
           the positioning of the triamge is up in the air and i don't know if it's actually responsive 
         */
-        top: 4rem;
-        right: 3.75rem;
+        top: -0.9rem;
+        right: 2.5rem;
 
         // makes a triangle using css
         width: 0;
         height: 0;
-        border: 5px solid transparent;
+        border: 10px solid transparent;
         border-top: 0;
-        border-bottom: 10px solid $asu_white;
+        border-bottom: 20px solid $background;
       }
+    }
+
+    // dropdown animation
+    .dropdown_content_show {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    .dropdown_content_hide {
+      transform: scaleY(0);
+      opacity: 0;
     }
   }
 }
@@ -120,7 +156,16 @@
 #navbar_nonScrolled {
   background: transparent;
   #link_wrapper {
-    #linkItemStyles {
+    // for the underline animation
+    .active_notScrolled {
+      border-bottom: 2px solid $asu_white;
+    }
+    .inactive_notScrolled {
+      &::after {
+        background-color: $asu_white;
+      }
+    }
+    #notScrolledLinkItemStyles {
       color: $asu_white;
       &:hover {
         color: $asu_grey;
@@ -172,6 +217,16 @@
   background: $asu_white;
   box-shadow: $box_shadow;
   #link_wrapper {
+    // for the underline animation
+    .active_scrolled {
+      border-bottom: 2px solid $asu_maroon;
+    }
+    .inactive_scrolled {
+      &::after {
+        background-color: $asu_maroon;
+      }
+    }
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     #scrolledLinkItemStyles {
       color: $asu_dark_grey;
       &:hover {

@@ -11,7 +11,7 @@ import { FiLogIn } from "react-icons/fi";
 import navbarStyles from "./../../../styles/components/page_layout/navbars/desktop.module.scss";
 
 //** Desktop Navbar component */
-const DesktopNavbar = () => {
+const DesktopNavbar = ({ currentPagePath }) => {
   const [isUserScrolling, setIsUserScrolling] = useState(false);
   const [isDropdownShowing, setIsDropdownShowing] = useState(false);
 
@@ -62,10 +62,21 @@ const DesktopNavbar = () => {
       </Link>
       <ul id={navbarStyles.link_wrapper}>
         <li
+          className={`
+          ${navbarStyles.linkItem}
+          ${
+            isUserScrolling
+              ? currentPagePath === "/"
+                ? navbarStyles.active_scrolled
+                : navbarStyles.inactive_scrolled
+              : currentPagePath === "/"
+              ? navbarStyles.active_notScrolled
+              : navbarStyles.inactive_notScrolled
+          }`}
           id={`${
             isUserScrolling
               ? navbarStyles.scrolledLinkItemStyles
-              : navbarStyles.linkItemStyles
+              : navbarStyles.notScrolledLinkItemStyles
           }`}
         >
           <Link href="/">
@@ -73,10 +84,21 @@ const DesktopNavbar = () => {
           </Link>
         </li>
         <li
+          className={`
+          ${navbarStyles.linkItem}
+          ${
+            isUserScrolling
+              ? currentPagePath === "/about"
+                ? navbarStyles.active_scrolled
+                : navbarStyles.inactive_scrolled
+              : currentPagePath === "/about"
+              ? navbarStyles.active_notScrolled
+              : navbarStyles.inactive_notScrolled
+          }`}
           id={`${
             isUserScrolling
               ? navbarStyles.scrolledLinkItemStyles
-              : navbarStyles.linkItemStyles
+              : navbarStyles.notScrolledLinkItemStyles
           }`}
         >
           <Link href="/about">
@@ -84,10 +106,21 @@ const DesktopNavbar = () => {
           </Link>
         </li>
         <li
+          className={`
+          ${navbarStyles.linkItem}
+          ${
+            isUserScrolling
+              ? currentPagePath === "/contact"
+                ? navbarStyles.active_scrolled
+                : navbarStyles.inactive_scrolled
+              : currentPagePath === "/contact"
+              ? navbarStyles.active_notScrolled
+              : navbarStyles.inactive_notScrolled
+          }`}
           id={`${
             isUserScrolling
               ? navbarStyles.scrolledLinkItemStyles
-              : navbarStyles.linkItemStyles
+              : navbarStyles.notScrolledLinkItemStyles
           }`}
         >
           <Link href="/contact">
@@ -138,7 +171,10 @@ const DesktopNavbar = () => {
           <FaLanguage />
         </button>
         {isDropdownShowing ? (
-          <ul id={navbarStyles.dropdown_content}>
+          <ul
+            id={navbarStyles.dropdown_content}
+            className={`${navbarStyles.dropdown_content_show}`}
+          >
             <li>
               <button>Española</button>
             </li>
@@ -164,7 +200,9 @@ const DesktopNavbar = () => {
               <button>हिन्दी</button>
             </li>
           </ul>
-        ) : null}
+        ) : (
+          <ul className={`${navbarStyles.dropdown_content_hide}`}></ul>
+        )}
       </div>
     </nav>
   );

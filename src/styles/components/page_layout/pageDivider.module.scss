@@ -1,21 +1,23 @@
 @use "./../../util/vars.scss" as *;
 
-.divider {
+#divider {
   position: relative;
   bottom: 0;
-  right: 0;
-  width: 100vw;
-  overflow: hidden;
+  height: fit-content;
+  overflow-y: visible;
+  overflow-x: hidden;
   line-height: 0;
+  transition: 1s all;
+  background: transparent;
 }
 
-.divider svg {
+#divider svg {
   position: relative;
   display: block;
   width: calc(164% + 1.3px);
-  height: 207px;
+  height: auto;
 }
 
-.divider .shape-fill {
+#divider .shape-fill {
   fill: $asu_white;
 }

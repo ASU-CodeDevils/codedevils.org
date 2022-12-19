@@ -1,15 +1,14 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-// import Header from "../headers/home";
+// components
 import PageHeader from "./../headers/_headerLayout";
 import Navbar from "./navbars/_navbarLayout";
 // import Footer from './footer'
 
 // styles
 import layoutStyles from "./../../styles/components/page_layout/_pageLayout.module.scss";
-import React from "react";
 
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(true);
@@ -35,10 +34,9 @@ export default function Layout({ children }) {
         {/* TODO: add all the developers that worked on the website at the end */}
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicon.png" />{" "}
-        {/* TODO: Add website favicon */}
       </Head>
 
-      {navbar && <Navbar />}
+      {navbar && <Navbar currentPagePath={asPath} />}
       <PageHeader />
 
       <main>{children}</main>

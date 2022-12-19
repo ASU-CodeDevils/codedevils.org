@@ -1,14 +1,34 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { useInView } from "react-intersection-observer";
 
-import headerStyles from "./../../styles/components/headers/home.module.scss";
+import headerStyles from "./../../styles/components/headers/_headerLayout.module.scss";
+
+// font optimization
+import { Poppins } from "@next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const HomePageHeader = () => {
+  const { ref: myRef, inView: isInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
   return (
-    <div id={headerStyles.header_content}>
-      <h1>
-        <strong>CodeDevils</strong> - An ASU Student Organization
-      </h1>
+    <div
+      ref={myRef}
+      id={headerStyles.home_header_content}
+      className={`${
+        isInView ? headerStyles.header_visible : headerStyles.header_hidden
+      }`}
+    >
+      <p>
+        <strong className={poppins.className}>CodeDevils</strong> - An ASU
+        Student Organization
+      </p>
       <Typewriter
         options={{
           strings: ["Develop.", "Create.", "Network."],

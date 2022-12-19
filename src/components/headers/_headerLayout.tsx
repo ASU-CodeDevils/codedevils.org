@@ -11,7 +11,7 @@ import AboutPageHeader from "./about";
 import ContactPageHeader from "./contact";
 
 // wave divider
-import Divider from "../page_layout/pageDivider";
+import Divider from "./../page_layout/pageDivider";
 
 const PageHeader = () => {
   const [header, setHeader] = useState(<></>);

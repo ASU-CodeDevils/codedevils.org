@@ -1,41 +1,78 @@
 @use "./../../util/vars.scss" as *;
 
 #header_wrapper {
-  background-image: // linear-gradient(-135deg, hsl(341, 66%, 33%, 0.4) 25%, hsl(341, 66%, 33%, 0.4)) 100%,
-    linear-gradient(-135deg, hsla(341, 66%, 33%, 0.75) 25%, hsla(341, 66%, 33%, 0.75) 100%),
+  background-image: linear-gradient(-135deg, hsla(341, 66%, 33%, 0.75) 25%, hsla(341, 66%, 33%, 0.75) 100%),
     url(./../../../../public/bg/code-grid.png);
-
   background-size: cover;
   height: fit-content;
   width: 100vw;
   color: $asu_white;
-  // when you change the 120px, change the handleScroll function in header.js to always be half of what you set padding top to be
-  // padding: 120px 3rem 0 3rem; // top/bottom, left/right
   padding-top: 120px !important;
 }
 
 #header_content {
   color: $asu_white;
-  padding: 0 3rem 2rem 3rem;
-  width: 80vw;
-  // text-align: left;
+  padding: 0 2rem 2.5rem 2rem;
+  width: 90vw;
+  transition: all 0.5s;
   #title {
     font-size: 3.5rem;
-    font-weight: 400;
+    font-weight: 300;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
   #description {
     font-size: 1rem;
     font-weight: 300;
   }
+
+  transition: all 0.5s;
 }
 
-@media screen and (min-width: 974px) {
+// styles for the header content on the home page
+#home_header_content {
+  transition: all 1s;
+  // center content in the middle of the header
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: left;
+  width: 100vw; // ----
+
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 0 1rem 3rem; // ----
+
+  strong,
+  .typewriter_wrapper {
+    font-weight: 900;
+  }
+}
+
+.header_visible {
+  opacity: 1;
+  filter: blur (0);
+  transform: translateX(0);
+}
+
+.header_hidden {
+  opacity: 0;
+  filter: blur (10px);
+  transform: translateX(-100%);
+}
+
+@media screen and (min-width: $desktop_size) {
   #header_content {
     width: 50vw;
     #description {
       font-size: 1.25rem;
       font-weight: 300;
     }
+  }
+  #home_header_content {
+    width: 70vw;
   }
 }
