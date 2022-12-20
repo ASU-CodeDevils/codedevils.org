@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
+import appReducer from "../../../reducers/appReducer";
 // import { useInView } from 'react-intersection-observer';
 // icons
 import { FaLanguage } from "react-icons/fa";
@@ -14,6 +15,7 @@ import navbarStyles from "./../../../styles/components/page_layout/navbars/deskt
 const DesktopNavbar = ({ currentPagePath }) => {
   const [isUserScrolling, setIsUserScrolling] = useState(false);
   const [isDropdownShowing, setIsDropdownShowing] = useState(false);
+  const [state, dispatch] = useReducer(appReducer, {});
 
   useEffect(() => {
     // Add a listener to the window scroll event
@@ -28,7 +30,6 @@ const DesktopNavbar = ({ currentPagePath }) => {
   function handleScroll() {
     // Check the value of window.scrollY to determine if the user has scrolled the page
     if (window.scrollY > 60) {
-      console.log("The user has scrolled the page by at least 90 pixels");
       setIsUserScrolling(true);
     } else {
       setIsUserScrolling(false);
@@ -40,6 +41,10 @@ const DesktopNavbar = ({ currentPagePath }) => {
   };
   const hideDropdown = () => {
     setIsDropdownShowing(false);
+  };
+
+  const changeLanguage = (language) => {
+    dispatch({ type: "SET_LANGUAGE", payload: language });
   };
 
   return (
@@ -170,16 +175,17 @@ const DesktopNavbar = ({ currentPagePath }) => {
         >
           <FaLanguage />
         </button>
+        {/* The only reason why I'm using */}
         {isDropdownShowing ? (
           <ul
             id={navbarStyles.dropdown_content}
             className={`${navbarStyles.dropdown_content_show}`}
           >
             <li>
-              <button>Española</button>
+              <button onClick={() => changeLanguage("es")}>Española</button>
             </li>
             <li>
-              <button>English</button>
+              <button onClick={() => changeLanguage("en")}>English</button>
             </li>
             <li>
               <button>Française</button>

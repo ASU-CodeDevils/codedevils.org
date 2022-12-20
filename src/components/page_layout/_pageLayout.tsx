@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useReducer, useContext } from "react";
+// contexts
+// import { AppContextProvider } from "../../contexts/AppContext";
+// import appReducer from "../../reducers/appReducer";
 // components
 import PageHeader from "./../headers/_headerLayout";
 import Navbar from "./navbars/_navbarLayout";
@@ -13,6 +15,17 @@ import layoutStyles from "./../../styles/components/page_layout/_pageLayout.modu
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(true);
   const { asPath } = useRouter();
+  // const [languageData, setLanguageData] = useState({});
+  // const value = useContext(AppContextProvider);
+
+  // const [state, dispatch] = useReducer(appReducer, {});
+  // console.log("state 1: ", state);
+
+  // useEffect(() => {
+  //   dispatch({ type: "SET_LANGUAGE", payload: locale });
+  //   setLanguageData(state.currentLangData);
+  //   console.log("languageData: ", languageData);
+  // }, [locale]);
 
   useEffect(() => {
     if (asPath == "/accounts/login" || asPath == "/accounts/signup") {
@@ -39,7 +52,7 @@ export default function Layout({ children }) {
       {navbar && <Navbar currentPagePath={asPath} />}
       <PageHeader />
 
-      <main>{children}</main>
+      {children}
       {/* <Footer /> */}
     </div>
   );
