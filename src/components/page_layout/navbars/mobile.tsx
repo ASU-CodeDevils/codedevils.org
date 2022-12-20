@@ -6,153 +6,173 @@ import Image from "next/image";
 import navbarStyles from "./../../../styles/components/page_layout/navbars/mobile.module.scss";
 
 // icon
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RiContactsBook2Line } from "react-icons/ri";
 import {
-  AiOutlineClose,
   AiOutlineHome,
   AiOutlineInfoCircle,
-  AiOutlineMail,
-  AiOutlineArrowRight,
+  AiOutlineUser,
 } from "react-icons/ai";
 
-const MobileNavbar = () => {
-  const [showNavbarLinks, setShowNavbarLinks] = useState(false);
+const MobileNavbar = ({ currentPagePath }) => {
+  const underlineEffect = () => {
+    const bar = document.getElementById(navbarStyles.bar);
+    if (bar) {
+      switch (currentPagePath) {
+        case "/":
+          bar.style.marginLeft = "0%";
+          break;
+        case "/about":
+          bar.style.marginLeft = "25%";
+          break;
+        case "/contact":
+          bar.style.marginLeft = "50%";
+          break;
+        case "/account":
+          bar.style.marginLeft = "75%";
+          break;
+      }
+    }
+  };
 
   useEffect(() => {
-    if (typeof document !== "undefined") {
-      if (showNavbarLinks) {
-        // disable scrolling when showNavbarLinks is true
-        document.addEventListener("wheel", disableScroll);
-        const htmlElement = document.querySelector("html");
-        // null checks
-        if (htmlElement) {
-          htmlElement.style.overflow = "hidden";
-        }
-        const bodyElement = document.querySelector("body");
-        if (bodyElement) {
-          bodyElement.style.overflow = "hidden";
-        }
-      } else {
-        // enable scrolling when showNavbarLinks is false
-        document.removeEventListener("wheel", disableScroll);
-        const htmlElement = document.querySelector("html");
-        if (htmlElement) {
-          htmlElement.style.overflow = "auto";
-        }
-        const bodyElement = document.querySelector("body");
-        if (bodyElement) {
-          bodyElement.style.overflow = "auto";
-        }
-      }
-
-      // return a cleanup function to remove the event listener and reset the overflow property when the component unmounts
-      return () => {
-        document.removeEventListener("wheel", disableScroll);
-        const htmlElement = document.querySelector("html");
-        if (htmlElement) {
-          htmlElement.style.overflow = "auto";
-        }
-        const bodyElement = document.querySelector("body");
-        if (bodyElement) {
-          bodyElement.style.overflow = "auto";
-        }
-      };
-    }
-  }, [showNavbarLinks]); // only run the effect when showNavbarLinks changes
-
-  function disableScroll(event) {
-    event.preventDefault();
-  }
+    underlineEffect();
+  }, [currentPagePath]);
 
   return (
-    <nav id={navbarStyles.navbar_wrapper}>
-      <Link href="/" className={navbarStyles.navbar_item}>
-        <Image
-          src={"/logo-dark.png"}
-          alt="CodeDevils Logo"
-          width="180"
-          height="100"
-        />
-      </Link>
-
-      <div
-        id={navbarStyles.icon}
-        className={`${navbarStyles.navbar_item}
-        ${showNavbarLinks ? navbarStyles.close : navbarStyles.open}
-        `}
-        onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-      >
-        {showNavbarLinks ? <AiOutlineClose /> : <RxHamburgerMenu />}
+    <nav>
+      <div id={navbarStyles.top}>
+        <Link href={"/"}>
+          <Image
+            id={navbarStyles.logo}
+            src="/logo-dark.png"
+            alt="CodeDevils Logo"
+            width={180}
+            height={100}
+          />
+        </Link>
       </div>
-
-      <div
-        id={navbarStyles.link_container}
-        className={`${showNavbarLinks ? navbarStyles.show : navbarStyles.hide}`}
-      >
-        <ul id={navbarStyles.link_wrapper}>
-          <li className={navbarStyles.list_item}>
-            <Link
-              href="/"
-              className={navbarStyles.item_wrapper}
-              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-            >
-              <AiOutlineHome />
-              <span>Home</span>
+      <div id={navbarStyles.bottom}>
+        <ul id={navbarStyles.list_wrapper}>
+          <li
+            className={`${
+              currentPagePath == "/"
+                ? navbarStyles.outline_effect
+                : navbarStyles.outline
+            }`}
+          >
+            <Link href={"/"} className={navbarStyles.list_item}>
+              <div
+                className={`${
+                  currentPagePath == "/"
+                    ? navbarStyles.item_title
+                    : navbarStyles.item_title_hidden
+                }`}
+              >
+                Home
+              </div>
+              <AiOutlineHome
+                className={`
+              ${
+                currentPagePath == "/"
+                  ? navbarStyles.icon_effect
+                  : navbarStyles.icon
+              }
+              `}
+              />
             </Link>
           </li>
-
-          <li className={navbarStyles.list_item}>
-            <Link
-              href="/about"
-              className={navbarStyles.item_wrapper}
-              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-            >
-              <AiOutlineInfoCircle />
-              <span>About</span>
+          <li
+            className={`${
+              currentPagePath == "/about"
+                ? navbarStyles.outline_effect
+                : navbarStyles.outline
+            }`}
+          >
+            <Link href={"/about"} className={navbarStyles.list_item}>
+              <div
+                className={`${
+                  currentPagePath == "/about"
+                    ? navbarStyles.item_title
+                    : navbarStyles.item_title_hidden
+                }`}
+              >
+                About
+              </div>
+              <AiOutlineInfoCircle
+                className={`
+              
+              ${
+                currentPagePath == "/about"
+                  ? navbarStyles.icon_effect
+                  : navbarStyles.icon
+              }
+              `}
+              />
             </Link>
           </li>
-
-          <li className={navbarStyles.list_item}>
-            <Link
-              href="/contact"
-              className={navbarStyles.item_wrapper}
-              onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-            >
-              <AiOutlineMail />
-              <span>Contact Us</span>
+          <li
+            className={`${
+              currentPagePath == "/contact"
+                ? navbarStyles.outline_effect
+                : navbarStyles.outline
+            }`}
+          >
+            <Link href={"/contact"} className={navbarStyles.list_item}>
+              <div
+                className={`${
+                  currentPagePath == "/contact"
+                    ? navbarStyles.item_title
+                    : navbarStyles.item_title_hidden
+                }`}
+              >
+                Contact
+              </div>
+              <RiContactsBook2Line
+                className={`
+              
+              ${
+                currentPagePath == "/contact"
+                  ? navbarStyles.icon_effect
+                  : navbarStyles.icon
+              }
+              `}
+              />
+            </Link>
+          </li>
+          <li
+            className={`${
+              currentPagePath == "/account"
+                ? navbarStyles.outline_effect
+                : navbarStyles.outline
+            }`}
+          >
+            <Link href={"/account"} className={navbarStyles.list_item}>
+              <div
+                className={`${
+                  currentPagePath == "/account"
+                    ? navbarStyles.item_title
+                    : navbarStyles.item_title_hidden
+                }`}
+              >
+                Login
+              </div>
+              <AiOutlineUser
+                className={`
+             
+              ${
+                currentPagePath == "/account"
+                  ? navbarStyles.icon_effect
+                  : navbarStyles.icon
+              }
+              `}
+              />
             </Link>
           </li>
         </ul>
-        <div id={navbarStyles.account_link_wrapper}>
-          <Link
-            href="/accounts/signup"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
-              <span>Register</span>
-              <AiOutlineArrowRight />
-            </div>
-          </Link>
-          <hr />
-          <Link
-            href="/accounts/login"
-            className={navbarStyles.list_item}
-            onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-          >
-            <div className={navbarStyles.item_wrapper}>
-              <span>Login</span>
-              <AiOutlineArrowRight />
-            </div>
-          </Link>
+        <div id={navbarStyles.bar_wrapper}>
+          <div id={navbarStyles.bar}></div>
         </div>
       </div>
-
-      <div
-        id={navbarStyles.close}
-        className={`${showNavbarLinks ? navbarStyles.show : navbarStyles.hide}`}
-        onClick={() => setShowNavbarLinks(!showNavbarLinks)}
-      ></div>
     </nav>
   );
 };

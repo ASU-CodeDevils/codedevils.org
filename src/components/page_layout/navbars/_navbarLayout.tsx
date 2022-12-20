@@ -30,7 +30,7 @@ const Navbar = ({ currentPagePath }) => {
   return (
     <>
       {isMobile ? (
-        <MobileNavbar />
+        <MobileNavbar currentPagePath={currentPagePath} />
       ) : (
         <DesktopNavbar currentPagePath={currentPagePath} />
       )}

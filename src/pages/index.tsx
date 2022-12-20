@@ -4,7 +4,7 @@ import React from "react";
 
 const HomePage: NextPage = () => {
   return (
-    <div className="">
+    <main className="">
       {/* <h1 className="text-xl font-bold">Home</h1>
       <p className="text-2xl mt-3">
         Welcome to CodeDevils! We are a virtual club that aims to bring ASU
@@ -74,7 +74,7 @@ const HomePage: NextPage = () => {
       <br />
       <br />
       <br />
-    </div>
+    </main>
   );
 };
 
