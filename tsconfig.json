@@ -25,7 +25,9 @@
     "**/*.mjs",
     "src/index.js",
     "src/App.jsx",
-    "public/langs/english/components/navbar.js"
+    "public/langs/english/components/navbar.js",
+    "src/contexts/AppContext.jsx",
+    "src/reducers/appReducer.jsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -8,7 +8,7 @@ import React from "react";
 // gobal styles
 import "../styles/globals.css";
 // contexts
-import { AppContextProvider } from "../contexts/AppContext";
+import { AppContextProvider } from "./../contexts/AppContext";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,

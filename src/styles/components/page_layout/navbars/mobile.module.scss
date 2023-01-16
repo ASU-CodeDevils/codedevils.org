@@ -17,6 +17,7 @@ nav {
     flex-direction: column;
     position: fixed;
     bottom: 0;
+    z-index: 100;
     padding: 0.25rem;
     padding-bottom: 0.5rem;
     width: 100%;
@@ -63,8 +64,10 @@ nav {
           font-size: 0.8rem;
           font-weight: 600;
           margin: 0.2rem;
-          transition: all 500ms;
+          // transition: all 500ms;
           transform: translateY(0%);
+          // opacity: 0;
+          // animation: 1s title 1 linear;
         }
         .item_title_hidden {
           opacity: 0;
@@ -109,7 +112,25 @@ nav {
   }
 }
 
-// icon animations
+// title animations
+@keyframes title {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  // 75% {
+  //   transform: translateY(0%);
+  //   opacity: 1;
+  // }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
 
 // animation for when the icon is clicked
 @keyframes icon {

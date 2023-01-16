@@ -1,8 +1,14 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
 // import HomeHeader from "../components/header";
 
 const HomePage: NextPage = () => {
+  // const {} = useContext(AppContext);
+  // console.log("value: ", language);
+  // setLanguage("es");
+  // console.log("value: ", language);
+
   return (
     <main className="">
       {/* <h1 className="text-xl font-bold">Home</h1>
@@ -11,6 +17,7 @@ const HomePage: NextPage = () => {
         students together.
       </p> */}
 
+      {/* <br />
       <br />
       <br />
       <br />
@@ -72,8 +79,7 @@ const HomePage: NextPage = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
+      <br /> */}
     </main>
   );
 };

@@ -1,0 +1,41 @@
+@use "./../../../util/vars.scss" as *;
+
+#footer_container {
+  margin-top: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: flex-start;
+
+  #club_description {
+    width: 25%;
+  }
+
+  #linkWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    .section_title {
+      width: 100%;
+      text-align: left;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .link_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      height: inherit;
+      .list_item {
+        height: 25%;
+      }
+    }
+  }
+}

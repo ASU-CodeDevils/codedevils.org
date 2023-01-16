@@ -7,7 +7,7 @@ import React, { useState, useEffect, useReducer, useContext } from "react";
 // components
 import PageHeader from "./../headers/_headerLayout";
 import Navbar from "./navbars/_navbarLayout";
-// import Footer from './footer'
+import Footer from "./footers/_footerLayout";
 
 // styles
 import layoutStyles from "./../../styles/components/page_layout/_pageLayout.module.scss";
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
       <PageHeader />
 
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

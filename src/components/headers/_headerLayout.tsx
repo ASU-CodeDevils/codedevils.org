@@ -42,10 +42,10 @@ const PageHeader = () => {
   }, [asPath]);
 
   return (
-    <div id={headerStyles.header_wrapper}>
+    <header id={headerStyles.header_wrapper}>
       {header}
       {showDivider && <Divider />}
-    </div>
+    </header>
   );
 };
 
