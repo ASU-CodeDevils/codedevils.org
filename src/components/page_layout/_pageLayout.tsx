@@ -6,8 +6,8 @@ import React, { useState, useEffect, useReducer, useContext } from "react";
 // import appReducer from "../../reducers/appReducer";
 // components
 import PageHeader from "./../headers/_headerLayout";
-import Navbar from "./navbars/_navbarLayout";
-import Footer from "./footers/_footerLayout";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 // styles
 import layoutStyles from "./../../styles/components/page_layout/_pageLayout.module.scss";

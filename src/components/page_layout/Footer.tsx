@@ -7,11 +7,11 @@ import Image from "next/image";
 // import MobileFooter from "./mobile";
 
 // styles
-import desktopStyles from "./../../../styles/components/page_layout/footers/desktop.module.scss";
-import mobileStyles from "./../../../styles/components/page_layout/footers/mobile.module.scss";
+import desktopStyles from "./../../styles/components/page_layout/footers/desktop.module.scss";
+import mobileStyles from "./../../styles/components/page_layout/footers/mobile.module.scss";
 
 // app context
-import { AppContext } from "./../../../contexts/AppContext.jsx";
+import { AppContext } from "../../contexts/AppContext.jsx";
 
 // desktop component
 

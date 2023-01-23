@@ -5,6 +5,7 @@ export const AppContext = React.createContext({});
 export const AppContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, {
     isMobile: false,
+    language: "en",
   });
 
   useEffect(() => {
