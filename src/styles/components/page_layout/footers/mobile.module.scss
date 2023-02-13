@@ -11,9 +11,25 @@
   flex-wrap: nowrap;
   text-align: center;
   box-shadow: $light_box_shadow;
+  font-size: 20px;
   #description_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  > div {
+    margin-top: 1rem;
+  }
+  #section_list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    > div {
+      margin-top: 1rem;
+    }
+    .section_list_item {
+      margin-top: 0.5rem;
+    }
   }
 }

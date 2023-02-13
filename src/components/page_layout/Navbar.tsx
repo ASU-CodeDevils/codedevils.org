@@ -6,7 +6,7 @@ import Image from "next/image";
 import { AppContext } from "../../contexts/AppContext";
 
 // app reducer
-import { appReducer } from "../../reducers/appReducer";
+// import { appReducer } from "../../reducers/appReducer";
 
 // styles
 import desktopStyles from "./../../styles/components/page_layout/navbars/desktop.module.scss";
@@ -27,7 +27,11 @@ import {
 const DesktopNavbar = ({ currentPagePath }) => {
   const [isUserScrolling, setIsUserScrolling] = useState(false);
   const [isDropdownShowing, setIsDropdownShowing] = useState(false);
-  const [state, dispatch] = useReducer(appReducer, {});
+  // const [state, dispatch] = useReducer(appReducer, {});
+
+  // const changeLanguage = (language: string) => {
+  //   dispatch({ type: "SET_LANGUAGE", payload: language });
+  // };
 
   useEffect(() => {
     // Add a listener to the window scroll event
@@ -53,10 +57,6 @@ const DesktopNavbar = ({ currentPagePath }) => {
   };
   const hideDropdown = () => {
     setIsDropdownShowing(false);
-  };
-
-  const changeLanguage = (language) => {
-    dispatch({ type: "SET_LANGUAGE", payload: language });
   };
 
   return (
@@ -147,7 +147,7 @@ const DesktopNavbar = ({ currentPagePath }) => {
       </ul>
       <div id={desktopStyles.navbar_button_wrapper}>
         <Link
-          href="/accounts/signup"
+          href="/accounts/register"
           id={`${
             isUserScrolling
               ? desktopStyles.registerScrollStyle
@@ -194,10 +194,10 @@ const DesktopNavbar = ({ currentPagePath }) => {
             className={`${desktopStyles.dropdown_content_show}`}
           >
             <li>
-              <button onClick={() => changeLanguage("es")}>Española</button>
+              <button>Española</button>
             </li>
             <li>
-              <button onClick={() => changeLanguage("en")}>English</button>
+              <button>English</button>
             </li>
             <li>
               <button>Française</button>
@@ -227,8 +227,12 @@ const DesktopNavbar = ({ currentPagePath }) => {
 };
 
 const MobileNavbar = ({ currentPagePath }) => {
+  const [showTop, setShowTop] = useState(true);
   const underlineEffect = () => {
-    const bar = document.getElementById(mobileStyles.bar);
+    // const bar = document.getElementById(mobileStyles.bar);
+    const bar = document.getElementById(`${mobileStyles.bar}`);
+    console.log("bar", bar);
+
     if (bar) {
       switch (currentPagePath) {
         case "/":
@@ -240,12 +244,31 @@ const MobileNavbar = ({ currentPagePath }) => {
         case "/contact":
           bar.style.marginLeft = "50%";
           break;
-        case "/account":
+        case "/accounts/register":
+        case "/accounts/login":
           bar.style.marginLeft = "75%";
           break;
       }
     }
   };
+
+  const handleScroll = () => {
+    if (window.scrollY >= 60) {
+      setShowTop(false);
+    } else {
+      setShowTop(true);
+    }
+  };
+
+  useEffect(() => {
+    // Add a listener to the window scroll event
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     underlineEffect();
@@ -253,7 +276,7 @@ const MobileNavbar = ({ currentPagePath }) => {
 
   return (
     <nav>
-      <div id={mobileStyles.top}>
+      <div id={mobileStyles.top} className={`${!showTop && mobileStyles.hide}`}>
         <Link href={"/"}>
           <Image
             id={mobileStyles.logo}
@@ -264,6 +287,7 @@ const MobileNavbar = ({ currentPagePath }) => {
           />
         </Link>
       </div>
+
       <div id={mobileStyles.bottom}>
         <ul id={mobileStyles.list_wrapper}>
           <li
@@ -354,26 +378,31 @@ const MobileNavbar = ({ currentPagePath }) => {
           </li>
           <li
             className={`${
-              currentPagePath == "/account"
+              currentPagePath == "/accounts/login" ||
+              currentPagePath == "/accounts/register"
                 ? mobileStyles.outline_effect
                 : mobileStyles.outline
             }`}
           >
-            <Link href={"/account"} className={mobileStyles.list_item}>
+            <Link href={"/accounts/login"} className={mobileStyles.list_item}>
               <div
                 className={`${
-                  currentPagePath == "/account"
+                  currentPagePath == "/accounts/login" ||
+                  currentPagePath == "/accounts/register"
                     ? mobileStyles.item_title
                     : mobileStyles.item_title_hidden
                 }`}
               >
-                Login
+                {currentPagePath == "/accounts/login" && <>Login</>}
+                {currentPagePath == "/accounts/register" && <>Register</>}
               </div>
+
               <AiOutlineUser
                 className={`
-             
+              
               ${
-                currentPagePath == "/account"
+                currentPagePath == "/accounts/login" ||
+                currentPagePath == "/accounts/register"
                   ? mobileStyles.icon_effect
                   : mobileStyles.icon
               }
@@ -391,7 +420,9 @@ const MobileNavbar = ({ currentPagePath }) => {
 };
 
 const Navbar = ({ currentPagePath }) => {
-  const { state } = useContext(AppContext);
+  // const { state } = useContext(AppContext);
+  const { state } = React.useContext(AppContext);
+
   const { isMobile } = state;
 
   return (

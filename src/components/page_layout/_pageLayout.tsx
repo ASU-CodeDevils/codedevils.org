@@ -1,9 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState, useEffect, useReducer, useContext } from "react";
-// contexts
-// import { AppContextProvider } from "../../contexts/AppContext";
-// import appReducer from "../../reducers/appReducer";
+import React, { useState, useEffect } from "react";
+
 // components
 import PageHeader from "./../headers/_headerLayout";
 import Navbar from "./Navbar";
@@ -27,13 +25,13 @@ export default function Layout({ children }) {
   //   console.log("languageData: ", languageData);
   // }, [locale]);
 
-  useEffect(() => {
-    if (asPath == "/accounts/login" || asPath == "/accounts/signup") {
-      setNavbar(false);
-    } else {
-      setNavbar(true);
-    }
-  }, [asPath]);
+  // useEffect(() => {
+  //   if (asPath == "/accounts/login" || asPath == "/accounts/signup") {
+  //     setNavbar(false);
+  //   } else {
+  //     setNavbar(true);
+  //   }
+  // }, [asPath]);
 
   return (
     <div id={layoutStyles.page_layout}>
@@ -52,7 +50,7 @@ export default function Layout({ children }) {
       {navbar && <Navbar currentPagePath={asPath} />}
       <PageHeader />
 
-      {children}
+      <main id={layoutStyles.content_conatiner}>{children}</main>
       <Footer />
     </div>
   );

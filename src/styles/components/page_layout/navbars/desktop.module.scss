@@ -19,12 +19,6 @@
   top: 0;
   left: 0;
 
-  #logo {
-    // max-width: 180px;
-    // width: auto;
-    // height: auto;
-  }
-
   #link_wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -40,7 +34,6 @@
       font-weight: 400;
     }
     .linkItem {
-      // transition: all 300ms ease-in-out;
       display: inline-block;
       position: relative;
       &::after {

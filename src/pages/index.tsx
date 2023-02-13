@@ -1,86 +1,23 @@
 import { NextPage } from "next";
-import React, { useContext } from "react";
-import { AppContext } from "../contexts/AppContext";
-// import HomeHeader from "../components/header";
+import React from "react";
+
+// styles
+import pageStyles from "./../styles/pages/layout.module.scss";
 
 const HomePage: NextPage = () => {
-  // const {} = useContext(AppContext);
-  // console.log("value: ", language);
-  // setLanguage("es");
-  // console.log("value: ", language);
-
   return (
-    <main className="">
-      {/* <h1 className="text-xl font-bold">Home</h1>
-      <p className="text-2xl mt-3">
-        Welcome to CodeDevils! We are a virtual club that aims to bring ASU
-        students together.
-      </p> */}
-
-      {/* <br />
+    <>
       <br />
       <br />
       <br />
+      <p id={pageStyles.description}>
+        This website is currently under construction. Please come back later to
+        see finished website.
+      </p>
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> */}
-    </main>
+    </>
   );
 };
 

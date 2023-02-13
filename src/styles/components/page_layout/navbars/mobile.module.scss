@@ -10,6 +10,7 @@ nav {
     z-index: 100;
     width: 100%;
     background: $asu_white;
+    transition: all 500ms ease-in-out;
   }
 
   #bottom {
@@ -64,10 +65,7 @@ nav {
           font-size: 0.8rem;
           font-weight: 600;
           margin: 0.2rem;
-          // transition: all 500ms;
           transform: translateY(0%);
-          // opacity: 0;
-          // animation: 1s title 1 linear;
         }
         .item_title_hidden {
           opacity: 0;
@@ -96,6 +94,10 @@ nav {
       }
     }
   }
+
+  .hide {
+    transform: translateY(-100%);
+  }
 }
 
 // outline animation
@@ -122,10 +124,6 @@ nav {
     transform: translateY(-10%);
     opacity: 1;
   }
-  // 75% {
-  //   transform: translateY(0%);
-  //   opacity: 1;
-  // }
   100% {
     transform: translateY(100%);
     opacity: 0;
@@ -136,7 +134,6 @@ nav {
 @keyframes icon {
   0% {
     transform: rotate(-45deg);
-    // opacity: 0;
   }
   50% {
     transform: rotate(-22.5deg);

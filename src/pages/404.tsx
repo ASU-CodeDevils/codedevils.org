@@ -1,14 +1,24 @@
 import { NextPage } from "next";
 import React from "react";
 
+// styles
+import pageStyles from "./../styles/pages/layout.module.scss";
+
 const ErrorPage: NextPage = () => {
   return (
-    <main className="mt-5 flex w-full flex-1 flex-col items-center justify-center px-20">
-      <h1 className="text-xl font-bold">Error</h1>
-      <p className="text-2xl mt-3">
-        Oops! Something went wrong. Seems like this pages isn&#180;t made yet 😉
+    <>
+      <br />
+      <br />
+      <br />
+      <h1 id={pageStyles.title}>404 Error</h1>
+      <p id={pageStyles.description}>
+        Oops! Something went wrong. Seems like this isn&#180;t the page you are
+        looking for.
       </p>
-    </main>
+      <br />
+      <br />
+      <br />
+    </>
   );
 };
 
