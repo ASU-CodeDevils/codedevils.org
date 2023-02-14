@@ -51,7 +51,7 @@ const DesktopFooter = () => {
                 "https://asu.campuslabs.com/engage/organization/codedevils/"
               }
             >
-              SunDevilSnyc
+              SunDevilSync
             </Link>
           </li>
           <li className={desktopStyles.list_item}>
@@ -64,7 +64,7 @@ const DesktopFooter = () => {
               target="_blank"
               href={"https://www.hackerrank.com/codedevils-spring-challenge"}
             >
-              Hackerrank
+              HackerRank
             </Link>
           </li>
 
