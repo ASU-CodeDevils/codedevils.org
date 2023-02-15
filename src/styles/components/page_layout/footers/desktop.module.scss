@@ -1,0 +1,55 @@
+@use "./../../../util/vars.scss" as *;
+
+#footer_container {
+  margin-top: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: flex-start;
+  box-shadow: $box_shadow;
+
+  #description_wrapper {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    width: 50%;
+    #description {
+      text-align: left;
+    }
+  }
+
+  #linkWrapper {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+
+    .section_title {
+      width: 100%;
+      text-align: left;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .link_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .list_item {
+        height: 25%;
+        width: 6rem;
+        &:hover {
+          color: $asu_maroon;
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,9 @@
-import { NextPage } from "next";
 import React from "react";
+import { NextPage } from "next";
 
-// styles
 import pageStyles from "./../styles/pages/layout.module.scss";
 
-const HomePage: NextPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <>
       <br />
@@ -21,4 +20,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default AboutPage;

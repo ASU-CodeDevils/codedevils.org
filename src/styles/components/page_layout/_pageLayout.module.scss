@@ -1,0 +1,22 @@
+@use "./../../util/vars.scss" as *;
+
+#page_layout {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+// desktop styles
+@media screen and (min-width: $desktop_size) {
+  #page_layout {
+    min-width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    #content_conatiner {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+}

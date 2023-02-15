@@ -4,15 +4,16 @@ import React from "react";
 // styles
 import pageStyles from "./../styles/pages/layout.module.scss";
 
-const HomePage: NextPage = () => {
+const ErrorPage: NextPage = () => {
   return (
     <>
       <br />
       <br />
       <br />
+      <h1 id={pageStyles.title}>404 Error</h1>
       <p id={pageStyles.description}>
-        This website is currently under construction. Please come back later to
-        see finished website.
+        Oops! Something went wrong. Seems like this isn&#180;t the page you are
+        looking for.
       </p>
       <br />
       <br />
@@ -21,4 +22,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default ErrorPage;

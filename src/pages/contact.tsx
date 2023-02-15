@@ -4,15 +4,18 @@ import React from "react";
 // styles
 import pageStyles from "./../styles/pages/layout.module.scss";
 
-const HomePage: NextPage = () => {
+const ContactPage: NextPage = () => {
   return (
     <>
       <br />
       <br />
       <br />
       <p id={pageStyles.description}>
-        This website is currently under construction. Please come back later to
-        see finished website.
+        If you have any questions, comments, or concerns, please contact us at
+        <a id={pageStyles.email} href="mailto:info@codedevils.org">
+          {" "}
+          info@codedevils.org
+        </a>
       </p>
       <br />
       <br />
@@ -21,4 +24,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default ContactPage;
