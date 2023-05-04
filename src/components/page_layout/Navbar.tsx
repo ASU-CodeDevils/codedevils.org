@@ -421,15 +421,19 @@ const MobileNavbar = ({ currentPagePath }) => {
 
 const Navbar = ({ currentPagePath }) => {
   // const { state } = useContext(AppContext);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { state } = React.useContext(AppContext);
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { isMobile } = state;
 
   return (
     <>
       {isMobile ? (
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         <MobileNavbar currentPagePath={currentPagePath} />
       ) : (
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         <DesktopNavbar currentPagePath={currentPagePath} />
       )}
     </>

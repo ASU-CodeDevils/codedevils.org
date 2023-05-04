@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { type NextPage } from "next";
 
 // styles
 import pageStyles from "./../../styles/pages/layout.module.scss";

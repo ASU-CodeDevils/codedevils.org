@@ -85,6 +85,7 @@ const DesktopFooter = () => {
 
 const MobileFooter = () => {
   const openPDF = (path) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     window.open(path, "_blank");
   };
 
@@ -142,10 +143,12 @@ const MobileFooter = () => {
 };
 
 const Footer = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { state } = React.useContext(AppContext);
   // const { state } = React.useContext(AppContext) as any;
   console.log("state", state);
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { isMobile } = state;
 
   return <>{isMobile ? <MobileFooter /> : <DesktopFooter />}</>;
