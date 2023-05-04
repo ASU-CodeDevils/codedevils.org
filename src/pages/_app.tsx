@@ -1,16 +1,19 @@
 // // file src: ./src/pages/_app.tsx
 
 import Layout from "../components/page_layout/_pageLayout";
-import type { AppProps } from "next/app";
+
+import { type AppType} from "next/app";
 import { ClerkProvider } from '@clerk/nextjs';
-import { trpc } from "../utils/trpc";
+import { api } from "~/utils/api";
 import React from "react";
+
 // gobal styles
 import "../styles/globals.css";
+
 // contexts
 import { AppContextProvider } from "./../contexts/AppContext";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider {...pageProps}>
       <AppContextProvider>
@@ -23,4 +26,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default trpc.withTRPC(MyApp);
+export default api.withTRPC(MyApp);

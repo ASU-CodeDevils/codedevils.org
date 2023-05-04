@@ -1,27 +1,22 @@
-import { env } from "./src/env/server.mjs";
-
 /**
- * Don't be scared of the generics here.
- * All they do is to give us autocompletion when using this.
- *
- * @template {import('next').NextConfig} T
- * @param {T} config - A generic parameter that flows through to the return type
- * @constraint {{import('next').NextConfig}}
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
+ * for Docker builds.
  */
-function defineNextConfig(config) {
-  return config;
-}
+await import("./src/env.mjs");
 
-export default defineNextConfig({
+/** @type {import("next").NextConfig} */
+const config = {
   reactStrictMode: true,
-  swcMinify: true,
-  
-  // automatically create a standalone folder that copies only the necessary files for a production deployment including select files in node_modules
-  // Learn more: https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files
-  output: 'standalone', 
-  // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
+
+  /**
+   * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config
+   * out.
+   *
+   * @see https://github.com/vercel/next.js/issues/41980
+   */
   i18n: {
-    locales: ["en", "es"],
+    locales: ["en"],
     defaultLocale: "en",
   },
-});
+};
+export default config;
