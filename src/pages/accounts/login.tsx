@@ -7,9 +7,6 @@ import pageStyles from "./../../styles/pages/layout.module.scss";
 const Login: NextPage = () => {
   return (
     <>
-      <br />
-      <br />
-      <br />
       <h1 id={pageStyles.description}>New users login page coming soon.</h1>
       <div id={pageStyles.button_wrapper}>
         <Link className={pageStyles.register} href="/accounts/register">
@@ -18,9 +15,6 @@ const Login: NextPage = () => {
           Create New Account
         </Link>
       </div>
-      <br />
-      <br />
-      <br />
     </>
   );
 };
