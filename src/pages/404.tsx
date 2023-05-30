@@ -7,17 +7,11 @@ import pageStyles from "./../styles/pages/layout.module.scss";
 const ErrorPage: NextPage = () => {
   return (
     <>
-      <br />
-      <br />
-      <br />
       <h1 id={pageStyles.title}>404 Error</h1>
       <p id={pageStyles.description}>
         Oops! Something went wrong. Seems like this isn&#180;t the page you are
         looking for.
       </p>
-      <br />
-      <br />
-      <br />
     </>
   );
 };
