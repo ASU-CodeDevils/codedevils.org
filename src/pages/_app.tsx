@@ -6,7 +6,7 @@ import Layout from "../components/page_layout/_pageLayout";
 import { trpc } from "../utils/trpc";
 import React from "react";
 // gobal styles
-import "../styles/globals.css";
+import "./../styles/globals.css";
 // contexts
 import { AppContextProvider } from "./../contexts/AppContext";
 
