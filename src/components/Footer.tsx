@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,12 +9,6 @@ const Footer = () => {
   const openPDF = (path) => {
     window.open(path, "_blank");
   };
-
-  const [currentYear, setCurrentYear] = useState<number | undefined>(undefined);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, [currentYear]);
 
   return (
     <footer className="bg-white dark:bg-gray-900">
@@ -68,7 +62,7 @@ const Footer = () => {
               <ul className="font-medium text-black">
                 {[
                   ["Instagram", "https://www.instagram.com/asu_codedevils/"],
-                  ["Discord Community", "https://discord.gg/9YCuQ5B48v"],
+                  ["Discord", "https://discord.gg/9YCuQ5B48v"],
                   [
                     "SunDevilSync",
                     "https://asu.campuslabs.com/engage/organization/codedevils/",
