@@ -106,7 +106,7 @@ const Navbar = () => {
 
       <ul
         className={`${
-          showMobileNav && " flex text-black md:relative md:top-0 md:right-0"
+          showMobileNav && "flex text-black md:relative md:top-0 md:right-0"
         } w-[30vw] md:my-0 md:mx-[0.25rem] md:flex md:min-w-fit md:flex-[1] md:justify-end md:transition-all md:duration-300 md:ease-out`}
       >
         {[
@@ -172,7 +172,13 @@ const Navbar = () => {
       >
         <FaLanguage />
 
-        <ul className={`${showDropdown ? "thebox" : "hidden"}`}>
+        <ul
+          className={`${
+            showDropdown
+              ? "absolute right-[1rem] top-[4.5rem] flex h-auto min-w-[2em] flex-col flex-nowrap bg-white p-[20px] text-black shadow-md transition-all duration-300 ease-in-out before:fixed before:top-[3.75rem] before:right-[3.5rem] before:h-0 before:w-0 before:border-[10px] before:border-t-0 before:border-b-[20px] before:border-solid before:border-transparent before:border-b-white"
+              : "hidden"
+          }`}
+        >
           {[
             "Española",
             "English",
