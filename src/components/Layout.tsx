@@ -1,9 +1,8 @@
 import Head from "next/head";
 
-// components
-import PageHeader from "./headers/_headerLayout";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Header from "./Header";
 
 export default function Layout({ children }) {
   return (
@@ -21,9 +20,9 @@ export default function Layout({ children }) {
       </Head>
 
       <Navbar />
-      <PageHeader />
+      <Header />
 
-      <main className="md:mb-4 md:text-center">{children}</main>
+      <main className="py-4 text-center md:mb-4">{children}</main>
       <Footer />
     </div>
   );
