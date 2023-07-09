@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,7 +5,7 @@ import { AiOutlineInstagram, AiOutlineLink } from "react-icons/ai";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
-  const openPDF = (path) => {
+  const openPDF = (path: string) => {
     window.open(path, "_blank");
   };
   return (
