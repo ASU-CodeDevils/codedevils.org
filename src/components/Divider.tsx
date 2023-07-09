@@ -1,3 +1,5 @@
+import React from "react";
+
 const Divider = () => {
   return (
     <div className="line relative bottom-0 h-fit overflow-x-hidden overflow-y-visible bg-transparent transition-all duration-1000">

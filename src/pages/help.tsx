@@ -1,3 +1,4 @@
+import React from "react";
 import type { NextPage } from "next";
 import { signIn } from "next-auth/react";
 import { trpc } from "../utils/trpc";
