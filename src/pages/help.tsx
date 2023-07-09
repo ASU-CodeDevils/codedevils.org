@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { signIn } from "next-auth/react";
 import { trpc } from "../utils/trpc";
-import React from "react";
 
 const Home: NextPage = () => {
   const hello = trpc.hello.useQuery({ text: "World" });
