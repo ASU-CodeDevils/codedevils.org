@@ -10,12 +10,6 @@
   box-sizing: border-box;
 }
 
-/* * {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-} */
-
 html {
   color-scheme: dark light;
 }
@@ -24,113 +18,11 @@ body {
   min-height: 100vh;
 }
 
-/* img,
-picture,
-svg,
-video {
-  max-width: 100%;
-  display: block;
-}
-
-input,
-textarea,
-select,
-button {
-  font-family: inherit;
-} */
-
-/* #navbar_button_wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  min-width: fit-content;
-  width: 30vw;
-  margin: 0 0.25rem;
-
-  * {
-    margin: 0 0.25rem;
-    transition: all 300ms ease-out;
-  }
-  .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    border-radius: 1.5rem;
-    padding: 0.5rem 0.5rem;
-    letter-spacing: 1.45px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-  }
-} */
-
-.linkItem {
-  /* flex: 1; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* min-width: fit-content; */
-  /* width: 30vw; */
-  /* margin: 0 0.25rem; */
-  /* transition: all 300ms ease-out; */
-
-  /* @apply my-0 mx-[0.25rem] flex w-[30vw] min-w-fit justify-end transition-all duration-300 ease-out; */
-}
-
-.button {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-items: center; */
-  /* flex-wrap: nowrap; */
-  /* border-radius: 1.5rem; */
-  /* padding: 0.5rem 0.5rem; */
-  /* letter-spacing: 1.45px; */
-  /* font-size: 0.75rem; */
-  /* text-transform: uppercase; */
-  /* font-family: "Poppins", sans-serif; */
-  /* 
-   */
-  /* border: 1px solid white; */
-  /* color: white; */
-
-  /* @apply font-serif flex flex-nowrap items-center rounded-3xl p-2 text-base uppercase; */
-}
-/* 
-.button:hover {
-  background: white;
-  color: black;
-} */
-
-.thebox {
-  /* background: white; */
-  /* transition: all 300ms ease-in-out; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: nowrap; */
-  /* position: absolute; */
-  /* right: 1rem; */
-  /* top: 4.5rem; */
-  /* box-shadow: 0 1px 10px rgb(26 26 26 / 40%); */
-  /* padding: 20px; */
-  /* min-width: 2em; */
-  /* height: auto; */
-  /* z-index: 100; */
-  @apply absolute right-[1rem] top-[4.5rem] flex h-auto min-w-[2em] flex-col flex-nowrap bg-white p-[20px] text-black shadow-md transition-all duration-300 ease-in-out;
-}
-
-.thebox::before {
-  content: "";
-  position: fixed;
-  /*
-          the positioning of the triamge is up in the air and i don't know if it's actually responsive 
-        */
-  top: 3.75rem;
-  right: 3.5rem;
-
-  /* makes a triangle using css */
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top: 0;
-  border-bottom: 20px solid white;
+.bg-hero {
+  background-image: linear-gradient(
+      -135deg,
+      hsla(341, 66%, 33%, 0.75) 25%,
+      hsla(341, 66%, 33%, 0.75) 100%
+    ),
+    url(./../../public/bg/code-grid.png);
 }
