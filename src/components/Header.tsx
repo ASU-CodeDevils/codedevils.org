@@ -15,7 +15,7 @@ const poppins = Poppins({
   weight: ["400"],
 });
 
-const HomeHeader = ({ url, title, description, key }) => {
+const NonHomeHeader = ({ url, title, description, key }) => {
   const { asPath } = useRouter();
 
   const { ref: myRef, inView: isInView } = useInView({
@@ -99,7 +99,7 @@ const Header = () => {
           ].map(
             ([url, title, description], key) =>
               asPath === url && (
-                <HomeHeader
+                <NonHomeHeader
                   url={url}
                   title={title}
                   description={description}
