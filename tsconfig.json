@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -26,9 +22,12 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
-, "src/index.js", "src/App.jsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.mjs",
+    "src/index.js",
+    "src/App.jsx",
+    "public/langs/english/components/navbar.js",
+    "src/contexts/AppContext.jsx",
+    "src/reducers/appReducer.jsx"
+  ],
+  "exclude": ["node_modules"]
 }

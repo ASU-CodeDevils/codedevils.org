@@ -1,8 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
 
+@import "tailwindcss/components";
 
-*, *::before, *::after {
-  font-family: "Poppins", sans-serif;
+@import "tailwindcss/utilities";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.bg-hero {
+  background-image: linear-gradient(
+      -135deg,
+      hsla(341, 66%, 33%, 0.75) 25%,
+      hsla(341, 66%, 33%, 0.75) 100%
+    ),
+    url(./../../public/bg/code-grid.png);
 }
