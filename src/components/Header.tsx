@@ -60,7 +60,7 @@ const Header = () => {
             isInView
               ? "translate-x-0	opacity-100 blur-0"
               : "-translate-x-full opacity-0 blur"
-          } items-left flex w-screen flex-col flex-wrap justify-start px-4 pb-12 text-[3.5rem] font-light transition-all duration-1000`}
+          } items-left flex w-8/12 flex-col flex-wrap justify-start px-4 pb-12 text-[3.5rem] font-light transition-all duration-1000`}
         >
           <p className="font-light">
             <strong className={`${poppins.className} font-extrabold`}>
