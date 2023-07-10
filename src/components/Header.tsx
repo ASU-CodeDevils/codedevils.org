@@ -15,7 +15,19 @@ const poppins = Poppins({
   weight: ["400"],
 });
 
-const NonHomeHeader = ({ url, title, description, key }) => {
+type NonHomeHeaderProps = {
+  url: string;
+  title: string;
+  description: string;
+  key: number;
+};
+
+const NonHomeHeader = ({
+  url,
+  title,
+  description,
+  key,
+}: NonHomeHeaderProps) => {
   const { asPath } = useRouter();
 
   const { ref: myRef, inView: isInView } = useInView({
@@ -100,10 +112,10 @@ const Header = () => {
             ([url, title, description], key) =>
               asPath === url && (
                 <NonHomeHeader
-                  url={url}
-                  title={title}
-                  description={description}
-                  key={key}
+                  url={url as string}
+                  title={title as string}
+                  description={description as string}
+                  key={key as number}
                 />
               )
           )}
