@@ -1,12 +1,13 @@
-import type { AppType } from "next/app";
-import Layout from "../components/Layout";
-import { trpc } from "../utils/trpc";
-import React from "react";
+import { type AppType } from "next/app";
 import { ClerkProvider } from "@clerk/nextjs";
-// gobal styles
-import "./../styles/globals.css";
+import { api } from "~/utils/api";
+import React from "react";
+import Layout from "../components/Layout";
 
-const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
+// gobal styles
+import "~/styles/globals.css";
+
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider {...pageProps}>
       <Layout>
@@ -16,4 +17,4 @@ const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
   );
 };
 
-export default trpc.withTRPC(MyApp);
+export default api.withTRPC(MyApp);
