@@ -26,11 +26,8 @@ dependencies:
   '@trpc/next':
     specifier: ^10.4.3
     version: 10.4.3(@tanstack/react-query@4.3.8)(@trpc/client@10.4.3)(@trpc/react-query@10.0.0-proxy-beta.21)(@trpc/server@10.4.3)(next@13.0.6)(react-dom@18.2.0)(react@18.2.0)
-  '@trpc/react':
-    specifier: ^9.27.4
-    version: 9.27.4(@trpc/client@10.4.3)(@trpc/server@10.4.3)(react-dom@18.2.0)(react-query@3.39.2)(react@18.2.0)
   '@trpc/react-query':
-    specifier: ^10.0.0-proxy-beta.21
+    specifier: 10.0.0-proxy-beta.21
     version: 10.0.0-proxy-beta.21(@tanstack/react-query@4.3.8)(@trpc/client@10.4.3)(@trpc/server@10.4.3)(react-dom@18.2.0)(react@18.2.0)
   '@trpc/server':
     specifier: ^10.4.3
@@ -550,24 +547,6 @@ packages:
       '@trpc/server': 10.4.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@trpc/react@9.27.4(@trpc/client@10.4.3)(@trpc/server@10.4.3)(react-dom@18.2.0)(react-query@3.39.2)(react@18.2.0):
-    resolution: {integrity: sha512-bP74Tf6vWcMoWYiTAvbWrieV9cFQiKUDKRoRj0+VeGJbxdbhdJyUzv4zos0T4SiSKuhgoEm9bP4jWU2NhNhpIA==}
-    deprecated: 'Migrate to v10: https://trpc.io/docs/migrate-from-v9-to-v10. Also, this package has changed name to `@trpc/react-query`.'
-    peerDependencies:
-      '@trpc/client': 9.27.4
-      '@trpc/server': 9.27.4
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-      react-query: ^3.37.0
-    dependencies:
-      '@babel/runtime': 7.22.6
-      '@trpc/client': 10.4.3(@trpc/server@10.4.3)
-      '@trpc/server': 10.4.3
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-query: 3.39.2(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@trpc/server@10.4.3:
