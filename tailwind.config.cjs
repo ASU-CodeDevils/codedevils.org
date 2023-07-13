@@ -2,7 +2,6 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   backgroundImage: {
-    // "hero-pattern": "url(./../../../../public/bg/code-grid.png)",
     "hero-pattern":
       "linear-gradient(-135deg, hsla(341, 66%, 33%, 0.75) 25%, hsla(341, 66%, 33%, 0.75) 100%), url(./../../../../public/bg/code-grid.png)",
   },
