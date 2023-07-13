@@ -10,7 +10,7 @@ const Footer = () => {
     window.open(path, "_blank");
   };
   return (
-    <footer className="mt-auto bg-white dark:bg-gray-900">
+    <footer className="mt-auto bg-white">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">
                 Organization
               </h2>
               <ul className="font-medium text-black">
@@ -46,7 +46,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 ">
                 Resources
               </h2>
               <ul className="font-medium text-black">
@@ -73,7 +73,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">
                 Legal
               </h2>
               <ul className="font-medium text-black">
@@ -94,7 +94,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-4" />
+        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-4" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-black">
             © 2023{" "}
@@ -136,7 +136,7 @@ const Footer = () => {
             ].map(([icon, title, url], key) => (
               <li key={key}>
                 <Link
-                  className="text-black transition-colors duration-200 ease-in-out hover:text-maroon dark:hover:text-white"
+                  className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                   target="_blank"
                   href={url as string}
                 >
