@@ -189,8 +189,8 @@ const Navbar = () => {
             "日本語",
             "हिन्दी",
           ].map((language, key) => (
-            <li key={key} className="">
-              <button className="">{language}</button>
+            <li key={key}>
+              <button className="text-black">{language}</button>
             </li>
           ))}
         </ul>
