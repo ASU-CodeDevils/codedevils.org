@@ -7,7 +7,7 @@ import Header from "./Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen flex-col flex-nowrap">
+    <div className="flex h-screen flex-col flex-nowrap bg-white dark:bg-black">
       <Head>
         <title>CodeDevils - Develop. Network. Create.</title>
         <meta
@@ -23,7 +23,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Navbar />
       <Header />
 
-      <main className="py-4 text-center md:mb-4">{children}</main>
+      <main className="flex items-center justify-center bg-white py-4 text-center">
+        {children}
+      </main>
       <Footer />
     </div>
   );

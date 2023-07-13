@@ -94,8 +94,8 @@ const Navbar = () => {
               href={url as string}
               className={`${
                 isScrolling
-                  ? " md:text-gray-100 md:hover:text-maroon"
-                  : "md:text-white md:hover:text-gray-400"
+                  ? " dark:text-black md:text-gray-100 md:hover:text-maroon"
+                  : " text-black md:text-white md:hover:text-gray-400"
               } flex w-full items-center justify-center p-2 text-center md:rounded-lg md:py-2 md:font-medium`}
             >
               {title}
@@ -127,7 +127,7 @@ const Navbar = () => {
             <FiLogIn key={2} />,
             {
               scrollStyles: `md:border-maroon bg-maroon text-white md:hover:border-black md:hover:bg-black md:hover:text-white md:hover:shadow-lg`,
-              nonScrollStyles: "bg-white md:text-black md:hover:bg-gray-600",
+              nonScrollStyles: "bg-white text-black md:hover:bg-gray-600",
               customGeneralStyles: `${`absolute top-[1.7rem] right-[17vw]  z-50 md:relative md:top-0 md:right-0`}`,
             },
           ],
@@ -165,7 +165,7 @@ const Navbar = () => {
         } items-center justify-center rounded-full p-[.7rem] shadow-xl transition-all duration-200 ease-in-out ${
           isScrolling
             ? "bg-maroon text-white hover:bg-black"
-            : "bg-white hover:bg-gray-600"
+            : "bg-white hover:bg-gray-600 dark:bg-black dark:hover:bg-gray-100"
         }`}
         onMouseOver={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
@@ -175,7 +175,7 @@ const Navbar = () => {
         <ul
           className={`${
             showDropdown
-              ? "absolute right-[1rem] top-[4.5rem] flex h-auto min-w-[2em] flex-col flex-nowrap bg-white p-[20px] text-black shadow-md transition-all duration-300 ease-in-out before:fixed before:top-[3.75rem] before:right-[3.5rem] before:h-0 before:w-0 before:border-[10px] before:border-t-0 before:border-b-[20px] before:border-solid before:border-transparent before:border-b-white"
+              ? "absolute right-[1rem] top-[4.5rem] flex h-auto min-w-[2em] flex-col flex-nowrap bg-white p-[20px] shadow-md transition-all duration-300 ease-in-out before:fixed before:top-[3.75rem] before:right-[3.5rem] before:h-0 before:w-0 before:border-[10px] before:border-t-0 before:border-b-[20px] before:border-solid before:border-transparent before:border-b-white"
               : "hidden"
           }`}
         >
@@ -190,7 +190,7 @@ const Navbar = () => {
             "हिन्दी",
           ].map((language, key) => (
             <li key={key}>
-              <button className="text-black">{language}</button>
+              <button className="text-black ">{language}</button>
             </li>
           ))}
         </ul>
