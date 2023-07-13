@@ -1,11 +1,8 @@
 import { NextPage } from "next";
 
-// styles
-import pageStyles from "./../../styles/pages/layout.module.scss";
-
 const SignupPage: NextPage = () => {
   return (
-    <h1 id={pageStyles.description}>
+    <h1 className="flex items-center justify-center text-center">
       New users registration page coming soon.
     </h1>
   );
