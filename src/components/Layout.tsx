@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Navbar />
       <Header />
 
-      <main className="flex items-center justify-center bg-white py-4 text-center">
+      <main className="flex items-center justify-center bg-white py-4 text-center text-black">
         {children}
       </main>
       <Footer />
