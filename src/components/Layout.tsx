@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Header from "./Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,9 +20,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
 
       <Navbar />
-      <Header />
 
-      <main className="flex items-center justify-center bg-white py-4 text-center text-black">
+      <main className="flex flex-col items-center justify-center bg-white text-center text-black">
         {children}
       </main>
       <Footer />
