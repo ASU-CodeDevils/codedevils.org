@@ -7,10 +7,9 @@ import { useUser } from "@clerk/nextjs";
 import { FaLanguage } from "react-icons/fa";
 import { HiUserAdd } from "react-icons/hi";
 import { FiLogIn } from "react-icons/fi";
-import { AiOutlineUser } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import SettingsBtn from "./SettingsBtn";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -169,9 +168,9 @@ const Navbar = () => {
       )}
 
       <div
-        className={`${
-          showMobileNav ? "flex" : "hidden md:flex"
-        } ml-auto items-center justify-center rounded-full p-[.7rem] shadow-xl transition-all duration-200 ease-in-out ${
+        className={`${showMobileNav ? "flex" : "hidden md:flex"} ${
+          !isSignedIn && " p-[.7rem]"
+        } ml-auto items-center justify-center rounded-full shadow-xl transition-all duration-200 ease-in-out ${
           isScrolling
             ? "bg-maroon hover:bg-black"
             : "bg-white hover:bg-gray-600  dark:hover:bg-gray-100"
@@ -180,44 +179,33 @@ const Navbar = () => {
         onMouseLeave={() => setShowDropdown(false)}
       >
         {isSignedIn ? (
-          <>
-            <SettingsBtn
-              showDropdown={showDropdown}
-              icon={
-                <AiOutlineUser
-                  className={`${isScrolling ? "text-white" : "text-black"}`}
-                />
-              }
-              list={
-                [
-                  ["Profile", "/profile"],
-                  ["Settings", "/settings"],
-                ] as [string, string][]
-              }
-            />
-          </>
+          <UserButton afterSignOutUrl="/" />
         ) : (
           <>
-            <SettingsBtn
-              showDropdown={showDropdown}
-              icon={
-                <FaLanguage
-                  className={`${isScrolling ? "text-white" : "text-black"}`}
-                />
-              }
-              list={
-                [
-                  "Española",
-                  "English",
-                  "Française",
-                  "عربى",
-                  "Nederlands",
-                  "Deutsche",
-                  "日本語",
-                  "हिन्दी",
-                ] as string[]
-              }
-            />
+            <FaLanguage />
+
+            <ul
+              className={`${
+                showDropdown
+                  ? "absolute right-[1rem] top-[4.5rem] flex h-auto min-w-[2em] flex-col flex-nowrap bg-white p-[20px] text-black shadow-md transition-all duration-300 ease-in-out before:fixed before:top-[3.75rem] before:right-[3.5rem] before:h-0 before:w-0 before:border-[10px] before:border-t-0 before:border-b-[20px] before:border-solid before:border-transparent before:border-b-white"
+                  : "hidden"
+              }`}
+            >
+              {[
+                "Española",
+                "English",
+                "Française",
+                "عربى",
+                "Nederlands",
+                "Deutsche",
+                "日本語",
+                "हिन्दी",
+              ].map((language, key) => (
+                <li key={key}>
+                  <button className="text-black">{language}</button>
+                </li>
+              ))}
+            </ul>
           </>
         )}
       </div>
