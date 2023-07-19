@@ -8,6 +8,7 @@ import { FaLanguage } from "react-icons/fa";
 import { HiUserAdd } from "react-icons/hi";
 import { FiLogIn } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
 import { UserButton } from "@clerk/nextjs";
 
@@ -38,9 +39,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${showMobileNav && "bg-white"} ${
+      className={`${showMobileNav && "bg-white shadow-xl"} ${
         isScrolling ? "bg-white md:shadow" : "md:bg-transparent"
-      } md:min-h-{5.563rem} fixed top-0 left-0 z-10 w-screen min-w-fit py-2 md:fixed md:top-0 md:left-0 md:z-50 md:flex md:flex-nowrap md:items-center md:px-12 md:py-1 md:transition-all md:duration-1000 md:ease-in-out`}
+      } md:min-h-{5.563rem} fixed top-0 left-0 z-10 w-screen min-w-fit py-2 md:fixed md:top-0 md:left-0 md:z-50 md:flex md:flex-nowrap md:items-center md:px-12 md:py-1 md:shadow-none md:transition-all md:duration-1000 md:ease-in-out`}
     >
       <Link
         onClick={() => setShowMobileNav(false)}
@@ -55,24 +56,27 @@ const Navbar = () => {
         />
       </Link>
 
+      <UserButton
+        appearance={{
+          elements: {
+            userButtonBox: "flex md:hidden absolute top-[2rem] right-[4.5rem]",
+          },
+        }}
+      />
+
       <button
-        className={`fixed top-7 right-3 flex  rounded border-solid p-[.6rem] text-xl outline-0 transition-colors duration-300 ease-in-out hover:bg-gray-600 focus:border-[.1rem] focus:border-gray-400 focus:p-2 md:hidden ${
-          showMobileNav
-            ? "text-black"
-            : ` hover:text-maroon focus:text-white ${
-                isScrolling ? "text-maroon" : "text-white"
-              }`
-        }`}
+        className={`fixed top-7 right-3 flex rounded border-solid p-[.6rem] text-xl outline-0 transition-all duration-500 ease-in-out md:hidden ${
+          showMobileNav ? "text-black" : "text-white"
+        } ${isScrolling && "text-maroon"}`}
         onClick={() => setShowMobileNav(!showMobileNav)}
       >
-        {/* add styles to this icon */}
-        <GiHamburgerMenu />
+        {!showMobileNav ? <GiHamburgerMenu /> : <AiOutlineClose />}
       </button>
 
       <ul
         className={`${
           showMobileNav ? "flex" : "hidden md:flex"
-        } flex-col md:my-auto md:mx-8 md:min-w-fit md:flex-row md:flex-nowrap md:items-center md:justify-between`}
+        }  flex-col md:my-auto md:mx-8 md:min-w-fit md:flex-row md:flex-nowrap md:items-center md:justify-between`}
       >
         {[
           ["Home", "/"],
@@ -172,17 +176,24 @@ const Navbar = () => {
           !isSignedIn && " p-[.7rem]"
         } ml-auto items-center justify-center rounded-full shadow-xl transition-all duration-200 ease-in-out ${
           isScrolling
-            ? "bg-maroon hover:bg-black"
-            : "bg-white hover:bg-gray-600  dark:hover:bg-gray-100"
+            ? "md:bg-maroon md:hover:bg-black"
+            : "md:bg-white md:hover:bg-gray-600  md:dark:hover:bg-gray-100"
         }`}
         onMouseOver={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
       >
         {isSignedIn ? (
-          <UserButton afterSignOutUrl="/" />
+          <UserButton
+            afterSignOutUrl="/"
+            appearance={{
+              elements: { userButtonBox: "hidden md:flex" },
+            }}
+          />
         ) : (
           <>
-            <FaLanguage />
+            <FaLanguage
+              className={`${!isScrolling ? "text-black" : "text-white"}`}
+            />
 
             <ul
               className={`${
