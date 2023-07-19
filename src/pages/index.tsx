@@ -25,7 +25,7 @@ const HomePage: NextPage = () => {
             isInView
               ? "translate-x-0	opacity-100 blur-0"
               : "-translate-x-full opacity-0 blur"
-          } flex w-screen flex-col flex-wrap justify-start pt-4 pl-10 text-left text-[2.5rem] transition-all duration-1000 md:w-7/12 md:text-[3rem]`}
+          } flex w-screen flex-col flex-nowrap justify-start px-4 pt-4 text-left text-[2.5rem] transition-all duration-1000 md:w-7/12 md:pl-10 md:text-[3rem]`}
         >
           <h1 className="">CodeDevils - An ASU Student Organization</h1>
           <Typewriter

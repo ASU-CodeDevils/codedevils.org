@@ -20,7 +20,7 @@ const Header = ({ title, description }: HeaderProps) => {
           isInView
             ? "translate-x-0	opacity-100 blur-0"
             : "-translate-x-full opacity-0 blur"
-        } w-screen py-4 pl-10 text-[3rem] transition-all duration-1000 ease-in-out md:w-7/12`}
+        } flex w-screen flex-col  items-start justify-center py-4 px-4 text-[3rem] transition-all duration-1000 ease-in-out md:w-8/12 md:pl-10`}
       >
         {title && <h1 className="text-left font-light">{title}</h1>}
         {description && (
