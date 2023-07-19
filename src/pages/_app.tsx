@@ -4,7 +4,7 @@ import { api } from "~/utils/api";
 import React from "react";
 import Layout from "../components/Layout";
 
-// gobal styles
+// global styles
 import "~/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
