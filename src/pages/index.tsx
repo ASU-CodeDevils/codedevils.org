@@ -30,6 +30,7 @@ const HomePage: NextPage = () => {
             zIndex: "0",
           }} // optional
           alt="CodeDevils code grid header background"
+          priority
         />
         <div
           ref={headerRef}

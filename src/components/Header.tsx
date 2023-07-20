@@ -25,6 +25,7 @@ const Header = ({ title, description }: HeaderProps) => {
           zIndex: "0",
         }} // optional
         alt="CodeDevils code grid header background"
+        priority
       />
       <div
         ref={myRef}
