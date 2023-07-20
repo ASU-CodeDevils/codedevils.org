@@ -65,6 +65,9 @@ const Navbar = () => {
       />
 
       <button
+        aria-label={`${
+          !showMobileNav ? "Open mobile navigation" : "Close mobile navigation"
+        }`}
         className={`fixed top-7 right-3 flex rounded border-solid p-[.6rem] text-xl outline-0 transition-all duration-500 ease-in-out md:hidden ${
           showMobileNav ? "text-black" : "text-white"
         } ${isScrolling && "text-maroon"}`}
@@ -213,7 +216,12 @@ const Navbar = () => {
                 "हिन्दी",
               ].map((language, key) => (
                 <li key={key}>
-                  <button className="text-black">{language}</button>
+                  <button
+                    aria-label={`Change language to ${language}`}
+                    className="text-black"
+                  >
+                    {language}
+                  </button>
                 </li>
               ))}
             </ul>

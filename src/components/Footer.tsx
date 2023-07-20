@@ -37,6 +37,7 @@ const Footer = () => {
                 ].map(([title, url], key) => (
                   <li key={key} className="mb-4">
                     <Link
+                      aria-label={`Learn more about CodeDevils by heading to ${title}`}
                       href={url as string}
                       className="hover:text-maroon hover:underline"
                     >
@@ -55,6 +56,7 @@ const Footer = () => {
                   ([title, url], key) => (
                     <li key={key} className="mb-4">
                       <Link
+                        aria-label={`Learn more about CodeDevil's ${title}`}
                         href={url as string}
                         className="hover:text-maroon hover:underline"
                       >
@@ -65,6 +67,7 @@ const Footer = () => {
                 )}
                 <li>
                   <button
+                    aria-label="Open CodeDevils welcome docs"
                     className="hover:text-maroon hover:underline"
                     onClick={() => openPDF("/pdf/welcome.pdf")}
                   >
@@ -84,6 +87,7 @@ const Footer = () => {
                 ].map(([title, url], key) => (
                   <li key={key} className="mb-4 last:mb-0">
                     <Link
+                      aria-label={`Open CodeDevils ${title} page`}
                       className="hover:text-maroon hover:underline"
                       href={url as string}
                     >
