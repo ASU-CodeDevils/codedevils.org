@@ -9,13 +9,30 @@ module.exports = {
     fontFamily: {
       sans: ["Arial", "sans-serif"],
     },
-    fontSize: {
-      sm: ["14px", "20px"],
-      base: ["16px", "24px"],
-      lg: ["20px", "28px"],
-      xl: ["24px", "32px"],
-    },
+
+    // fontSize: {
+    // sm: ["14px", "20px"],
+    // base: ["16px", "24px"],
+    // lg: ["20px", "28px"],
+    // xl: ["24px", "32px"],
+    // },
     extend: {
+      animation: {
+        bounce: "bounce 3s ease-in-out infinite",
+      },
+      keyframes: {
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-25%)",
+            "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      },
+
       colors: {
         maroon: "#8c1d40",
         gold: "#ffc627",
@@ -30,6 +47,7 @@ module.exports = {
           500: "#d0d0d0",
           600: "#e8e8e8",
           700: "#fafafa",
+          800: "#f5f5f5",
         },
         copper: "#af674b",
         turquoise: "#04ab7c4",

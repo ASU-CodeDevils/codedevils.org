@@ -1,12 +1,20 @@
 import React from "react";
 import Head from "next/head";
 
+import Banner from "./Banner";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+import { Inter } from "@next/font/google";
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ["latin"] });
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen flex-col flex-nowrap bg-white dark:bg-black">
+    <div
+      className={`${inter.className} mx-auto flex h-screen flex-col flex-nowrap bg-white text-black `}
+    >
       <Head>
         <title>CodeDevils - Develop. Network. Create.</title>
         <meta
@@ -19,12 +27,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.png" />{" "}
       </Head>
 
-      <Navbar />
+      <div className="flex h-screen flex-col ">
+        <Navbar />
+        <main className="mx-auto mt-20 w-full max-w-screen-2xl md:mt-16">
+          {children}
+        </main>
 
-      <main className="flex flex-col items-center justify-center bg-white text-center text-black">
-        {children}
-      </main>
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }

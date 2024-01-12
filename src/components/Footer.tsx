@@ -11,8 +11,8 @@ const Footer = () => {
   };
   return (
     <footer className="mt-auto bg-white">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+      <div className="p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-2xl md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">
               <Image
@@ -100,9 +100,9 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-4" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="mx-auto w-full max-w-screen-2xl sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-black">
-            © 2023{" "}
+            © 2024{" "}
             <Link
               href="/"
               className="text-marron transition-colors duration-200 ease-in-out hover:text-maroon md:text-black"
@@ -121,7 +121,7 @@ const Footer = () => {
               [
                 <FaDiscord key={2} />,
                 "Discord",
-                "https://discord.gg/9YCuQ5B48v",
+                "https://discord.gg/YK2acN8brN",
               ],
               [
                 <AiOutlineLink key={3} />,
