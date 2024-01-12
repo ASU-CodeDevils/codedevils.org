@@ -4,14 +4,39 @@
 
 @import "tailwindcss/utilities";
 
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html {
-  color-scheme: dark light;
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 body {
