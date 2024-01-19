@@ -16,6 +16,7 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     }
@@ -25,12 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs",
-    "src/index.js",
-    "src/App.jsx",
-    "public/langs/english/components/navbar.js",
-    "src/contexts/AppContext.jsx",
-    "src/reducers/appReducer.jsx"
+    ".next/types/**/*.ts",
+    "next.config.cjs"
   ],
   "exclude": ["node_modules"]
 }
