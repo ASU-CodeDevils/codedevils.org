@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { FaArrowRight } from "react-icons/fa";
+import Button from "../Button";
 
 interface ButtonProps {
   text: string;
@@ -13,7 +13,6 @@ interface MenuButtonProps {
   title: string;
   text: string;
   picture?: string;
-  // btn?: string;
   btn?: ButtonProps;
   hide: boolean;
   amount: number;
@@ -25,39 +24,37 @@ const MenuContent: React.FC<MenuButtonProps> = ({
   picture,
   btn,
   hide,
-  amount,
 }: MenuButtonProps) => {
   return (
     <div
       className={`${
         !hide
-          ? `flex flex-col-reverse gap-4 md:grid	md:grid-cols-${amount}`
+          ? `flex flex-col-reverse gap-4 md:grid ${
+              picture ? "grid-cols-2" : "md:grid-cols-1"
+            }`
           : "hidden"
-      } mt-4 `}
+      } h-full`}
     >
-      <div className=" flex flex-col justify-start gap-2">
-        <h2 className="text-3xl font-bold">{title}</h2>
-        <p className="h-24 min-h-fit">{text}</p>
+      <div className=" items-between flex h-full min-h-fit flex-col justify-between">
+        <h2 className="text-3xl font-bold text-black">{title}</h2>
+        <p className="mb-2 min-h-fit grow py-2 text-base md:text-sm">{text}</p>
 
         {btn && (
-          <Link
-            href={btn.link}
-            target="_blank"
-            rel="noopener"
-            className="flex w-fit items-center gap-2 rounded-md bg-maroon px-4 py-2 text-base font-bold uppercase text-white"
-          >
+          <Button href={btn.link} target="_blank" rel="noopener noreferrer">
             {btn.text} <FaArrowRight className="inline" />
-          </Link>
+          </Button>
         )}
       </div>
       {picture && (
-        <Image
-          src={picture}
-          width={500}
-          height={500}
-          alt="What's new image"
-          className="shadow-base rounded-lg md:shadow-lg"
-        />
+        <div className="flex justify-center ">
+          <Image
+            src={picture}
+            width={500}
+            height={500}
+            alt="section image"
+            className="shadow-base my-auto h-auto w-auto rounded-lg md:shadow-lg"
+          />
+        </div>
       )}
     </div>
   );
