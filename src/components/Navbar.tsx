@@ -42,6 +42,11 @@ const Navbar: React.FC = () => {
                 className="text-2xl text-black focus:outline-none"
               >
                 {!showMobileNav ? <GiHamburgerMenu /> : <AiOutlineClose />}
+                <div className="sr-only">
+                  {showMobileNav
+                    ? "Close Mobile Navigation"
+                    : "Open Mobile Navigation"}
+                </div>
               </button>
             </div>
           </div>
