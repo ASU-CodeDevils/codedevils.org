@@ -43,6 +43,7 @@ const HomePage: NextPage = () => {
             className="text-white underline"
           >
             following our newsletter!
+            <div className="sr-only">Click here to see our newsletter</div>
           </Link>
         </div>
         <div className=" mx-4 grid h-fit rounded bg-white mix-blend-lighten shadow-lg md:mx-auto   md:w-10/12 md:grid-cols-3 md:space-y-0  ">
@@ -67,6 +68,9 @@ const HomePage: NextPage = () => {
               className="absolute bottom-0 flex items-center gap-2 pb-3 text-maroon"
             >
               Learn More <FaArrowRight />
+              <div className="sr-only">
+                Click here to learn more about our community
+              </div>
             </Link>
           </div>
 
@@ -92,6 +96,10 @@ const HomePage: NextPage = () => {
               className="absolute bottom-0 flex items-center gap-2 pb-3 text-maroon"
             >
               Learn More <FaArrowRight />
+              <div className="sr-only">
+                Click here to learn more about our projects and coding
+                competitions
+              </div>
             </Link>
           </div>
 
@@ -113,6 +121,9 @@ const HomePage: NextPage = () => {
               className="absolute bottom-0 flex items-center gap-2 pb-3 text-maroon"
             >
               Learn More <FaArrowRight />
+              <div className="sr-only">
+                Click here to learn more about our coding competitions
+              </div>
             </Link>
           </div>
         </div>
