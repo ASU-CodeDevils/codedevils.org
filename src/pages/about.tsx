@@ -224,6 +224,9 @@ export default function AboutPage({
                 rel="noopener noreferrer"
               >
                 Join our Discord
+                <div className="sr-only">
+                  Click here to join our Discord server
+                </div>
               </Button>
             </div>
           </article>
@@ -298,6 +301,10 @@ export default function AboutPage({
                               className="flex h-12 w-12 items-center justify-center rounded-full text-3xl text-maroon transition-colors hover:text-black"
                             >
                               <FaGithub />
+                              <div className="sr-only">
+                                Click here to visit the project&apos;s GitHub
+                                repository.
+                              </div>
                             </Link>
                           )}
                           {project.homepage && project.archived !== true && (
@@ -309,6 +316,9 @@ export default function AboutPage({
                               className="flex h-12 w-12 items-center justify-center rounded-full text-3xl text-maroon transition-colors hover:text-black"
                             >
                               <TbWorld />
+                              <div className="sr-only">
+                                Click here to visit the project&apos;s website.
+                              </div>
                             </Link>
                           )}
                         </div>
@@ -328,6 +338,10 @@ export default function AboutPage({
             className="flex items-center gap-2 text-xl font-black uppercase text-black transition-colors hover:text-maroon"
           >
             See More of our Projects
+            <div className="sr-only">
+              Click here to navigate to our GitHub organization page to see more
+              of our projects.
+            </div>
           </Link>
         </div>
 
@@ -342,6 +356,10 @@ export default function AboutPage({
                     className="text-xl font-bold uppercase "
                   >
                     Join as a Member
+                    <div className="sr-only">
+                      Click here to navigate to the learn how to join as our
+                      community.
+                    </div>
                   </Link>
                   <FaArrowRight />
                 </div>
@@ -363,6 +381,9 @@ export default function AboutPage({
                     className="text-xl font-bold uppercase "
                   >
                     Submit a Project
+                    <div className="sr-only">
+                      Click here to navigate to the project proposal guide.
+                    </div>
                   </Link>
                   <FaArrowRight />
                 </div>
