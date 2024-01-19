@@ -14,7 +14,7 @@ const BasicComponent: React.FC = () => {
         <div className="flex w-full	">
           <div className="flex grow items-center">
             <p className="flex w-full items-center justify-end gap-1 text-sm font-normal text-black">
-              <span className="me-3 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-maroon p-1 dark:bg-gray-600">
+              <span className="me-3 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-maroon p-1">
                 <svg
                   className="h-3 w-3 text-white"
                   aria-hidden="true"
