@@ -42,6 +42,7 @@ const MenuContent: React.FC<MenuButtonProps> = ({
         {btn && (
           <Button href={btn.link} target="_blank" rel="noopener noreferrer">
             {btn.text} <FaArrowRight className="inline" />
+            <div className="sr-only">Click to go to our {title}</div>
           </Button>
         )}
       </div>
