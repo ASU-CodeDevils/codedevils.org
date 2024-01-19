@@ -219,7 +219,7 @@ export default function AboutPage({
             </p>
             <div className="">
               <Button
-                href={"https://discord.com/invite/QQ4PNVhz"}
+                href={"https://discord.gg/eevXKjVmm2"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
