@@ -3,20 +3,18 @@ import Head from "next/head";
 
 import Navbar from "./Navbar";
 
-// import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
-// const roboto = Roboto({
-//   weight: ["400", "500", "700"],
-//   subsets: ["latin"],
-// });
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 import dynamic from "next/dynamic";
 
 const DynamicFooter = dynamic(() => import("./Footer"), {
   loading: () => <p>Loading...</p>,
 });
-
-// ${roboto.className}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -29,9 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, []);
   return (
     <div
-      className={` mx-auto flex h-screen flex-col flex-nowrap bg-white text-black
-    
-       `}
+      className={` mx-auto flex h-screen flex-col flex-nowrap bg-white text-black ${roboto.className}`}
     >
       <Head>
         <title>CodeDevils - Develop, Create, and Network</title>
