@@ -1,17 +1,13 @@
 import React, { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
-
-// Add the missing import for the `data-dismiss-target` attribute
-import { HTMLAttributes } from "react";
-
-// ...
 
 const BasicComponent: React.FC = () => {
   const [showBanner, setShowBanner] = useState(true);
   return (
     <div
       className={`${
-        showBanner ? "" : "hidden"
+        !showBanner && "hidden"
       } start-0 top-0 z-50 block w-full bg-white shadow-sm`}
     >
       <div className="mx-auto mx-auto max-w-screen-2xl px-6 py-3">
@@ -33,7 +29,10 @@ const BasicComponent: React.FC = () => {
               <span className="text-center">
                 Brand new{" "}
                 <Link
-                  href="/about#officers"
+                  href="/about#leadership"
+                  onClick={() => {
+                    setShowBanner(!showBanner);
+                  }}
                   className="decoration-600 inline font-medium text-maroon underline decoration-solid underline-offset-2 hover:no-underline"
                 >
                   officer board
@@ -45,26 +44,12 @@ const BasicComponent: React.FC = () => {
           <div className="flex grow items-center justify-end">
             <button
               type="button"
-              className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg p-1.5 text-sm text-black hover:bg-gray-200 hover:text-maroon"
+              className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg p-1.5 text-sm text-black hover:bg-gray-500 hover:text-maroon"
               onClick={() => {
                 setShowBanner(!showBanner);
               }}
             >
-              <svg
-                className="h-3 w-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                />
-              </svg>
+              <AiOutlineClose />
               <span className="sr-only">Close banner</span>
             </button>
           </div>
