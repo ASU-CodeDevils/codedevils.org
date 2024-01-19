@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 *,
 *::before,
@@ -8,31 +10,27 @@
   box-sizing: border-box;
 }
 
-/* * {
+* {
   margin: 0;
   padding: 0;
   font: inherit;
-} */
-
-html {
-  color-scheme: dark light;
 }
 
 body {
   min-height: 100vh;
 }
 
-/* img,
+img,
 picture,
 svg,
 video {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 input,
 textarea,
 select,
 button {
-  font-family: inherit;
-} */
+  font: inherit;
+}

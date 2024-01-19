@@ -1,29 +1,16 @@
-// // file src: ./src/pages/_app.tsx
-import type { Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
-import type { AppType } from "next/app";
-import Layout from "../components/page_layout/_pageLayout";
-import { trpc } from "../utils/trpc";
+import { type AppType } from "next/app";
 import React from "react";
-// gobal styles
-import "../styles/globals.css";
-// contexts
-import { AppContextProvider } from "./../contexts/AppContext";
+import Layout from "../components/Layout";
 
-const MyApp: AppType<{ session: Session | null }> = ({
-  Component,
-  pageProps: { session, ...pageProps },
-}) => {
+// global styles
+import "~/styles/globals.css";
+
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <SessionProvider session={session}>
-      <AppContextProvider>
-        <Layout>
-          {/* This becomes the children of the layout component because it's nested within the layout component */}
-          <Component {...pageProps} />
-        </Layout>
-      </AppContextProvider>
-    </SessionProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 
-export default trpc.withTRPC(MyApp);
+export default MyApp;

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,19 +15,19 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "strict": false
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs",
-    "src/index.js",
-    "src/App.jsx",
-    "public/langs/english/components/navbar.js",
-    "src/contexts/AppContext.jsx",
-    "src/reducers/appReducer.jsx"
+    ".next/types/**/*.ts",
+    "next.config.cjs"
   ],
   "exclude": ["node_modules"]
 }
