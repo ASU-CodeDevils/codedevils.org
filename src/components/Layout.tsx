@@ -41,7 +41,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta name="author" content="" />{" "}
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="icon" href="/favicon.webp" />{" "}
+        <link rel="icon" href="/favicon.webp" />
+        <html lang="en" />
       </Head>
 
       <div className="flex h-screen flex-col ">
