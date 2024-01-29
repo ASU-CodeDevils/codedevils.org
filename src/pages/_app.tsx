@@ -1,16 +1,21 @@
-import { type AppType } from "next/app";
+import { AppProps } from "next/app";
 import React from "react";
+import { SessionProvider } from "next-auth/react";
 import Layout from "../components/Layout";
-
-// global styles
 import "~/styles/globals.css";
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+const App: React.FC<AppProps> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   return (
     <Layout>
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </Layout>
   );
 };
 
-export default MyApp;
+export default App;
+
