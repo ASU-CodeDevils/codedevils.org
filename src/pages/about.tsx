@@ -398,6 +398,59 @@ export default function AboutPage({
           </Card>
         </div>
       </div>
+      <div id="competitions" className="bg-gradient-to-r from-cyan-100 to-blue-100 border-double border-4 border-indigo-600 py-28 lg:py-40">
+        <div className="mx-auto flex w-11/12 grid-cols-2 flex-col gap-8  lg:grid ">
+          <article className="space-y-8 text-left text-2xl my-auto ">
+            <h1 className="text-left text-6xl text-green  md:text-7xl">
+              Our Competitions
+            </h1>{" "}
+            <p className="text-xl">
+            CodeDevils also held competitions for everyone with a profound passion 
+            for problem-solving codings. Specifically, coding competitions are hosted each 
+            semester on Hackerrank. Challenges are various in difficulties to fit with each 
+            individual&apos;s skills. There could be some good prizes for outstanding people in 
+            the competition, and at least the others could learn something from the competition 
+            and assess their logical thinking precisely. Here are some of our past competitions:
+            </p>
+          </article>
+          <div className="flex flex-col">
+            <Image
+              src={"/images/competitiveprogramming.jpg" as string}
+              className="rounded-xl items-center"
+              width={1000}
+              height={1000}
+              alt="Competitive Programming"
+            />
+            <p className="text-sm text-right text-gray-500 mt-2">Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_25559969.htm?query=custom%20coding#from_view=detail_alsolike">Freepik</a></p>
+          </div>
+        </div>
+          <ul className="grid grid-cols-1 gap-4 bg-transparent my-16 md:mx-auto md:w-11/12 md:grid-cols-1 md:grid-rows-6 lg:grid-cols-6 lg:grid-rows-1 xl:grid-cols-6 xl:grid-rows-1">
+          <Link 
+            href = "https://www.hackerrank.com/codedevils-spring-challenge"
+            className="transition-transform hover:scale-105 flex w-fit items-center gap-2 rounded-md bg-green px-4 py-2 text-lg font-medium text-white transition-colors hover:bg-black"
+            >
+             <div className="p-0">
+              <div className="font-bold text-xl mb-2">CodeDevils Spring Challenge 2021</div>
+             </div>
+            </Link>
+            <Link 
+            href = "https://www.hackerrank.com/codedevils-spring-2020/"
+            className="transition-transform hover:scale-105 flex w-fit items-center gap-2 rounded-md bg-sky px-4 py-2 text-lg font-medium text-white transition-colors hover:bg-black"
+            >
+             <div className="p-0">
+              <div className="font-bold text-xl mb-2">CodeDevils Spring Challenge 2020</div>
+             </div>
+            </Link>
+            <Link 
+            href = "https://www.hackerrank.com/codedevils-challenge-4"
+            className="transition-transform hover:scale-105 flex w-fit items-center gap-2 rounded-md bg-orange px-4 py-2 text-lg font-medium text-white transition-colors hover:bg-black"
+            >
+             <div className="p-0">
+              <div className="font-bold text-xl mb-2">CodeDevils Spring Challenge 2017</div>
+             </div>
+            </Link>
+          </ul>
+      </div>
     </>
   );
 }
