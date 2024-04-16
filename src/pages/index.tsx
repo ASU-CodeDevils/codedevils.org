@@ -117,7 +117,7 @@ const HomePage: NextPage = () => {
               skills! At the end of the term you could win some swag!
             </p>
             <Link
-              href={"/about#community"}
+              href={"/about#competitions"}
               className="absolute bottom-0 flex items-center gap-2 pb-3 text-maroon"
             >
               Learn More <FaArrowRight />
