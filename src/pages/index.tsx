@@ -104,7 +104,7 @@ const HomePage: NextPage = () => {
           </div>
 
           <div className=" relative	px-8 py-6 text-left transition-transform  duration-200	  ">
-            <h2 className="text-2xl font-bold">Compete</h2>
+            <h2 className="text-2xl font-bold">Competitions</h2>
             <p className="mb-8 mt-4">
               Coding competitions are hosted each semester on HackerRank.
               <br />
