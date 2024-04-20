@@ -1,4 +1,3 @@
-// "use Server";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +6,7 @@ import { socialLinks } from "~/utils/staticdata";
 
 import { AiOutlineInstagram, AiOutlineLink } from "react-icons/ai";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   const { instagram, discord, github, linkedin, sundevilsync } = socialLinks;
   return (
@@ -54,22 +54,34 @@ const Footer = () => {
             <div>
               <h2 className="mb-6 font-semibold uppercase">Organization</h2>
               <ul className="font-medium ">
-                {[
-                  ["About Us", "/about"],
-                  ["Newsletter", "/newsletter"],
-                  ["Careers", "/careers"],
-                  ["Blog", "/blog"],
-                ].map(([title, url], key) => (
-                  <li key={key} className="mb-4">
-                    <Link
-                      aria-label={`Learn more about CodeDevils by heading to ${title}`}
-                      href={url as string}
-                      className="hover:text-maroon hover:underline"
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                ))}
+                <li className="mb-4">
+                  <Link
+                    aria-label={`Learn more about CodeDevils by heading to our about page`}
+                    href={"/about"}
+                    className="hover:text-maroon hover:underline"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={"https://forms.gle/hkqP2ZMuDrppxNsr8"}
+                    className="hover:text-maroon hover:underline"
+                  >
+                    Newsletter
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    aria-label={`Learn more about CodeDevils by heading to our careers page`}
+                    href={"/careers"}
+                    className="hover:text-maroon hover:underline"
+                  >
+                    Careers
+                  </Link>
+                </li>
               </ul>
             </div>
 
