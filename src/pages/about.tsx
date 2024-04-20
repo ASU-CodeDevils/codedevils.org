@@ -14,9 +14,9 @@ export default function AboutPage() {
     <>
       <Hero className="bg-gray">
         <article className="space-y-3 text-center">
-          <h2 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
+          <h1 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
             Our Organization
-          </h2>
+          </h1>
           <p className="text-xl text-black/70">
             Learn who we our and what we stand for.
           </p>
@@ -25,10 +25,10 @@ export default function AboutPage() {
 
       <Section>
         <article className="space-y-3">
-          <h3 className="text-xl text-maroon">Join our Team</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Join our Team</h2>
+          <h3 className="text-4xl font-bold">
             Find your group with CodeDevils
-          </h2>
+          </h3>
           <p className="text-base">
             Do you have a passion for helping others learn and grow? Are you a
             team player who enjoys collaborating with others? If so, we want you
@@ -41,12 +41,13 @@ export default function AboutPage() {
           </InternalLink>
         </article>
       </Section>
+
       <Section className="bg-gray">
         <article className="space-y-3">
-          <h3 className="text-xl text-maroon">Our Mission</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Our Mission</h2>
+          <h3 className="text-4xl font-bold">
             Understanding what we are all about
-          </h2>
+          </h3>
           <p className="text-base">
             CodeDevils is an inclusive virtual software development organization
             that aims to bring together coding enthusiasts of all skill levels
@@ -88,10 +89,10 @@ export default function AboutPage() {
 
       <Section>
         <article className="space-y-3">
-          <h3 className="text-xl text-maroon">Our History</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Our History</h2>
+          <h3 className="text-4xl font-bold">
             Our journey and how it all started
-          </h2>
+          </h3>
           <p>
             Early on, students through Arizona State University&apos;s online
             campus realized that there wasn&apos;t any software development
@@ -133,8 +134,8 @@ export default function AboutPage() {
 
       <Section id="leadership">
         <article className="space-y-3">
-          <h3 className="text-xl text-maroon">Our Leadership</h3>
-          <h2 className="text-4xl font-bold">Meet the CodeDevils Officers</h2>
+          <h2 className="text-xl text-maroon">Our Leadership</h2>
+          <h3 className="text-4xl font-bold">Meet the CodeDevils Officers</h3>
           <p className="text-base">
             Our officers are dedicated to helping you grow your skills and
             succeed in your software development journey. Meet the team that
@@ -147,10 +148,10 @@ export default function AboutPage() {
 
       <Section id="projectleads">
         <article className="space-y-3">
-          <h3 className="text-xl text-maroon">Our Project Leads</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Our Project Leads</h2>
+          <h3 className="text-4xl font-bold">
             Meet our talented Project Leads
-          </h2>
+          </h3>
           <p className="text-base">
             Our Project Leads are experts in their field and are here to help
             our members grow their skills and succeed in their software

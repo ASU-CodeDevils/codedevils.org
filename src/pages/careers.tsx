@@ -10,9 +10,9 @@ const CareersPage: NextPage = () => {
     <>
       <Hero className="bg-gray">
         <article className="space-y-3 text-center">
-          <h2 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
+          <h1 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
             Join our team
-          </h2>
+          </h1>
           <p className="text-xl text-black/70 md:mx-auto md:w-7/12">
             Do you have a passion for helping others learn and grow? CodeDevils
             is always looking for new officers to help us grow and succeed.
@@ -22,10 +22,10 @@ const CareersPage: NextPage = () => {
 
       <Section>
         <article className="space-y-3 md:text-center">
-          <h3 className="text-xl text-maroon">Who are we</h3>
-          <h2 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
+          <h2 className="text-xl text-maroon">Who are we</h2>
+          <h3 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
             We aren&apos;t just some ordinary leadership team.
-          </h2>
+          </h3>
           <p className="mx-auto max-w-screen-md text-base">
             With every organization&apos;, there are always a few key
             individuals who help keep the organization running smoothly. Our
@@ -47,9 +47,9 @@ const CareersPage: NextPage = () => {
       <div className="px-6 py-28 md:px-8">
         <div className="mx-auto max-w-screen-xl space-y-3">
           <article className="space-y-3 md:text-center">
-            <h2 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
+            <h1 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
               Our Virtues
-            </h2>
+            </h1>
             <p className="mx-auto max-w-screen-md text-lg">
               As an organization who is dedicated to helping others learn and
               grow, we look for individuals who embody our core virtues of
@@ -63,7 +63,7 @@ const CareersPage: NextPage = () => {
           <ul className="mx-auto flex max-w-screen-lg flex-col">
             <li className="flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2">
               <article className="flex flex-col justify-center space-y-2">
-                <h3 className="text-2xl font-medium">Open Collaboration</h3>
+                <h2 className="text-2xl font-medium">Open Collaboration</h2>
                 <p className="">
                   We believe in the power of collaboration and open
                   communication. We work together to achieve our goals and help
@@ -90,7 +90,7 @@ const CareersPage: NextPage = () => {
                 />
               </div>
               <article className="flex flex-col justify-center space-y-2">
-                <h3 className="text-2xl font-medium">Outcome Driven</h3>
+                <h2 className="text-2xl font-medium">Outcome Driven</h2>
                 <p className="">
                   We are outcome-driven and focused on achieving our goals. We
                   work together to achieve our goals and help each other grow
@@ -102,9 +102,9 @@ const CareersPage: NextPage = () => {
 
             <li className="flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2">
               <article className="flex flex-col justify-center space-y-2">
-                <h3 className="text-2xl font-medium">
+                <h2 className="text-2xl font-medium">
                   Passionate About Learning
-                </h3>
+                </h2>
                 <p className="">
                   We are passionate about creating a culture of learning and
                   growing within our community. We are always looking for new

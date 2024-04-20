@@ -17,7 +17,7 @@ const ContactPage: NextPage = () => {
     <>
       <Hero>
         <article className="space-y-3 text-center">
-          <h3 className="text-3xl text-maroon">CodeDevils&apos; Support</h3>
+          <h1 className="text-3xl text-maroon">CodeDevils&apos; Support</h1>
           <h2 className="text-6xl font-bold">How can we help you?</h2>
           <p className="text-xl text-black/70 md:mx-auto md:w-7/12">
             Let&apos;s get the help you need to be the best programmer you can
@@ -125,12 +125,12 @@ const ContactPage: NextPage = () => {
         <div className="space-y-6 md:grid md:grid-cols-2">
           <div className="flex flex-col items-start justify-center space-y-6">
             <article className="space-y-2">
-              <h3 className="text-xl text-maroon">
+              <h2 className="text-xl text-maroon">
                 CodeDevils&apos; Community
-              </h3>
-              <h2 className="text-4xl font-bold ">
-                Ask questions, share knowledge, and help solve problems.
               </h2>
+              <h3 className="text-4xl font-bold ">
+                Ask questions, share knowledge, and help solve problems.
+              </h3>
               <p className="text-lg ">
                 Join our community of developers, designers, and creators to
                 share ideas, ask questions, and collaborate on projects.
@@ -152,7 +152,6 @@ const ContactPage: NextPage = () => {
               alt="Community"
               width={500}
               height={500}
-              className=""
             />
           </div>
         </div>
@@ -160,7 +159,7 @@ const ContactPage: NextPage = () => {
 
       <Section>
         <div className="mx-auto max-w-screen-lg space-y-12">
-          <h3 className="text-center text-4xl font-bold">Support FAQ</h3>
+          <h2 className="text-center text-4xl font-bold">Support FAQ</h2>
 
           <ul className="flex flex-col ">
             <li>

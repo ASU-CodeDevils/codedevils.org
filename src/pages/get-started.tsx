@@ -9,9 +9,9 @@ const getStarted: NextPage = () => {
     <>
       <Hero className="bg-gray">
         <article className="space-y-3 text-center">
-          <h3 className="gradient-text icon-sparkle rainbow text-3xl font-medium md:text-4xl">
+          <h1 className="gradient-text icon-sparkle rainbow text-3xl font-medium md:text-4xl">
             Community
-          </h3>
+          </h1>
           <h2 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
             Welcome to the CodeDevils&apos; Community
           </h2>
@@ -23,10 +23,10 @@ const getStarted: NextPage = () => {
 
       <Section id="community">
         <article className="space-y-3 text-center">
-          <h3 className="text-xl text-maroon">Get involved</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Get involved</h2>
+          <h3 className="text-4xl font-bold">
             Engage with our thriving community
-          </h2>
+          </h3>
           <p className="mx-auto w-9/12 text-base">
             We offer a rich online community where members can find their place
             with us. You can engage in insightful discussions, share knowledge,
@@ -98,10 +98,10 @@ const getStarted: NextPage = () => {
 
       <Section>
         <article className="space-y-3 text-center">
-          <h3 className="text-xl text-maroon">Grow your skills</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-xl text-maroon">Grow your skills</h2>
+          <h3 className="text-4xl font-bold">
             Learn and improve your skills with our resources
-          </h2>
+          </h3>
           <p className="mx-auto text-base md:w-9/12">
             We offer a wide range of resources to help you grow your skills as a
             software developer. From courses to workshops, projects, and

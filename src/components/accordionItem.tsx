@@ -20,7 +20,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
         className="flex cursor-pointer items-center justify-between p-4 "
         onClick={toggleAccordion}
       >
-        <h2 className="text-xl font-medium	 ">{title}</h2>
+        <h3 className="text-xl font-medium">{title}</h3>
 
         <IconChevronDown
           className={`transform ${

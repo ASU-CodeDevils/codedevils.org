@@ -38,11 +38,11 @@ const HomePage: NextPage = () => {
 
       <Section>
         <article className="space-y-3 md:text-center">
-          <h3 className=" text-xl text-maroon">What is CodeDevils?</h3>
-          <h2 className="text-4xl font-bold md:mx-auto md:w-10/12">
+          <h2 className=" text-xl text-maroon">What is CodeDevils?</h2>
+          <h3 className="text-4xl font-bold md:mx-auto md:w-10/12">
             Arizona State University&apos;s largest software development student
             organization.
-          </h2>
+          </h3>
           <p className=" text-base md:mx-auto md:w-9/12">
             CodeDevils is a student organization at Arizona State University
             that is dedicated to helping students learn and grow as software
@@ -90,10 +90,10 @@ const HomePage: NextPage = () => {
 
       <Section>
         <article className="space-y-3 md:text-center">
-          <h3 className="text-xl text-maroon">Why CodeDevils?</h3>
-          <h2 className="text-4xl font-bold md:mx-auto md:w-10/12">
+          <h2 className="text-xl text-maroon">Why CodeDevils?</h2>
+          <h3 className="text-4xl font-bold md:mx-auto md:w-10/12">
             What makes CodeDevils unique?
-          </h2>
+          </h3>
           <p className="text-base md:mx-auto md:w-9/12">
             CodeDevils is more than just a student organization. We are a
             community of passionate developers who are dedicated to helping each

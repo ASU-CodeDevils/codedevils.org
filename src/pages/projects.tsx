@@ -15,7 +15,7 @@ const projectsPage: NextPage = () => {
     <>
       <Section>
         <article className="space-y-3 text-center">
-          <h3 className="text-3xl text-maroon">Our Projects</h3>
+          <h1 className="text-3xl text-maroon">Our Projects</h1>
           <h2 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
             Grow your resume with our open-source projects
           </h2>
@@ -59,10 +59,10 @@ const projectsPage: NextPage = () => {
 
       <Section className="bg-gray">
         <article className="space-y-3 text-center">
-          <h3 className="text-2xl text-maroon">Get involved</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-2xl text-maroon">Get involved</h2>
+          <h3 className="text-4xl font-bold">
             Contribute to our open-source projects
-          </h2>
+          </h3>
           <p className="mx-auto w-9/12 text-base">
             Get involved with our open-source projects to build your portfolio
             up for future job opportunities. We have a variety of projects that
@@ -133,10 +133,10 @@ const projectsPage: NextPage = () => {
 
       <Section>
         <article className="space-y-3 text-center">
-          <h3 className="text-2xl text-maroon">Get Started</h3>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-2xl text-maroon">Get Started</h2>
+          <h3 className="text-4xl font-bold">
             Want to contribute to our projects, but you&apos;re new?
-          </h2>
+          </h3>
           <p className="mx-auto w-9/12 text-base">
             No worries! We have a guide to help you get started with
             contributing to our projects. We welcome all skill levels to
@@ -216,10 +216,10 @@ const projectsPage: NextPage = () => {
       <Section>
         <div className="flex flex-col items-center gap-6 md:grid md:grid-cols-2">
           <article className="space-y-3 text-left">
-            <h3 className="text-2xl text-maroon">Have a project idea?</h3>
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-2xl text-maroon">Have a project idea?</h2>
+            <h3 className="text-4xl font-bold">
               Want to start a project with us?
-            </h2>
+            </h3>
             <p className="text-base">
               We are always looking for new project ideas to work on. If you
               have a project idea that you want to work on with us, let us know
