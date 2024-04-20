@@ -4,14 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-.pnpm-lock.yaml
+.yarn/install-state.gz
 
 # testing
 /coverage
-
-# database
-/prisma/db.sqlite
-/prisma/db.sqlite-journal
 
 # next.js
 /.next/
@@ -28,25 +24,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
 # local env files
-.env
 .env*.local
+.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-/.idea/.gitignore
-/.idea/codedevils.iml
-/.idea/jpa-buddy.xml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
-/.idea/git_toolbox_prj.xml
-
-# analytics
-/analyze
+next-env.d.ts

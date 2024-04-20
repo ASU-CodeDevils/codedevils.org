@@ -1,12 +1,12 @@
 import React from "react";
-import { NextPage } from "next";
+import NextPage from "next";
 
-import { InfiniteLogoCarousel } from "~/components/InfiniteLogoCarousel";
+import { InfiniteLogoCarousel } from "~/components/infiniteLogoCarousel";
 import { Section, SupportSection } from "~/components/ui/sections";
 import { ExternalLink, InternalLink } from "~/components/ui/buttons";
 
 import { socialLinks } from "~/utils/staticdata";
-import { Header } from "~/components/Header";
+import { Header } from "~/components/header";
 
 const HomePage: NextPage = () => {
   const { discord } = socialLinks;
@@ -25,9 +25,9 @@ const HomePage: NextPage = () => {
           </p>
           <InternalLink href="/get-started">
             Learn More
-            <div className="sr-only">
+            <p className="sr-only">
               to learn more about how you can get started with CodeDevils.
-            </div>
+            </p>
           </InternalLink>
         </article>
       </Header>
@@ -106,9 +106,9 @@ const HomePage: NextPage = () => {
           </p>
           <ExternalLink href={discord} className="center_link">
             Join our community
-            <div className="sr-only">
+            <p className="sr-only">
               to join our Discord server and connect with other members.
-            </div>
+            </p>
           </ExternalLink>
         </article>
       </Section>

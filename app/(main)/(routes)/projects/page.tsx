@@ -1,9 +1,9 @@
 import React from "react";
-import { NextPage } from "next";
+import NextPage from "next";
 
 import Image from "next/image";
 
-import { Card } from "../components/Card";
+import { Card } from "~/components/card";
 import { Section, SupportSection } from "~/components/ui/sections";
 import { ExternalLink, InternalLink } from "~/components/ui/buttons";
 
@@ -85,9 +85,9 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
-              <div className="sr-only">
+              <p className="sr-only">
                 to view the CodeDevils&apos; website repository.
-              </div>
+              </p>
             </ExternalLink>
           </li>
 
@@ -104,7 +104,7 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
-              <div className="sr-only">to view DevilBot repository.</div>
+              <p className="sr-only">to view DevilBot repository.</p>
             </ExternalLink>
           </li>
 
@@ -123,9 +123,9 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
-              <div className="sr-only">
+              <p className="sr-only">
                 to view the React Components Library repository.
-              </div>
+              </p>
             </ExternalLink>
           </li>
         </ul>
@@ -166,10 +166,10 @@ const projectsPage: NextPage = () => {
               </div>
               <ExternalLink href={discord}>
                 Join our Discord
-                <div className="sr-only">
+                <p className="sr-only">
                   to get involved with our community, projects, and access our
                   resources.
-                </div>
+                </p>
               </ExternalLink>
             </li>
 
@@ -185,10 +185,10 @@ const projectsPage: NextPage = () => {
               </div>
               <InternalLink href="/about#projectleads">
                 Meet our project leads
-                <div className="sr-only">
+                <p className="sr-only">
                   to learn more about our projects and how to get started with
                   them.
-                </div>
+                </p>
               </InternalLink>
             </li>
 
@@ -204,9 +204,9 @@ const projectsPage: NextPage = () => {
               </div>
               <ExternalLink href={"https://docs.codedevils.org/"}>
                 View our Documentation
-                <div className="sr-only">
+                <p className="sr-only">
                   to understand our projects and get started with contributing.
-                </div>
+                </p>
               </ExternalLink>
             </li>
           </ul>
@@ -231,9 +231,9 @@ const projectsPage: NextPage = () => {
               }
             >
               Learn more
-              <div className="sr-only">
+              <p className="sr-only">
                 about how you can propose a project idea to us.
-              </div>
+              </p>
             </ExternalLink>
           </article>
           <Image

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { IconLeaf, IconHammer, IconBrandAsana } from "@tabler/icons-react";
@@ -37,7 +38,7 @@ export default function AboutPage() {
           </p>
           <InternalLink href={"/careers"}>
             Learn more
-            <div className="sr-only">about how you can join our team</div>
+            <p className="sr-only">about how you can join our team</p>
           </InternalLink>
         </article>
       </Section>
@@ -86,7 +87,7 @@ export default function AboutPage() {
           </li>
         </ul>
       </Section>
-      
+
       <Section>
         <article className="space-y-3">
           <h2 className="text-xl text-maroon">Our History</h2>
@@ -125,9 +126,9 @@ export default function AboutPage() {
           </p>
           <InternalLink href="/careers">
             Contribute to our journey
-            <div className="sr-only">
+            <p className="sr-only">
               by joining our team and helping us grow and succeed.
-            </div>
+            </p>
           </InternalLink>
         </article>
       </Section>

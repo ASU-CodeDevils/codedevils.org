@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { NextPage } from "next";
+import NextPage from "next";
 import Link from "next/link";
 
 import { Hero, Section } from "~/components/ui/sections";
@@ -176,9 +177,7 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     Instagram
-                    <div className="sr-only">
-                      to stay updated on our events.
-                    </div>
+                    <p className="sr-only">to stay updated on our events.</p>
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -188,10 +187,10 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     SunDevilSync
-                    <div className="sr-only">
+                    <p className="sr-only">
                       to stay updated on our upcoming events and be counted as a
                       member.
-                    </div>
+                    </p>
                   </Link>{" "}
                   to stay updated on our upcoming events.
                 </p>
@@ -210,9 +209,9 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     Discord
-                    <div className="sr-only">
+                    <p className="sr-only">
                       to collaborate with other members and ask questions.
-                    </div>
+                    </p>
                   </Link>{" "}
                   server, workshops, courses and community projects where
                   members can get the opportunity to collaborate with other
@@ -230,9 +229,9 @@ const ContactPage: NextPage = () => {
                   their qualifications and experience. Head over to our{" "}
                   <Link href={"/careers"} className="text-maroon">
                     careers
-                    <div className="sr-only">
+                    <p className="sr-only">
                       to learn more about our current openings.
-                    </div>
+                    </p>
                   </Link>{" "}
                   page to learn more about our current openings.
                 </p>

@@ -44,7 +44,10 @@ export const SupportSection: FC<SectionProps> = () => {
           If you have any questions or need help, feel free to reach out to us.
           We are here to help you succeed in your software development journey.
         </p>
-        <InternalLink href="/support">Get Support</InternalLink>
+        <InternalLink href="/support">
+          Get Support
+          <div className="sr-only">to get help or ask questions</div>
+        </InternalLink>
       </article>
     </Section>
   );

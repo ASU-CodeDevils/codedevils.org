@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import NextPage from "next";
 
 import Image from "next/image";
 
@@ -39,7 +39,7 @@ const CareersPage: NextPage = () => {
             className="center_link"
           >
             Apply Now
-            <div className="sr-only">to join our leadership team</div>
+            <p className="sr-only">to join our leadership team</p>
           </ExternalLink>
         </article>
       </Section>
@@ -140,7 +140,7 @@ const CareersPage: NextPage = () => {
               </p>
               <InternalLink href={"/careers"}>
                 Learn more
-                <div className="sr-only">about our remote work policy</div>
+                <p className="sr-only">about our remote work policy</p>
               </InternalLink>
             </article>
           </li>

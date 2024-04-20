@@ -1,6 +1,6 @@
 {
-  "name": "codedevils",
-  "version": "0.1.0",
+  "name": "codedevils.org",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,14 +11,13 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
-    "@next/font": "^13.0.6",
     "@react-three/drei": "^9.102.5",
     "@react-three/fiber": "^8.15.19",
-    "@tabler/icons-react": "^3.1.0",
+    "@tabler/icons-react": "^3.2.0",
     "@vercel/analytics": "^1.2.2",
     "clsx": "^2.1.0",
     "framer-motion": "^10.18.0",
-    "next": "14.1.4",
+    "next": "14.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",

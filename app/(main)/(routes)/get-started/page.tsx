@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import NextPage from "next";
 import { Hero, Section, SupportSection } from "~/components/ui/sections";
 import { ExternalLink } from "~/components/ui/buttons";
 import { socialLinks } from "~/utils/staticdata";
@@ -36,10 +36,10 @@ const getStarted: NextPage = () => {
 
           <ExternalLink href={discord} className="mx-auto">
             Join our community
-            <div className="sr-only">
+            <p className="sr-only">
               on Discord to engage with our members and stay updated with our
               events and activities.
-            </div>
+            </p>
           </ExternalLink>
         </article>
 
@@ -55,9 +55,9 @@ const getStarted: NextPage = () => {
 
             <ExternalLink href={sundevilsync}>
               Register with us
-              <div className="sr-only">
+              <p className="sr-only">
                 on SunDevilSync to stay updated with our events and activities.
-              </div>
+              </p>
             </ExternalLink>
           </li>
 
@@ -69,10 +69,10 @@ const getStarted: NextPage = () => {
 
             <ExternalLink href={github}>
               Join us on Github
-              <div className="sr-only">
+              <p className="sr-only">
                 to contribute to our projects and collaborate with other
                 members.
-              </div>
+              </p>
             </ExternalLink>
           </li>
 
@@ -87,10 +87,10 @@ const getStarted: NextPage = () => {
 
             <ExternalLink href="https://forms.gle/hkqP2ZMuDrppxNsr8">
               Subscribe now
-              <div className="sr-only">
+              <p className="sr-only">
                 to our newsletter to stay updated with our latest news and
                 events.
-              </div>
+              </p>
             </ExternalLink>
           </li>
         </ul>
