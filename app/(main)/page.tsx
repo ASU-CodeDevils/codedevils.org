@@ -1,5 +1,5 @@
 import React from "react";
-import NextPage from "next";
+import { type NextPage } from "next";
 
 import { InfiniteLogoCarousel } from "~/components/infiniteLogoCarousel";
 import { Section, SupportSection } from "~/components/ui/sections";

@@ -1,4 +1,4 @@
-import NextPage from "next";
+import { type NextPage } from "next";
 import { Hero, Section, SupportSection } from "~/components/ui/sections";
 import { ExternalLink } from "~/components/ui/buttons";
 import { socialLinks } from "~/utils/staticdata";
