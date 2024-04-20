@@ -1,6 +1,6 @@
 import React, { useState, FC } from "react";
 import Image from "next/image";
-import Card from "./Card";
+import { Card } from "./Card";
 import Link from "next/link";
 
 import { RxAvatar } from "react-icons/rx";
