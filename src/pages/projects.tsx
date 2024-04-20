@@ -85,6 +85,9 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
+              <div className="sr-only">
+                to view the CodeDevils&apos; website repository.
+              </div>
             </ExternalLink>
           </li>
 
@@ -101,6 +104,7 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
+              <div className="sr-only">to view DevilBot repository.</div>
             </ExternalLink>
           </li>
 
@@ -119,6 +123,9 @@ const projectsPage: NextPage = () => {
               className="mx-auto"
             >
               View on GitHub
+              <div className="sr-only">
+                to view the React Components Library repository.
+              </div>
             </ExternalLink>
           </li>
         </ul>
@@ -157,7 +164,13 @@ const projectsPage: NextPage = () => {
                   and be involved in our discussions.
                 </p>
               </div>
-              <ExternalLink href={discord}>Join our Discord</ExternalLink>
+              <ExternalLink href={discord}>
+                Join our Discord
+                <div className="sr-only">
+                  to get involved with our community, projects, and access our
+                  resources.
+                </div>
+              </ExternalLink>
             </li>
 
             <li className="flex flex-col gap-y-4 rounded-lg bg-gray px-4 py-6 text-base shadow-xl md:rounded-none md:bg-white md:p-0 md:shadow-none">
@@ -172,6 +185,10 @@ const projectsPage: NextPage = () => {
               </div>
               <InternalLink href="/about#projectleads">
                 Meet our project leads
+                <div className="sr-only">
+                  to learn more about our projects and how to get started with
+                  them.
+                </div>
               </InternalLink>
             </li>
 
@@ -187,6 +204,9 @@ const projectsPage: NextPage = () => {
               </div>
               <ExternalLink href={"https://docs.codedevils.org/"}>
                 View our Documentation
+                <div className="sr-only">
+                  to understand our projects and get started with contributing.
+                </div>
               </ExternalLink>
             </li>
           </ul>
@@ -200,7 +220,7 @@ const projectsPage: NextPage = () => {
             <h2 className="text-4xl font-bold">
               Want to start a project with us?
             </h2>
-            <p className="  text-base">
+            <p className="text-base">
               We are always looking for new project ideas to work on. If you
               have a project idea that you want to work on with us, let us know
               and we can help you get started.
@@ -209,9 +229,11 @@ const projectsPage: NextPage = () => {
               href={
                 "https://codedevils.notion.site/Project-Proposal-Guide-3d0fd1768faa4afa81a880a18e0d60bc?pvs=4"
               }
-              className=""
             >
               Learn more
+              <div className="sr-only">
+                about how you can propose a project idea to us.
+              </div>
             </ExternalLink>
           </article>
           <Image

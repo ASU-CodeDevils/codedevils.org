@@ -39,6 +39,7 @@ const CareersPage: NextPage = () => {
             className="center_link"
           >
             Apply Now
+            <div className="sr-only">to join our leadership team</div>
           </ExternalLink>
         </article>
       </Section>
@@ -137,7 +138,10 @@ const CareersPage: NextPage = () => {
                 premises. You can work from anywhere in the world, as long as
                 you have an internet connection.
               </p>
-              <InternalLink href={"/careers"}>Learn more</InternalLink>
+              <InternalLink href={"/careers"}>
+                Learn more
+                <div className="sr-only">about our remote work policy</div>
+              </InternalLink>
             </article>
           </li>
           <li>

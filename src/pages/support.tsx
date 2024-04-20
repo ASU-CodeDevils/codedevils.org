@@ -46,10 +46,14 @@ const ContactPage: NextPage = () => {
               <path d="M11 10h2" />
             </svg>{" "}
             <Link
-              href=""
+              href="#"
               className="cursor-not-allowed text-xl hover:underline"
             >
               CodeDevils&apos; Academy
+              <div className="sr-only">
+                gives you access our online courses and other learning
+                resources.
+              </div>
             </Link>
             <p>
               <span className="font-bold text-maroon">COMING SOON</span>
@@ -81,6 +85,10 @@ const ContactPage: NextPage = () => {
               className="text-xl hover:underline"
             >
               Project Documentation
+              <div className="sr-only">
+                are to understand our projects and get started with
+                contributing.
+              </div>
             </Link>
           </li>
           <li className=" flex flex-col items-center justify-center gap-y-4 rounded-lg bg-white p-7 shadow-md">
@@ -107,6 +115,7 @@ const ContactPage: NextPage = () => {
               className="text-xl hover:underline"
             >
               Reach out to us
+              <div className="sr-only">by sending us an email.</div>
             </Link>
           </li>
         </ul>
@@ -168,6 +177,9 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     Instagram
+                    <div className="sr-only">
+                      to stay updated on our events.
+                    </div>
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -177,6 +189,10 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     SunDevilSync
+                    <div className="sr-only">
+                      to stay updated on our upcoming events and be counted as a
+                      member.
+                    </div>
                   </Link>{" "}
                   to stay updated on our upcoming events.
                 </p>
@@ -195,6 +211,9 @@ const ContactPage: NextPage = () => {
                     className="text-maroon"
                   >
                     Discord
+                    <div className="sr-only">
+                      to collaborate with other members and ask questions.
+                    </div>
                   </Link>{" "}
                   server, workshops, courses and community projects where
                   members can get the opportunity to collaborate with other
@@ -212,6 +231,9 @@ const ContactPage: NextPage = () => {
                   their qualifications and experience. Head over to our{" "}
                   <Link href={"/careers"} className="text-maroon">
                     careers
+                    <div className="sr-only">
+                      to learn more about our current openings.
+                    </div>
                   </Link>{" "}
                   page to learn more about our current openings.
                 </p>

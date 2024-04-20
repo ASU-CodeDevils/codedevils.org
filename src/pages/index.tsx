@@ -23,7 +23,12 @@ const HomePage: NextPage = () => {
             them for success in the industry through hands-on workshops,
             projects, and mentorship.
           </p>
-          <InternalLink href="/get-started">Learn More</InternalLink>
+          <InternalLink href="/get-started">
+            Learn More
+            <div className="sr-only">
+              to learn more about how you can get started with CodeDevils.
+            </div>
+          </InternalLink>
         </article>
       </Header>
 
@@ -101,6 +106,9 @@ const HomePage: NextPage = () => {
           </p>
           <ExternalLink href={discord} className="center_link">
             Join our community
+            <div className="sr-only">
+              to join our Discord server and connect with other members.
+            </div>
           </ExternalLink>
         </article>
       </Section>

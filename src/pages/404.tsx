@@ -13,9 +13,15 @@ export default function Custom404() {
               did 🤷
             </p>
             <p className="text-base">
-              <InternalLink href="/">Go to the Home Page</InternalLink>
+              <InternalLink href="/">
+                Go to the Home Page
+                <div className="sr-only">as you ran into a 500 error.</div>
+              </InternalLink>
 
-              <InternalLink href="/support">Get Support</InternalLink>
+              <InternalLink href="/support">
+                Get Support
+                <div className="sr-only">if you need further assistance.</div>
+              </InternalLink>
             </p>
           </article>
         </Header>

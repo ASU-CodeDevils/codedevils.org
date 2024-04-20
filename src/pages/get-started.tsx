@@ -36,6 +36,10 @@ const getStarted: NextPage = () => {
 
           <ExternalLink href={discord} className="mx-auto">
             Join our community
+            <div className="sr-only">
+              on Discord to engage with our members and stay updated with our
+              events and activities.
+            </div>
           </ExternalLink>
         </article>
 
@@ -49,7 +53,12 @@ const getStarted: NextPage = () => {
               </p>
             </div>
 
-            <ExternalLink href={sundevilsync}>Register with us</ExternalLink>
+            <ExternalLink href={sundevilsync}>
+              Register with us
+              <div className="sr-only">
+                on SunDevilSync to stay updated with our events and activities.
+              </div>
+            </ExternalLink>
           </li>
 
           <li className="space-y-4 rounded-xl bg-white p-6 shadow-xl">
@@ -58,7 +67,13 @@ const getStarted: NextPage = () => {
               <p>Join our Github organization to contribute to our projects</p>
             </div>
 
-            <ExternalLink href={github}>Join us on Github</ExternalLink>
+            <ExternalLink href={github}>
+              Join us on Github
+              <div className="sr-only">
+                to contribute to our projects and collaborate with other
+                members.
+              </div>
+            </ExternalLink>
           </li>
 
           <li className="space-y-4 rounded-xl bg-white p-6 shadow-xl">
@@ -72,6 +87,10 @@ const getStarted: NextPage = () => {
 
             <ExternalLink href="https://forms.gle/hkqP2ZMuDrppxNsr8">
               Subscribe now
+              <div className="sr-only">
+                to our newsletter to stay updated with our latest news and
+                events.
+              </div>
             </ExternalLink>
           </li>
         </ul>

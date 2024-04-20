@@ -35,7 +35,10 @@ export default function AboutPage() {
             to join our team! CodeDevils is always looking for new officers to
             help us grow and succeed.
           </p>
-          <InternalLink href={"/careers"}>Learn more</InternalLink>
+          <InternalLink href={"/careers"}>
+            Learn more
+            <div className="sr-only">about how you can join our team</div>
+          </InternalLink>
         </article>
       </Section>
       <Section className="bg-gray">
@@ -119,7 +122,12 @@ export default function AboutPage() {
             work we&apos;ve done to help students grow their skills and succeed
             in their software development journey.
           </p>
-          <InternalLink href="/careers">Contribute to our journey</InternalLink>
+          <InternalLink href="/careers">
+            Contribute to our journey
+            <div className="sr-only">
+              by joining our team and helping us grow and succeed.
+            </div>
+          </InternalLink>
         </article>
       </Section>
 
