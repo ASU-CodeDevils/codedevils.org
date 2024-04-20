@@ -86,7 +86,7 @@ export default function AboutPage() {
           </li>
         </ul>
       </Section>
-
+      
       <Section>
         <article className="space-y-3">
           <h2 className="text-xl text-maroon">Our History</h2>
