@@ -117,8 +117,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex h-full flex-col items-start justify-between gap-y-2 bg-gray px-8 py-12 md:flex-row md:items-center md:gap-y-0">
-          <ul className="mx-auto flex flex-wrap justify-center text-center text-sm md:mx-0 md:flex-row md:flex-nowrap  md:text-left md:text-xs">
+        <div className="flex h-full flex-col items-start justify-between gap-y-6 bg-gray px-8 py-12 md:flex-row md:items-center md:gap-y-0 ">
+          <ul className="mx-auto flex flex-wrap justify-center space-y-3 text-center text-sm md:mx-0 md:flex-row md:flex-nowrap  md:space-y-0 md:text-left md:text-xs">
             <li className="">
               <span className=" text-black">
                 © 2024 CodeDevils - Arizona State University. All Rights
@@ -126,8 +126,7 @@ const Footer = () => {
               </span>
             </li>
 
-            {/* <ul className="w-ful mb-4 flex justify-center"> */}
-            <li className="">
+            <li>
               <span className="mx-1 hidden md:inline-block">|</span>
               <Link
                 target="_blank"
@@ -138,6 +137,7 @@ const Footer = () => {
                 }
               >
                 Privacy Policy
+                <div className="sr-only">Privacy Policy</div>
               </Link>
             </li>
             <li>
@@ -151,9 +151,9 @@ const Footer = () => {
                 }
               >
                 Terms & Conditions
+                <div className="sr-only">Terms & Conditions</div>
               </Link>
             </li>
-            {/* </ul> */}
           </ul>
           <ul className="flex w-full justify-center space-x-5 md:w-fit md:justify-end">
             <li>
