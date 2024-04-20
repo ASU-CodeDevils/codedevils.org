@@ -1,42 +1,43 @@
+// "use Server";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { socialLinks } from "~/utils/staticdata";
+
 import { AiOutlineInstagram, AiOutlineLink } from "react-icons/ai";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
-
-import CodeDevilsLogo from "./../../public/logo-small.png";
-
 const Footer = () => {
+  const { instagram, discord, github, linkedin, sundevilsync } = socialLinks;
   return (
-    <footer className="mt-auto bg-white">
-      <div className="p-4 py-6 lg:py-8">
-        <div className="mx-auto w-full max-w-screen-2xl md:flex md:justify-between">
-          <div className="mb-6 flex flex-col md:mb-0">
-            <Link href="/" className="flex items-center">
+    <footer className="mx-auto mt-auto w-full max-w-screen-2xl bg-white">
+      <div className="flex flex-col gap-8  pt-12">
+        <div className="flex flex-col justify-between gap-x-2 gap-y-8 px-8 md:flex-row">
+          <div className="flex flex-col md:gap-2">
+            <Link href="/" className="w-fit">
               <Image
-                src={CodeDevilsLogo}
+                src={"/logo.svg"}
                 alt="CodeDevils logo"
-                width={100}
-                height={200}
-                className="h-auto w-auto"
+                width={150}
+                height={150}
+                className=""
               />
             </Link>
-            <p className="my-2 text-sm text-gray-100 md:mb-0 md:mt-2 md:w-7/12">
-              CodeDevils is an inclusive online student organization at Arizona
-              State University that aims to bring students together.
+            <p className="text-sm">
+              CodeDevils is a student organization at Arizona State University
+              that aims to bring software development enthusiasts of all levels
+              to learn, build, and network together.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+
+          <div className="grid w-fit grid-cols-2 gap-x-8 gap-y-6 text-sm sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">
-                Organization
-              </h2>
-              <ul className="font-medium text-black">
+              <h2 className="mb-6 font-semibold uppercase ">Members</h2>
+              <ul className="font-medium">
                 {[
-                  ["About", "/about"],
-                  ["Leadership", "/about/#leadership"],
-                  ["Contact", "/contact"],
+                  ["Documentation", "https://docs.codedevils.org"],
+                  ["Get Started", "/get-started"],
+                  ["Projects", "/projects"],
                 ].map(([title, url], key) => (
                   <li key={key} className="mb-4">
                     <Link
@@ -51,10 +52,30 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 ">
-                Resources
-              </h2>
-              <ul className="font-medium text-black">
+              <h2 className="mb-6 font-semibold uppercase">Organization</h2>
+              <ul className="font-medium ">
+                {[
+                  ["About Us", "/about"],
+                  ["Newsletter", "/newsletter"],
+                  ["Careers", "/careers"],
+                  ["Blog", "/blog"],
+                ].map(([title, url], key) => (
+                  <li key={key} className="mb-4">
+                    <Link
+                      aria-label={`Learn more about CodeDevils by heading to ${title}`}
+                      href={url as string}
+                      className="hover:text-maroon hover:underline"
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className=" mb-6 font-semibold uppercase">Resources</h2>
+              <ul className="font-medium ">
                 <li className="mb-4">
                   <Link
                     target="_blank"
@@ -81,57 +102,53 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">
-                Legal
-              </h2>
-              <ul className="font-medium text-black">
-                <li className="mb-4 last:mb-0">
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-maroon hover:underline"
-                    href={
-                      "https://codedevils.notion.site/CodeDevils-Privacy-Policy-bc0544f3eebe42fc9d60d39f8d731834?pvs=4"
-                    }
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li className="mb-4 last:mb-0">
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-maroon hover:underline"
-                    href={
-                      "https://codedevils.notion.site/Terms-Conditions-59c663cb99e9471a8e0fae12cbb09008?pvs=4"
-                    }
-                  >
-                    Terms & Conditions
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-500 sm:mx-auto lg:my-4" />
-        <div className="mx-auto w-full max-w-screen-2xl sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-black">
-            © 2024{" "}
-            <Link
-              href="/"
-              className="text-marron transition-colors duration-200 ease-in-out hover:text-maroon md:text-black"
-            >
-              CodeDevils - Arizona State University
-            </Link>
-            . All Rights Reserved.
-          </span>
-          <ul className="mt-4 flex space-x-5 sm:mt-0 sm:justify-center">
+
+        <div className="flex h-full flex-col items-start justify-between gap-y-2 bg-gray px-8 py-12 md:flex-row md:items-center md:gap-y-0">
+          <ul className="mx-auto flex flex-wrap justify-center text-center text-sm md:mx-0 md:flex-row md:flex-nowrap  md:text-left md:text-xs">
+            <li className="">
+              <span className=" text-black">
+                © 2024 CodeDevils - Arizona State University. All Rights
+                Reserved.
+              </span>
+            </li>
+
+            {/* <ul className="w-ful mb-4 flex justify-center"> */}
+            <li className="">
+              <span className="mx-1 hidden md:inline-block">|</span>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                href={
+                  "https://codedevils.notion.site/CodeDevils-Privacy-Policy-bc0544f3eebe42fc9d60d39f8d731834?pvs=4"
+                }
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <span className="mx-1">|</span>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                href={
+                  "https://codedevils.notion.site/Terms-Conditions-59c663cb99e9471a8e0fae12cbb09008?pvs=4"
+                }
+              >
+                Terms & Conditions
+              </Link>
+            </li>
+            {/* </ul> */}
+          </ul>
+          <ul className="flex w-full justify-center space-x-5 md:w-fit md:justify-end">
             <li>
               <Link
                 className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                 target="_blank"
-                href="https://www.instagram.com/codedevils.asu/"
+                href={instagram}
               >
                 <span className="h-4 w-4">
                   <AiOutlineInstagram />
@@ -143,7 +160,7 @@ const Footer = () => {
               <Link
                 className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                 target="_blank"
-                href="https://discord.gg/eevXKjVmm2"
+                href={discord}
               >
                 <span className="h-4 w-4">
                   <FaDiscord />
@@ -155,7 +172,7 @@ const Footer = () => {
               <Link
                 className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                 target="_blank"
-                href="https://asu.campuslabs.com/engage/organization/codedevils/"
+                href={sundevilsync}
               >
                 <span className="h-4 w-4">
                   <AiOutlineLink />
@@ -167,7 +184,7 @@ const Footer = () => {
               <Link
                 className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                 target="_blank"
-                href="https://github.com/ASU-CodeDevils/"
+                href={github}
               >
                 <span className="h-4 w-4">
                   <FaGithub />
@@ -179,7 +196,7 @@ const Footer = () => {
               <Link
                 className="text-black transition-colors duration-200 ease-in-out hover:text-maroon"
                 target="_blank"
-                href="https://www.linkedin.com/company/codedevils-official/"
+                href={linkedin}
               >
                 <span className="h-4 w-4">
                   <FaLinkedin />

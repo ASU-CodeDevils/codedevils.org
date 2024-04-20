@@ -1,38 +1,93 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import React, { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-import HeaderBackground from "./../../public/images/headerImage.png";
+import { cn } from "~/utils/cn";
 
-type HeaderProps = {
-  children?: React.ReactNode;
-};
-
-const Header: React.FC<HeaderProps> = ({ children }: HeaderProps) => {
-  const { ref: headerRef, inView: isInView } = useInView({
-    triggerOnce: false,
-  });
-
+export const Header = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className="relative flex text-white">
-      <Image
-        src={HeaderBackground}
-        className="h-[412px] object-cover"
-        alt="CodeDevils code grid header background"
-        priority
-      />
-      <div
-        ref={headerRef}
-        className={` ${
-          isInView
-            ? "translate-x-0	opacity-100 blur-0"
-            : "-translate-x-full opacity-0 blur"
-        } absolute mx-auto flex h-full w-full max-w-screen-2xl items-center text-left text-[2rem] transition-all duration-700 md:text-[3rem] `}
-      >
-        <div className="my-auto px-6 md:ml-8 md:px-0 lg:w-7/12">{children}</div>
+    <div className="flex bg-gray py-12 text-white">
+      <div className="relative">
+        <Image
+          src={"/images/YLPWQK.png"}
+          height={300}
+          width={1440}
+          alt="CodeDevils code grid header background"
+          className="hidden object-cover md:block"
+          priority
+        />
+        <div
+          className={cn(
+            "justify-left top-0 flex h-full w-full items-center px-8 text-[2rem] transition-all duration-700 md:absolute md:w-6/12 md:py-28 md:text-[3rem]",
+            className
+          )}
+        >
+          <article className="flex flex-col space-y-6 text-black">
+            {children}
+          </article>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export const HeaderTitle = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: string;
+}) => {
+  return (
+    <h1 className={cn("text-5xl font-bold  md:text-6xl", className)}>
+      {children}
+    </h1>
+  );
+};
+
+export const HeaderSubtitle = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: string;
+}) => {
+  // the reason why the chidlren is wrapped in a article is because the children prop is a ReactNode, allowing for multiple elements(paragraphs, links, etc) to be passed in as children.
+  return (
+    <p className={cn("text-base font-extralight", className)}>{children}</p>
+  );
+};
+
+export const HeaderButton = ({
+  link,
+  target,
+  rel,
+  children,
+  className,
+}: {
+  link: string;
+  children: string;
+  target?: string;
+  rel?: string;
+  className?: string;
+}) => {
+  return (
+    <Link
+      href={link}
+      className={cn(
+        "w-fit rounded-lg border border-maroon bg-maroon px-4 py-1 text-2xl text-white transition-colors duration-300 ease-in-out hover:bg-gray",
+        className
+      )}
+      target={target}
+      rel={rel}
+    >
+      {children}
+    </Link>
+  );
+};

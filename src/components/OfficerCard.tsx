@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import Image from "next/image";
 import Card from "./Card";
 import Link from "next/link";
 
-import { MdOutlineZoomOutMap } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
+import { IoMdOpen } from "react-icons/io";
 
 type OfficerCardProps = {
   officerInfo: OfficerInfo;
@@ -17,7 +17,7 @@ type OfficerInfo = {
   portfolio_url: string;
 };
 
-const OfficerCard: React.FC<OfficerCardProps> = ({
+const OfficerCard: FC<OfficerCardProps> = ({
   officerInfo,
 }: OfficerCardProps) => {
   const [hovered, setHovered] = useState(false);
@@ -62,15 +62,15 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
               >
                 {name}
               </div>
-              <div className="text-sm text-gray-200">{position}</div>
+              <div className="text-gray-200 text-sm">{position}</div>
             </div>
 
             <div
               className={`${
-                hovered ? " scale-100" : " scale-0"
+                hovered ? " scale-100" : "lg:scale-0"
               } transition-transform`}
             >
-              <MdOutlineZoomOutMap className="text-3xl text-maroon" />
+              <IoMdOpen className="text-3xl text-maroon" />
             </div>
           </Link>
         </Card>
