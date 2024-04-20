@@ -1,6 +1,5 @@
-import Header from "~/components/Header";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import { Header } from "~/components/Header";
+import { InternalLink } from "~/components/ui/buttons";
 
 type ErrorProps = {
   statusCode: number;
@@ -16,17 +15,18 @@ type ErrorInitialProps = {
 const Error = ({ statusCode }: ErrorProps) => {
   return (
     <>
-      <div className="isolate">
+      <div className="flex h-full items-center justify-center">
         <Header>
-          <h1 className="text-3xl text-7xl font-bold">{statusCode} Error</h1>
+          <h1 className="text-7xl font-bold">{statusCode} Error</h1>
           <article className="space-y-4">
             <p className="text-base md:w-1/2">
-              Oops! Something went wrong. Sorry, that&apos;s all we know.
+              Oops! Something went wrong. Seems like this isn&apos;t the page
+              you are looking for.
             </p>
             <p className="text-base">
-              <Link className=" text-white" href="/">
-                Go to the Home Page <FaArrowRight className="inline" />
-              </Link>
+              <InternalLink href="/">Go to the Home Page</InternalLink>
+
+              <InternalLink href="/support">Get Support</InternalLink>
             </p>
           </article>
         </Header>
