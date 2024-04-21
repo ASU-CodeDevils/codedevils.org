@@ -12,7 +12,7 @@ export const Header = ({
   className?: string;
 }) => {
   return (
-    <div className="flex bg-gray py-12 text-white">
+    <div className="flex items-center justify-center bg-gray py-12 text-white">
       <div className="relative">
         <Image
           src={"/images/YLPWQK.png"}

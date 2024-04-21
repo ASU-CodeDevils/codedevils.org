@@ -18,7 +18,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./*"]
     },
     "plugins": [
       {
@@ -31,8 +31,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    ".next/types/**/*.ts",
-    "next.config.cjs"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

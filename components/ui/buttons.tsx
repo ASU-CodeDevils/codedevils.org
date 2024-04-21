@@ -50,7 +50,7 @@ export const InternalLink: FC<LinkProps> = ({ href, children, className }) => {
           className
         )}
       >
-        {children}
+        <span className="text-maroon">{children}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={24}
@@ -86,7 +86,7 @@ export const ExternalLink: FC<LinkProps> = ({ href, children, className }) => {
           className
         )}
       >
-        {children}
+        <span className="text-maroon">{children}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={24}

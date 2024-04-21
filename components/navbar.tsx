@@ -1,12 +1,13 @@
+"use client";
 import React, { useState, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { IconX, IconChevronDown, IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2, IconX, IconChevronDown } from "@tabler/icons-react";
 
-import CodeDevilsLogo from "./../../public/logo.svg";
+import CodeDevilsLogo from "./../public/logo.svg";
 
-import Banner from "./Banner";
+import Banner from "./banner";
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
