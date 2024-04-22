@@ -1,6 +1,8 @@
-# CodeDevils Website
+# CodeDevils' Website
 
-This is the repository for the CodeDevils website. It is built using the [Next.js](https://nextjs.org) framework, [Tailwind CSS](https://tailwindcss.com/), and [TypeScript](https://www.typescriptlang.org/). The website is hosted on [Vercel](https://vercel.com).
+![](https://codedevils.org/og.png)
+
+This is the official repository for CodeDevils' website. It's built using the [Next.js](https://nextjs.org) framework, [Tailwind CSS](https://tailwindcss.com/), and [TypeScript](https://www.typescriptlang.org/). The website is hosted on [Vercel](https://vercel.com).
 
 ## Why are there `.js` files in here?
 
@@ -49,7 +51,3 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/en/
 ## Contributing (Pull Requests)
 
 Please make sure to follow the pull request template when creating a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
