@@ -18,16 +18,20 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
-    }
+      "~/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    ".next/types/**/*.ts",
-    "next.config.cjs"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
