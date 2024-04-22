@@ -211,7 +211,7 @@ export const Dropdown = ({
               }
             `}
             >
-              <div className="overflow-hidden border-black/[0.2] bg-white backdrop-blur-sm dark:border-white/[0.2] dark:bg-black md:rounded-2xl md:border md:shadow-xl">
+              <div className="overflow-hidden border-black/[0.2] bg-white backdrop-blur-sm md:rounded-2xl md:border md:shadow-xl">
                 <div className="h-full space-y-4 md:w-max md:px-8 md:py-4">
                   {children}
                 </div>
