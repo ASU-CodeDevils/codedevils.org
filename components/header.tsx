@@ -12,16 +12,15 @@ export const Header = ({
   className?: string;
 }) => {
   return (
-    <div className='flex flex-col md:grid md:grid-cols-2 md:gap-4 px-8 py-12'>
+    <div className='flex flex-col md:grid md:grid-cols-2 md:gap-4 px-8 py-12 '>
       <div className={cn(className)}>{children}</div>
-      <div className='flex items-center'>
+      <div className='flex items-center justify-center'>
         <Image
           src={'/images/YLPWQK.png'}
-          height={500}
-          width={500}
+          height={300}
+          width={700}
           alt='CodeDevils code grid header background'
-          className='hidden md:block'
-          style={{ height: 'auto', width: 'auto' }}
+          className='hidden md:flex'
           priority
         />
       </div>
