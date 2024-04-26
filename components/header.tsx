@@ -12,7 +12,7 @@ export const Header = ({
   className?: string;
 }) => {
   return (
-    <div className='flex flex-col md:grid md:grid-cols-2 md:gap-4 px-8 py-12 '>
+    <div className='flex flex-col md:grid md:grid-cols-2 md:gap-4 px-8 py-12 bg-gray'>
       <div className={cn(className)}>{children}</div>
       <div className='flex items-center justify-center'>
         <Image
