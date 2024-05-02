@@ -1,19 +1,25 @@
-import { type NextPage } from "next";
+import type { Metadata, NextPage } from 'next';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import { ExternalLink, InternalLink } from "~/components/ui/buttons";
-import { Hero, Section, SupportSection } from "~/components/ui/sections";
+import { ExternalLink, InternalLink } from '~/components/ui/buttons';
+import { Hero, Section, SupportSection } from '~/components/ui/sections';
+
+export const metadata: Metadata = {
+  title: 'Careers at CodeDevils',
+  description:
+    'Explore career opportunities at CodeDevils and learn what it takes to join our leadership team. Discover the values we look for and how you can contribute to our mission of empowering software developers.',
+};
 
 const CareersPage: NextPage = () => {
   return (
     <>
-      <Hero className="bg-gray">
-        <article className="space-y-3 text-center">
-          <h1 className="mx-auto text-5xl font-bold md:w-2/3 md:text-6xl">
+      <Hero className='bg-gray'>
+        <article className='space-y-3 text-center'>
+          <h1 className='mx-auto text-5xl font-bold md:w-2/3 md:text-6xl'>
             Join our team
           </h1>
-          <p className="text-xl text-black/70 md:mx-auto md:w-7/12">
+          <p className='text-xl text-black/70 md:mx-auto md:w-7/12'>
             Do you have a passion for helping others learn and grow? CodeDevils
             is always looking for new officers to help us grow and succeed.
           </p>
@@ -21,12 +27,12 @@ const CareersPage: NextPage = () => {
       </Hero>
 
       <Section>
-        <article className="space-y-3 md:text-center">
-          <h2 className="text-xl text-maroon">Who are we</h2>
-          <h3 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
+        <article className='space-y-3 md:text-center'>
+          <h2 className='text-xl text-maroon'>Who are we</h2>
+          <h3 className='mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl'>
             We aren&apos;t just some ordinary leadership team.
           </h3>
-          <p className="mx-auto max-w-screen-md text-base">
+          <p className='mx-auto max-w-screen-md text-base'>
             With every organization&apos;, there are always a few key
             individuals who help keep the organization running smoothly. Our
             leadership team is no different. We are a group of dedicated
@@ -35,22 +41,22 @@ const CareersPage: NextPage = () => {
             team and help us succeed.
           </p>
           <ExternalLink
-            href="https://forms.gle/Y4rSigaHGzA1XCJ16"
-            className="center_link"
+            href='https://forms.gle/Y4rSigaHGzA1XCJ16'
+            className='center_link'
           >
             Apply Now
-            <p className="sr-only">to join our leadership team</p>
+            <p className='sr-only'>to join our leadership team</p>
           </ExternalLink>
         </article>
       </Section>
 
-      <div className="px-6 py-28 md:px-8">
-        <div className="mx-auto max-w-screen-xl space-y-3">
-          <article className="space-y-3 md:text-center">
-            <h1 className="mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl">
+      <div className='px-6 py-28 md:px-8'>
+        <div className='mx-auto max-w-screen-xl space-y-3'>
+          <article className='space-y-3 md:text-center'>
+            <h1 className='mx-auto max-w-screen-lg text-3xl font-bold md:text-4xl'>
               Our Virtues
             </h1>
-            <p className="mx-auto max-w-screen-md text-lg">
+            <p className='mx-auto max-w-screen-md text-lg'>
               As an organization who is dedicated to helping others learn and
               grow, we look for individuals who embody our core virtues of
               enabling members to Learn, Build, and Network. We are looking for
@@ -60,38 +66,38 @@ const CareersPage: NextPage = () => {
             </p>
           </article>
 
-          <ul className="mx-auto flex max-w-screen-lg flex-col">
-            <li className="flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2">
-              <article className="flex flex-col justify-center space-y-2">
-                <h2 className="text-2xl font-medium">Open Collaboration</h2>
-                <p className="">
+          <ul className='mx-auto flex max-w-screen-lg flex-col'>
+            <li className='flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2'>
+              <article className='flex flex-col justify-center space-y-2'>
+                <h2 className='text-2xl font-medium'>Open Collaboration</h2>
+                <p className=''>
                   We believe in the power of collaboration and open
                   communication. We work together to achieve our goals and help
                   each other grow.
                 </p>
               </article>
-              <div className="flex items-center justify-center">
+              <div className='flex items-center justify-center'>
                 <Image
-                  src="/images/AFYHFT.png"
-                  alt="Learn"
+                  src='/images/AFYHFT.png'
+                  alt='Learn'
                   width={500}
                   height={400}
                 />
               </div>
             </li>
 
-            <li className="flex flex-col gap-x-8 md:grid md:grid-cols-2">
-              <div className="flex items-center justify-center">
+            <li className='flex flex-col gap-x-8 md:grid md:grid-cols-2'>
+              <div className='flex items-center justify-center'>
                 <Image
-                  src="/images/GFJBVT.png"
-                  alt="Learn"
+                  src='/images/GFJBVT.png'
+                  alt='Learn'
                   width={500}
                   height={400}
                 />
               </div>
-              <article className="flex flex-col justify-center space-y-2">
-                <h2 className="text-2xl font-medium">Outcome Driven</h2>
-                <p className="">
+              <article className='flex flex-col justify-center space-y-2'>
+                <h2 className='text-2xl font-medium'>Outcome Driven</h2>
+                <p className=''>
                   We are outcome-driven and focused on achieving our goals. We
                   work together to achieve our goals and help each other grow
                   for our members. As ensuring have the best experience possible
@@ -100,12 +106,12 @@ const CareersPage: NextPage = () => {
               </article>
             </li>
 
-            <li className="flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2">
-              <article className="flex flex-col justify-center space-y-2">
-                <h2 className="text-2xl font-medium">
+            <li className='flex flex-col-reverse gap-x-8 md:grid md:grid-cols-2'>
+              <article className='flex flex-col justify-center space-y-2'>
+                <h2 className='text-2xl font-medium'>
                   Passionate About Learning
                 </h2>
-                <p className="">
+                <p className=''>
                   We are passionate about creating a culture of learning and
                   growing within our community. We are always looking for new
                   ways to help our members learn and grow. We also aim to create
@@ -113,10 +119,10 @@ const CareersPage: NextPage = () => {
                   their skill level.
                 </p>
               </article>
-              <div className="flex items-center justify-center">
+              <div className='flex items-center justify-center'>
                 <Image
-                  src="/images/IUYJVK.png"
-                  alt="Learn"
+                  src='/images/IUYJVK.png'
+                  alt='Learn'
                   width={500}
                   height={400}
                 />
@@ -127,27 +133,27 @@ const CareersPage: NextPage = () => {
       </div>
 
       <Section>
-        <ul className="mx-auto flex max-w-screen-lg flex-col gap-x-6 gap-y-4 md:grid md:grid-cols-2">
-          <li className="flex items-center justify-center">
-            <article className="space-y-3 text-left">
-              <h2 className="text-4xl font-bold">
+        <ul className='mx-auto flex max-w-screen-lg flex-col gap-x-6 gap-y-4 md:grid md:grid-cols-2'>
+          <li className='flex items-center justify-center'>
+            <article className='space-y-3 text-left'>
+              <h2 className='text-4xl font-bold'>
                 Fully Remote — Work From Where You Are
               </h2>
-              <p className="  text-base">
+              <p className='  text-base'>
                 We&apos;re a fully remote organization, with no physical
                 premises. You can work from anywhere in the world, as long as
                 you have an internet connection.
               </p>
-              <InternalLink href={"/careers"}>
+              <InternalLink href={'/careers'}>
                 Learn more
-                <p className="sr-only">about our remote work policy</p>
+                <p className='sr-only'>about our remote work policy</p>
               </InternalLink>
             </article>
           </li>
           <li>
             <Image
-              src="/images/MHYECJ.png"
-              alt="Learn"
+              src='/images/MHYECJ.png'
+              alt='Learn'
               width={500}
               height={500}
             />
