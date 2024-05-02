@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: {
     template: '%s | Arizona State University',
-    default: 'CodeDevils',
+    default: 'CodeDevils | Arizona State University',
   },
   metadataBase: new URL('https://www.codedevils.org'),
   description:
