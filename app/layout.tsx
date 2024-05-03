@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    shortcut: '/favicon.webp',
+    shortcut: '/favicon.png',
   },
 };
 
