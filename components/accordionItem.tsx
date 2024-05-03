@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 
-import { IconChevronDown } from "@tabler/icons-react";
+import { IconChevronDown } from '@tabler/icons-react';
 
 type AccordionItemProps = {
   title: string;
@@ -15,25 +16,25 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
   };
 
   return (
-    <div className="border-b-2 border-b-black/20">
+    <div className='border-b-2 border-b-black/20'>
       <div
-        className="flex cursor-pointer items-center justify-between p-4 "
+        className='flex cursor-pointer items-center justify-between p-4 '
         onClick={toggleAccordion}
       >
-        <h3 className="text-xl font-medium">{title}</h3>
+        <h3 className='text-xl font-medium'>{title}</h3>
 
         <IconChevronDown
           className={`transform ${
-            isOpen ? "rotate-180" : "rotate-0"
+            isOpen ? 'rotate-180' : 'rotate-0'
           } mx-4 transition-transform duration-200 md:mx-0`}
         />
       </div>
       <div
-        className={`px-4 py-2 ${isOpen ? "block" : "hidden"}`}
+        className={`px-4 py-2 ${isOpen ? 'block' : 'hidden'}`}
         style={{
-          maxHeight: isOpen ? "500px" : "0px",
-          overflow: "hidden",
-          transition: "max-height 1.0s ease-in-out",
+          maxHeight: isOpen ? '500px' : '0px',
+          overflow: 'hidden',
+          transition: 'max-height 1.0s ease-in-out',
         }}
       >
         {children}

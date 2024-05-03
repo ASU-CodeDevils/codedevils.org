@@ -8,7 +8,11 @@ import Footer from '~/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'CodeDevils | Arizona State University',
+  title: {
+    template: '%s | Arizona State University',
+    default: 'CodeDevils | Arizona State University',
+  },
+  metadataBase: new URL('https://www.codedevils.org'),
   description:
     "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
   keywords: [
@@ -51,7 +55,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    shortcut: '/favicon.webp',
+    shortcut: '/favicon.png',
   },
 };
 
