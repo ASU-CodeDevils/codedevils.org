@@ -5,9 +5,14 @@ import { ExternalLink } from '~/components/ui/buttons';
 import { socialLinks } from '~/utils/staticdata';
 
 export const metadata: Metadata = {
-  title: 'Getting Started with CodeDevils',
+  title: 'Getting Started',
   description:
     'Learn how to join CodeDevils and become part of our vibrant software development community. Find out what steps to take, what to expect, and how you can start contributing to projects and improving your coding skills.',
+  openGraph: {
+    title: 'Getting Started',
+    description:
+      'Learn how to join CodeDevils and become part of our vibrant software development community. Find out what steps to take, what to expect, and how you can start contributing to projects and improving your coding skills.',
+  },
 };
 
 const getStarted: NextPage = () => {

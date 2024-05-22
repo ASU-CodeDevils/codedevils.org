@@ -1,5 +1,5 @@
 import React from 'react';
-import { type NextPage } from 'next';
+import type { NextPage, Metadata } from 'next';
 
 import { InfiniteLogoCarousel } from '~/components/infiniteLogoCarousel';
 import { Section, SupportSection } from '~/components/ui/sections';
@@ -7,6 +7,12 @@ import { ExternalLink, InternalLink } from '~/components/ui/buttons';
 
 import { socialLinks } from '~/utils/staticdata';
 import { Header } from '~/components/header';
+
+export const metadata: Metadata = {
+  title: 'CodeDevils',
+  description:
+    'Discover CodeDevils, a vibrant software development community at Arizona State University. Learn how we help members grow their coding skills and prepare for tech careers. Explore our programs, events, and resources.',
+};
 
 const HomePage: NextPage = () => {
   const { discord } = socialLinks;

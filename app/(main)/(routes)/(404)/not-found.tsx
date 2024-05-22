@@ -1,5 +1,17 @@
+import { Metadata } from 'next';
 import { Header } from '~/components/header';
 import { InternalLink } from '~/components/ui/buttons';
+
+export const metadata: Metadata = {
+  title: '404 Error',
+  description:
+    "Oops! It looks like the page you're trying to access doesn't exist. Don't worry, you can explore other areas of CodeDevils to find what you're looking for. If you need assistance, feel free to contact us.",
+  openGraph: {
+    title: '404 Error',
+    description:
+      "Oops! It looks like the page you're trying to access doesn't exist. Don't worry, you can explore other areas of CodeDevils to find what you're looking for. If you need assistance, feel free to contact us.",
+  },
+};
 
 export default function NotFoundCatchAll() {
   return (
