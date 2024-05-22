@@ -6,9 +6,14 @@ import { ExternalLink, InternalLink } from '~/components/ui/buttons';
 import { Hero, Section, SupportSection } from '~/components/ui/sections';
 
 export const metadata: Metadata = {
-  title: 'Careers at CodeDevils',
+  title: 'Careers',
   description:
     'Explore career opportunities at CodeDevils and learn what it takes to join our leadership team. Discover the values we look for and how you can contribute to our mission of empowering software developers.',
+  openGraph: {
+    title: 'Careers',
+    description:
+      'Explore career opportunities at CodeDevils and learn what it takes to join our leadership team. Discover the values we look for and how you can contribute to our mission of empowering software developers.',
+  },
 };
 
 const CareersPage: NextPage = () => {

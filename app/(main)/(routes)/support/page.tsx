@@ -10,9 +10,14 @@ import AccordionItem from '~/components/accordionItem';
 import { socialLinks } from '~/utils/staticdata';
 
 export const metadata: Metadata = {
-  title: "CodeDevils' Support",
+  title: 'Support',
   description:
     'Need help with a technical issue or guidance on your software development journey? Visit the CodeDevils Support page for resources, FAQs, and expert assistance from our support team.',
+  openGraph: {
+    title: 'Support',
+    description:
+      'Need help with a technical issue or guidance on your software development journey? Visit the CodeDevils Support page for resources, FAQs, and expert assistance from our support team.',
+  },
 };
 
 const ContactPage: NextPage = () => {
@@ -84,9 +89,7 @@ const ContactPage: NextPage = () => {
               <path d='M9 16h6' />
             </svg>
             <Link
-              href='https://docs.codedevils.org'
-              target='_blank'
-              rel='noopener noreferrer'
+              href='https://docs.codedevils.io'
               className='text-xl hover:underline'
             >
               Project Documentation

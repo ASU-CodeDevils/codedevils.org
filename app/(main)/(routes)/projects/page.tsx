@@ -9,9 +9,14 @@ import { ExternalLink, InternalLink } from '~/components/ui/buttons';
 import { socialLinks } from '~/utils/staticdata';
 
 export const metadata: Metadata = {
-  title: "CodeDevils' Projects",
+  title: 'Projects',
   description:
     'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
+  openGraph: {
+    title: 'Projects',
+    description:
+      'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
+  },
 };
 
 const projectsPage: NextPage = () => {

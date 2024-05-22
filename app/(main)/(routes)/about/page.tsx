@@ -10,9 +10,14 @@ import { IconLeaf, IconHammer, IconBrandAsana } from '@tabler/icons-react';
 import { officers, projectLeads } from '~/utils/staticdata';
 
 export const metadata: Metadata = {
-  title: 'About CodeDevils',
+  title: 'About Us',
   description:
     "Learn more about CodeDevils, including our history, mission, and leadership team. Discover the industry professionals who support our projects and how we're preparing members for successful careers in software development.",
+  openGraph: {
+    title: 'About Us',
+    description:
+      "Learn more about CodeDevils, including our history, mission, and leadership team. Discover the industry professionals who support our projects and how we're preparing members for successful careers in software development.",
+  },
 };
 
 const AboutPage: NextPage = () => {

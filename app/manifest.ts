@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'CodeDevils',
     short_name: 'CodeDevils',
     description:
-      'Discover CodeDevils, a vibrant software development community at Arizona State University. Learn how we help members grow their coding skills and prepare for tech careers.',
+      "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
