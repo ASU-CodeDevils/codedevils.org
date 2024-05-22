@@ -6,6 +6,8 @@ export const metadata: Metadata = {
     default: 'CodeDevils | Arizona State University',
   },
   metadataBase: new URL('https://www.codedevils.io'),
+  description:
+    "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
   keywords: [
     'codedevils',
     'arizona state university student organizations',
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
     description:
       "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
     type: 'website',
+    url: 'https://www.codedevils.io',
     locale: 'en_US',
     images: [
       {
