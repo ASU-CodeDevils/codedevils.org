@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import '~/app/globals.css';
-import '~/utils/metadata';
+import { metadata, viewport } from '~/utils/metadata';
+export { metadata, viewport };
 
 import Navbar from '~/components/navbar';
 import Footer from '~/components/footer';
