@@ -1,20 +1,11 @@
-import { type Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-import Navbar from '~/components/navbar';
-import Footer from '~/components/footer';
-
-const inter = Inter({ subsets: ['latin'] });
+import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Arizona State University',
+    template: '%s | CodeDevils @ Arizona State University',
     default: 'CodeDevils | Arizona State University',
   },
-  metadataBase: new URL('https://www.codedevils.org'),
-  description:
-    "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
+  metadataBase: new URL('https://www.codedevils.io'),
   keywords: [
     'codedevils',
     'arizona state university student organizations',
@@ -38,7 +29,6 @@ export const metadata: Metadata = {
   ],
   robots: 'index, follow',
   authors: [{ name: "CodeDevils' Website Team" }],
-  viewport: 'width=device-width, initial-scale=1.0',
   openGraph: {
     title: 'CodeDevils | Arizona State University',
     description:
@@ -47,7 +37,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://codedevils.org/og.png',
+        url: 'https://codedevils.io/og.png',
         width: 1362,
         height: 482,
         alt: "CodeDevils' openGraph image",
@@ -59,21 +49,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang='en'
-      className={`mx-auto flex h-screen flex-col flex-nowrap bg-white text-black`}
-    >
-      <body className={`flex h-screen flex-col ${inter.className}`}>
-        <Navbar />
-        <div className='mx-auto w-full max-w-screen-2xl'>{children}</div>
-        <Footer />
-      </body>
-    </html>
-  );
-}
+export const viewport: Viewport = {
+  themeColor: 'white',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
