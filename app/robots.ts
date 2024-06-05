@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '',
     },
-    sitemap: 'https://www.codedevils.org/sitemap.xml',
+    sitemap: 'https://www.codedevils.io/sitemap.xml',
   };
 }
