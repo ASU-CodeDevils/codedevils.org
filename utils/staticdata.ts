@@ -10,17 +10,8 @@ export type ProfileType = {
 
 export const officers = [
   {
-    name: 'David Nevarez',
-    position: 'President',
-    avatar: '/images/officers/david_nevarez.png',
-    links: {
-      portfolio_url: 'https://www.davidnevarez.info/',
-      linkedin: 'https://www.linkedin.com/in/fernando-d-nevarez/',
-    },
-  },
-  {
     name: 'Frank Lin',
-    position: 'Vice President',
+    position: 'President',
     avatar: '/images/officers/frank-lin.png',
     links: {
       portfolio_url: 'https://yellowrubberduckie.com/',
@@ -28,15 +19,25 @@ export const officers = [
     },
   },
   {
-    name: 'Haamid Juvale',
+    name: 'Remi Godin',
     position: 'Vice President',
-    avatar: '/images/officers/Haamid-Juvale.jpeg',
+    avatar: '/images/officers/Remi-Godin.png',
     links: {
       portfolio_url:
-        'https://codedevils.notion.site/Haamid-Juvale-f21cb8be651445bfad01d2e175dcfda0?pvs=74',
-      linkedin: 'https://www.linkedin.com/in/haamidjuvale/',
+        'https://codedevils.notion.site/Remi-Godin-282225e0b6fe4b01948e707cf1a793f4?pvs=4',
+      linkedin: 'https://www.linkedin.com/in/remi-godin-179719282/',
     },
   },
+  {
+    name: 'David Nevarez',
+    position: 'Chief Technology Officer',
+    avatar: '/images/officers/david_nevarez.png',
+    links: {
+      portfolio_url: 'https://www.davidnevarez.info/',
+      linkedin: 'https://www.linkedin.com/in/fernando-d-nevarez/',
+    },
+  },
+
   {
     name: 'Tyler Kruer',
     position: 'Treasurer',
@@ -56,6 +57,7 @@ export const officers = [
       linkedin: 'https://www.linkedin.com/in/ansh-dani/',
     },
   },
+
   {
     name: 'Krishna Balaji',
     position: 'Secretary',
@@ -67,8 +69,18 @@ export const officers = [
     },
   },
   {
+    name: 'Haamid Juvale',
+    position: 'Industry Director',
+    avatar: '/images/officers/Haamid-Juvale.jpeg',
+    links: {
+      portfolio_url:
+        'https://codedevils.notion.site/Haamid-Juvale-f21cb8be651445bfad01d2e175dcfda0?pvs=74',
+      linkedin: 'https://www.linkedin.com/in/haamidjuvale/',
+    },
+  },
+  {
     name: 'Pranith Molakalapalli',
-    position: 'Project Coordinator',
+    position: 'Events Director',
     avatar: '/images/officers/Pranith-Molakalapalli.jpeg',
     links: {
       portfolio_url: 'https://prani.tech/',
@@ -77,7 +89,7 @@ export const officers = [
   },
   {
     name: 'Mason Biegel',
-    position: 'Project Coordinator',
+    position: 'Events Coordinator',
     avatar: '/images/officers/Mason-Biegel.png',
     links: {
       portfolio_url:
@@ -85,19 +97,21 @@ export const officers = [
       linkedin: 'https://www.linkedin.com/in/masonb3/',
     },
   },
+
   {
-    name: 'Remi Godin',
-    position: 'Project Coordinator',
-    avatar: '/images/officers/Remi-Godin.png',
+    name: 'Jaith Darrah',
+    position: 'Events Coordinator',
+    avatar: '/images/officers/Jaith-Darrah.png',
     links: {
       portfolio_url:
-        'https://codedevils.notion.site/Remi-Godin-282225e0b6fe4b01948e707cf1a793f4?pvs=4',
-      linkedin: 'https://www.linkedin.com/in/remi-godin-179719282/',
+        'https://codedevils.notion.site/Jaith-Darrah-1a7e24d6556e48ac95482c791e1f8e8a?pvs=4',
+      linkedin: 'https://www.linkedin.com/in/jaithdarrah/',
     },
   },
+
   {
     name: 'Isabella Faris',
-    position: 'Marketing Coordinator',
+    position: 'Marketing Director',
     avatar: '/images/officers/Isabella-Faris.png',
     links: {
       portfolio_url:
