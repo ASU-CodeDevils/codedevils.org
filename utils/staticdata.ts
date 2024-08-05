@@ -179,7 +179,7 @@ export const projectLeads = [
 ];
 
 export const socialLinks = {
-  discord: 'https://discord.gg/eevXKjVmm2',
+  discord: 'https://discord.gg/codedevils',
   sundevilsync: 'https://asu.campuslabs.com/engage/organization/codedevils/',
   linkedin: 'https://www.linkedin.com/company/codedevils-official/',
   instagram: 'https://www.instagram.com/codedevils.asu/',
