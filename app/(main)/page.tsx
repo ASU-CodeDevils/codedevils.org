@@ -75,7 +75,7 @@ const HomePage: NextPage = () => {
             <div className='space-y-1'>
               <h4 className='text-xl font-medium'>Build</h4>
               <p>
-                We offer the uqniue opportunity to members to work on real-world
+                We offer the unique opportunity to members to work on real-world
                 projects to gain experience and build their portfolio.
               </p>
             </div>
