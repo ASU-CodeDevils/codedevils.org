@@ -11,23 +11,28 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
+    "@prisma/client": "^5.19.0",
     "@react-three/drei": "^9.102.5",
     "@react-three/fiber": "^8.15.19",
     "@tabler/icons-react": "^3.2.0",
     "@vercel/analytics": "^1.2.2",
+    "bcrypt": "^5.1.1",
     "clsx": "^2.1.0",
     "framer-motion": "^10.18.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "14.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.5",
-    "react^10.4.3": "link:@trpc/react^10.4.3",
+    "sqlite3": "^5.1.7",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@types/bcrypt": "^5.0.2",
     "@types/eslint": "^8.44.0",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "20.12.7",
     "@types/prettier": "^2.7.3",
     "@types/react": "18.0.26",
@@ -40,10 +45,16 @@
     "postcss": "^8.4.19",
     "prettier": "2.8.0",
     "prettier-plugin-tailwindcss": "^0.2.8",
+    "prisma": "^5.19.0",
     "tailwindcss": "^3.2.4",
     "typescript": "4.9.3"
   },
   "ct3aMetadata": {
     "initVersion": "5.14.0"
-  }
+  },
+  "description": "![](https://codedevils.org/og.png)",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

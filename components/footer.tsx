@@ -39,6 +39,7 @@ const Footer = () => {
                   ["Documentation", "https://docs.codedevils.org"],
                   ["Get Started", "/get-started"],
                   ["Projects", "/projects"],
+                  ["Leader Board", "/point-leaderboards"],
                 ].map(([title, url], key) => (
                   <li key={key} className="mb-4">
                     <Link

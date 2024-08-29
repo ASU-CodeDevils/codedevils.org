@@ -132,6 +132,12 @@ const Navbar = () => {
                   </DropdownItem>
                 </div>
               </Dropdown>
+              <MenuItem
+                href="/point-leaderboards"
+                onClick={() => setShowMobileNav(!showMobileNav)}
+              >
+                Point Leader Board
+              </MenuItem>
             </Menu>
           </div>
         </div>
