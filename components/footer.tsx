@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex flex-col md:gap-2">
             <Link href="/" className="w-fit">
               <Image
-                src={"/logo.svg"}
+                src={"/codedevils-logo.svg"}
                 alt="CodeDevils logo"
                 width={150}
                 height={150}
