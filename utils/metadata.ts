@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     template: '%s | CodeDevils @ Arizona State University',
     default: 'CodeDevils | Arizona State University',
   },
-  metadataBase: new URL('https://www.codedevils.io'),
+  metadataBase: new URL('https://www.codedevils.org'),
   description:
     "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
   keywords: [
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     description:
       "Grow your software development skills with CodeDevils, Arizona State University's largest software development student organization. Learn, build, and network with us!",
     type: 'website',
-    url: 'https://www.codedevils.io',
+    url: 'https://www.codedevils.org',
     locale: 'en_US',
     images: [
       {
-        url: 'https://codedevils.io/og.png',
+        url: 'https://codedevils.org/og.png',
         width: 1362,
         height: 482,
         alt: "CodeDevils' openGraph image",
