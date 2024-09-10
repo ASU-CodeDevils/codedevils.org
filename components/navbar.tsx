@@ -77,7 +77,7 @@ const Navbar = () => {
               <Dropdown setActive={setActive} active={active} item="Members">
                 <div className="flex flex-col space-y-4 text-sm">
                   <DropdownItem
-                    href="https://docs.codedevils.club"
+                    href="https://docs.codedevils.org"
                     onClick={() => setShowMobileNav(!showMobileNav)}
                   >
                     Documentation
