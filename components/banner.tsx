@@ -8,7 +8,7 @@ const Banner = () => {
         <ul className="flex justify-start gap-4 text-maroon md:justify-end">
           <li>
             <Link
-              href="https://docs.codedevils.club"
+              href="https://docs.codedevils.org"
               className="hover:underline"
             >
               Docs
