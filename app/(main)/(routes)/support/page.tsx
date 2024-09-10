@@ -89,7 +89,7 @@ const ContactPage: NextPage = () => {
               <path d='M9 16h6' />
             </svg>
             <Link
-              href='https://docs.codedevils.io'
+              href='https://docs.codedevils.org'
               className='text-xl hover:underline'
             >
               Project Documentation
