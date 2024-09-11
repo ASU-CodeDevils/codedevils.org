@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { IconMenu2, IconX, IconChevronDown } from "@tabler/icons-react";
 
-import CodeDevilsLogo from "./../public/logo.svg";
+import CodeDevilsLogo from "../public/codedevils-logo.svg";
 
 import Banner from "./banner";
 
