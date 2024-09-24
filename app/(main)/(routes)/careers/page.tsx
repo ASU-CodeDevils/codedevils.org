@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 const CareersPage: NextPage = () => {
   return (
     <>
+      <div className='w-full h-24' />
       <Hero className='bg-gray'>
         <article className='space-y-3 text-center'>
           <h1 className='mx-auto text-5xl font-bold md:w-2/3 md:text-6xl'>

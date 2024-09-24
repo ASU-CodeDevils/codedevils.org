@@ -18,6 +18,7 @@ const HomePage: NextPage = () => {
   const { discord } = socialLinks;
   return (
     <>
+      <div className='w-full h-24' />
       <Header>
         <article className='flex flex-col space-y-6 text-black'>
           <h1 className='text-5xl font-bold  md:text-6xl'>
@@ -29,7 +30,7 @@ const HomePage: NextPage = () => {
             them for success in the industry through hands-on workshops,
             projects, and mentorship.
           </p>
-          <InternalLink href='/get-started'>
+          <InternalLink href='/get-started' className='ml-auto mr-12'>
             Learn More
             <p className='sr-only'>
               to learn more about how you can get started with CodeDevils.

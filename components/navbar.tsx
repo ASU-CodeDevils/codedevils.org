@@ -15,8 +15,7 @@ const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <header className="z-50 w-full bg-white shadow-md">
-      <Banner />
+    <header className="fixed z-50 w-full bg-white shadow-md">
       <nav
         className={`mx-auto max-w-screen-2xl px-6 md:px-8`}
         onMouseLeave={() => setActive(null)}

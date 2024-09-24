@@ -19,6 +19,7 @@ export default function RootLayout({
       className={`mx-auto flex h-screen flex-col flex-nowrap bg-white text-black`}
     >
       <body className={`flex h-screen flex-col ${inter.className}`}>
+        
         <Navbar />
         <main className='mx-auto w-full max-w-screen-2xl'>{children}</main>
         <Footer />

@@ -23,53 +23,34 @@ const projectsPage: NextPage = () => {
   const { discord } = socialLinks;
   return (
     <>
+      <div className='w-full h-24' />
       <Section>
         <article className='space-y-3 text-center'>
-          <h1 className='text-3xl text-maroon'>Our Projects</h1>
-          <h2 className='mx-auto text-5xl font-bold md:w-2/3 md:text-6xl'>
-            Grow your resume with our open-source projects
+          <h2 className='mx-auto text-5xl font-bold md:w-5/6 md:text-6xl'>
+            Our members are foundational to our projects
           </h2>
           <p className='text-xl text-black/70'>
-            Learn and improve your skills by contributing to our projects.
+            Here are their achievements.
           </p>
         </article>
 
         {/* Card */}
         <div
-          className='relative flex h-[35rem] items-center justify-center md:h-[50rem]' // md:h-[80rem]
+          className='relative flex h-[40rem] items-center justify-center' // md:h-[80rem]
         >
-          <div
-            className='relative w-full py-10 md:py-28'
-            style={{
-              perspective: '1000px',
-            }}
-          >
-            <Card>
-              <Image
-                src={`/images/github.png`}
-                alt='hero'
-                height={720}
-                width={1400}
-                className='mx-auto hidden h-full rounded-2xl object-cover object-left-top md:block'
-                draggable={false}
-              />
-
-              <Image
-                src={`/images/github-mobile.png`}
-                alt='hero'
-                height={1280}
-                width={1400}
-                className='mx-auto block h-full rounded-2xl object-cover object-left-top md:hidden'
-                draggable={false}
-              />
-            </Card>
+          <div className='flex flex-row h-full w-full gap-2'>
+            <div className='flex justify-center items-center w-full h-full rounded-3xl 
+              bg-gradient-to-br from-zinc-100 to-zinc-200 text-black' >Git Activity here</div>
+            <div className='flex justify-center items-center w-full h-full rounded-3xl 
+              bg-gradient-to-br from-zinc-100 to-zinc-300 text-black' >Leaderboard here</div>
+            
           </div>
         </div>
       </Section>
 
       <Section className='bg-gray'>
         <article className='space-y-3 text-center'>
-          <h2 className='text-2xl text-maroon'>Get involved</h2>
+          
           <h3 className='text-4xl font-bold'>
             Contribute to our open-source projects
           </h3>
@@ -86,58 +67,90 @@ const projectsPage: NextPage = () => {
             <div className='space-y-2'>
               <h4 className='text-xl font-medium'>CodeDevils&apos; Website</h4>
               <p className='text-base text-black/90'>
-                The official CodeDevils&apos; website that you are currently
-                viewing.
+                Our rapidly-evolving website.  New features and tools are constantly being added!
               </p>
             </div>
-            <ExternalLink
-              href='https://github.com/ASU-CodeDevils/codedevils.org'
+            <InternalLink
+              href='/projects/cd-website'
               className='mx-auto'
             >
-              View on GitHub
+              
               <p className='sr-only'>
                 to view the CodeDevils&apos; website repository.
               </p>
-            </ExternalLink>
+            </InternalLink>
           </li>
 
           <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
             <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>DevilBot</h4>
+              <h4 className='text-xl font-medium'>CodeDevils Academy</h4>
               <p className='text-base text-black/90'>
-                A Bot written in Rust to provide utility and fun commands within
-                our Discord server.
+                A sister website to CodeDevils.org.  A content library for users to visit and learn how to code!
               </p>
             </div>
-            <ExternalLink
-              href='https://github.com/ASU-CodeDevils/discordo-rusto-boto'
+            <InternalLink
+              href='/projects/academy'
               className='mx-auto'
             >
-              View on GitHub
-              <p className='sr-only'>to view DevilBot repository.</p>
-            </ExternalLink>
+            
+              <p className='sr-only'>to view Academy repository.</p>
+            </InternalLink>
           </li>
 
           <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
             <div className='space-y-2'>
               <h4 className='text-xl font-medium'>
-                Our React Components Library
+                CodeDevils GameDev
               </h4>
               <p className='text-base text-black/90'>
-                A Components Library that is used across all of our projects to
-                maintain a consistent design system.
+                A series of Game Development projects to implement in various places around CodeDevils!
               </p>
             </div>
-            <ExternalLink
-              href='https://github.com/ASU-CodeDevils/CD-Library'
+            <InternalLink
+              href='/projects/gamedev'
               className='mx-auto'
             >
-              View on GitHub
               <p className='sr-only'>
-                to view the React Components Library repository.
+                to view the gamedev repository.
               </p>
-            </ExternalLink>
+            </InternalLink>
           </li>
+
+          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
+            <div className='space-y-2'>
+              <h4 className='text-xl font-medium'>CodeDevils Mobile</h4>
+              <p className='text-base text-black/90'>
+                Our Mobile app!  Built for iOS and Android, helps contributors keep up to date with projects and keeps members aware of events!
+              </p>
+            </div>
+            <InternalLink
+              href='/projects/mobile'
+              className='mx-auto'
+            >
+              <p className='sr-only'>
+                to view the CodeDevils&apos; website repository.
+              </p>
+            </InternalLink>
+          </li>
+
+          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
+            <div className='space-y-2'>
+              <h4 className='text-xl font-medium'>CodeDevils Scraper</h4>
+              <p className='text-base text-black/90'>
+                A job post scraping tool built to keep our members up to date with the latest developments in the job market!
+              </p>
+            </div>
+            <InternalLink
+              href='/projects/scraper'
+              className='mx-auto'
+            >
+              <p className='sr-only'>
+                to view the CodeDevils&apos; website repository.
+              </p>
+            </InternalLink>
+          </li>
+
+          
         </ul>
       </Section>
 

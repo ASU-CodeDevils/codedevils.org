@@ -19,6 +19,7 @@ const getStarted: NextPage = () => {
   const { discord, sundevilsync, github } = socialLinks;
   return (
     <>
+      <div className='w-full h-24' />
       <Hero className='bg-gray'>
         <article className='space-y-3 text-center'>
           <h1 className='gradient-text icon-sparkle rainbow text-3xl font-medium md:text-4xl'>

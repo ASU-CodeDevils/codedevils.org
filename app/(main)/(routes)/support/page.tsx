@@ -25,6 +25,7 @@ const ContactPage: NextPage = () => {
 
   return (
     <>
+      <div className='w-full h-24' />
       <Hero>
         <article className='space-y-3 text-center'>
           <h1 className='text-3xl text-maroon'>CodeDevils&apos; Support</h1>
