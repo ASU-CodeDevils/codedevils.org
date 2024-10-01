@@ -17,6 +17,7 @@
     "@vercel/analytics": "^1.2.2",
     "clsx": "^2.1.0",
     "framer-motion": "^10.18.0",
+    "lucide-react": "^0.445.0",
     "next": "14.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -45,5 +46,9 @@
   },
   "ct3aMetadata": {
     "initVersion": "5.14.0"
+  },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   }
 }

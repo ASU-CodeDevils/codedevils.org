@@ -1,0 +1,35 @@
+
+#project-title {
+    @apply flex flex-row items-center mb-12;
+}
+
+#project-title h1 {
+    @apply text-5xl font-black 
+           underline underline-offset-2 transition-all duration-100 hover:underline-offset-4 ;
+}
+
+#project-icon {
+    @apply ml-4 w-16 h-16 text-asumaroon-900 transition-transform duration-300 hover:rotate-[720deg];
+}
+
+#project-text {
+    @apply flex flex-col text-xl indent-8 gap-4 mb-12;
+}
+
+#project-goals-title {
+    @apply text-3xl font-bold mb-5 -mt-6 bg-white px-2;
+}
+
+#project-goals-list {
+    @apply flex flex-col gap-2 ml-8 my-2 text-xl font-semibold mb-12 text-asumaroon-950;
+}
+
+#project-goals-list li {
+    @apply px-4 py-1 w-[70%]
+           transition-transform hover:translate-x-4 duration-200 
+           bg-gradient-to-r from-asumaroon-200 to-stone-100 rounded-md
+}
+
+#info-link {
+    @apply text-asumaroon hover:underline
+}
