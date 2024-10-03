@@ -8,27 +8,90 @@
            underline underline-offset-2 transition-all duration-100 hover:underline-offset-4 ;
 }
 
-#project-icon {
-    @apply ml-4 w-16 h-16 text-asumaroon-900 transition-transform duration-300 hover:rotate-[720deg];
+#project-title div:nth-of-type(1) *:first-child {
+    @apply ml-4 w-16 h-16 text-asumaroon-900 transition-transform duration-200 hover:rotate-[-20deg];
 }
+
+#project-title div:nth-of-type(2) {
+    @apply ml-auto
+}
+
+
+
 
 #project-text {
-    @apply flex flex-col text-xl indent-8 gap-4 mb-12;
+    @apply text-xl indent-8 mb-4;
 }
 
-#project-goals-title {
+
+
+
+#project-stack {
+    @apply flex flex-col justify-start items-center gap-2 p-4 rounded-2xl w-56 h-96 -ml-8 mr-4 float-left
+         bg-gradient-to-b from-zinc-200 to-zinc-100 shadow-inner shadow-zinc-300;
+}
+
+#project-stack svg {
+    @apply w-32 h-32 hover:scale-110 transition-transform duration-200 fill-asumaroon-800;
+}
+
+
+
+
+#git-monitor {
+    @apply flex flex-col text-zinc-100 float-right ml-4
+}
+
+#git-monitor div:nth-of-type(1) {
+    @apply flex items-center justify-center h-[80px] w-[320px] rounded-t-lg 
+           font-semibold text-2xl shadow-xl shadow-slate-700
+           bg-gradient-to-r from-slate-950 to-zinc-800;
+}
+
+#git-monitor div:nth-of-type(2) {
+    @apply h-[600px] w-[320px] rounded-b-lg
+           shadow-lg shadow-slate-500
+           bg-gradient-to-br from-slate-800 to-slate-900;
+}
+
+
+
+
+#project-images {
+    @apply grid grid-cols-3 grid-rows-1 gap-4 mt-12 h-64
+}
+
+#project-images * {
+    @apply h-full w-full object-cover
+}
+
+
+
+
+#project-goals div {
+    @apply flex flex-col items-center mt-12;
+}
+
+#project-goals div div {
+    @apply w-full h-0.5 bg-asumaroon;
+}
+
+#project-goals h2 {
     @apply text-3xl font-bold mb-5 -mt-6 bg-white px-2;
 }
 
-#project-goals-list {
+#project-goals ul {
     @apply flex flex-col gap-2 ml-8 my-2 text-xl font-semibold mb-12 text-asumaroon-950;
 }
 
-#project-goals-list li {
+#project-goals ul li {
     @apply px-4 py-1 w-[70%]
            transition-transform hover:translate-x-4 duration-200 
            bg-gradient-to-r from-asumaroon-200 to-stone-100 rounded-md
 }
+
+
+
 
 #info-link {
     @apply text-asumaroon hover:underline
