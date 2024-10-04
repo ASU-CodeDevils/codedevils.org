@@ -3,9 +3,9 @@ import type { NextPage, Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Hero, Section } from '~/components/ui/ContentWrappers';
-import { FilledButton } from '~/components/ui/buttons';
-import AccordionItem from '~/components/accordionItem';
+import { Hero, Section } from '~/src/app/components/ui/ContentWrappers';
+import { FilledButton } from '~/src/app/components/ui/buttons';
+import AccordionItem from '~/src/app/components/accordionItem';
 
 import { socialLinks } from '~/src/app/utils/staticdata';
 

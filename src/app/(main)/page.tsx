@@ -18,7 +18,7 @@ const HomePage: NextPage = () => {
   const { discord } = socialLinks;
   return (
     <>
-      <div className='w-full' />
+      <div className='w-full h-24' />
       <Header>
         <article className='flex flex-col space-y-6 text-black'>
           <h1 className='text-5xl font-bold  md:text-6xl'>

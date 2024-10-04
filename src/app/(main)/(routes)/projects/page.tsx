@@ -71,7 +71,7 @@ const projectsPage: NextPage = () => {
               </p>
             </div>
             <InternalLink
-              href='/projects/cd-website'
+              href='/projects/website'
               className='mx-auto'
             >
               
