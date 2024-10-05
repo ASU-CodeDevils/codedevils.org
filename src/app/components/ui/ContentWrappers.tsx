@@ -1,7 +1,5 @@
 import React, { FC, HTMLAttributes } from "react";
 
-import { InternalLink } from "~/components/ui/buttons";
-
 import { cn } from "~/src/app/utils/cn";
 
 type SectionProps = HTMLAttributes<HTMLDivElement>;
