@@ -24,20 +24,22 @@ export const projectApplicationLinks = {
     }
 
 
+    // format: element [0] must be of type MemberID all other elements must be an array of one or
+    //         two string literals.  First element is the contributor's name, second is an optional link.
     
 const projectTeams = {
-    academy: [['pita', '']
+    academy: [['pita']
             ],
-    website: [  ['pita', ''],
-                ['David Fales', '']
+    website: [  ['pita'],
+                ['David Fales']
             ],
-    gamedev: [  ['remi', ''],
-                ['Autumn O', ''],
+    gamedev: [  ['remi'],
+                ['Autumn O'],
                 ['Pita Sherwood', 'https://pita.blue'],
             ],
-    mobile: [['pita', '']
+    mobile: [['pita']
             ],
-    scraper: [['frankie', '']
+    scraper: [['frankie']
             ]
 }
 
@@ -80,8 +82,8 @@ const projectTeams = {
                 progress tracking features that allow users to monitor their advancement through courses and tutorials. 
                 This will help them set goals and celebrate their achievements.
                 </p><p id='project-text'>
-                If you’re ready to make a difference and help us build CodeDevils Academy, we invite you to apply. 
-                Let’s create a premier learning platform that reflects our commitment to education and community. 
+                If you&apos;re ready to make a difference and help us build CodeDevils Academy, we invite you to apply. 
+                Let&apos;s create a premier learning platform that reflects our commitment to education and community. 
                 Your journey with CodeDevils starts here—let&apos;s make something great!
                 </p>
             </>
@@ -157,7 +159,7 @@ const projectTeams = {
                     { projectTeams[projectID][1] ? 
                         ( projectTeams[projectID].map(([member, link], index) => (
                             index > 0 ? (
-                            <div>
+                            <div key={index}>
                                 { link ? <a key={member} href={link} target='_blank'>{member}</a>
                                     : <p key={member}>{member}</p> }
                             </div> ) : <></>
@@ -215,8 +217,8 @@ const projectTeams = {
                 </div>
                 <div>
                     <ul>
-                        <li>Add and improve features using service API's</li>
-                        <li>Redesign the website's colors and design to align with CodeDevils rebranding</li>
+                        <li>Add and improve features using service API&apos;s</li>
+                        <li>Redesign the website&apos;s colors and design to align with CodeDevils rebranding</li>
                         <li>Rewrite and redesign the website's content</li>
                     </ul>
                     <Hammer />
@@ -279,7 +281,7 @@ const projectTeams = {
                 { projectTeams[projectID][1] ? 
                         ( projectTeams[projectID].map(([member, link], index) => (
                             index > 0 ? (
-                            <div>
+                            <div key={index}>
                                 { link ? <a key={member} href={link} target='_blank'>{member}</a>
                                     : <p key={member}>{member}</p> }
                             </div> ) : <></>
@@ -407,7 +409,7 @@ const projectTeams = {
                 { projectTeams[projectID][1] ? 
                         ( projectTeams[projectID].map(([member, link], index) => (
                             index > 0 ? (
-                            <div>
+                            <div key={index}>
                                 { link ? <a key={member} href={link} target='_blank'>{member}</a>
                                     : <p key={member}>{member}</p> }
                             </div> ) : <></>
@@ -524,7 +526,7 @@ const projectTeams = {
                 { projectTeams[projectID][1] ? 
                         ( projectTeams[projectID].map(([member, link], index) => (
                             index > 0 ? (
-                            <div>
+                            <div key={index}>
                                 { link ? <a key={member} href={link} target='_blank'>{member}</a>
                                     : <p key={member}>{member}</p> }
                             </div> ) : <></>
