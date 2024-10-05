@@ -14,21 +14,20 @@ const Footer = () => {
     <footer className="mx-auto mt-auto w-full max-w-screen-2xl bg-white">
       <div className="flex flex-col gap-8  pt-12">
         <div className="flex flex-col justify-between gap-x-2 gap-y-8 px-8 md:flex-row">
-          <div className="flex flex-col md:gap-2">
-            <Link href="/" className="w-fit">
-              <Image
-                src={"/codedevils-logo.svg"}
-                alt="CodeDevils logo"
-                width={150}
-                height={150}
-                className=""
-              />
-            </Link>
-            <p className="text-sm">
-              CodeDevils is a student organization at Arizona State University
-              that aims to bring software development enthusiasts of all levels
-              to learn, build, and network together.
-            </p>
+        <div className="flex flex-col md:gap-2 items-start">
+        <Link href="/" className="w-fit">
+          <Image
+            src="/codedevils-logo.svg"
+            alt="CodeDevils logo"
+            width={150}
+            height={150}
+            className="m-0 p-0 mr-8"  
+          />
+        </Link>
+        <p className="text-sm mt-2 ml-5"> 
+        CodeDevils is a student organization at Arizona State University that aims to
+        bring software development enthusiasts of all levels to learn, build, and network together.
+      </p>
           </div>
 
           <div className="grid w-fit grid-cols-2 gap-x-8 gap-y-6 text-sm sm:grid-cols-3">
