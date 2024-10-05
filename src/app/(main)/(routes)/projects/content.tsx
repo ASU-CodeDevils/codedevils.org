@@ -1,4 +1,4 @@
-import { Gamepad2, Hammer, PanelsTopLeft } from 'lucide-react';
+import { Gamepad2, Hammer, PanelsTopLeft, Smartphone } from 'lucide-react';
 import './project-styles.css'
 import getSVG from '~/public/svg-data';
 import Link from 'next/link';
@@ -34,15 +34,6 @@ const projectTeams = {
     gamedev: [  ['remi', ''],
                 ['Autumn O', ''],
                 ['Pita Sherwood', 'https://pita.blue'],
-                ['Contributor 1', ''], 
-                ['Contributor 2', ''], 
-                ['Contributor 3', ''], 
-                ['Contributor 4', ''], 
-                ['Contributor 5', ''], 
-                ['Contributor 6', ''], 
-                ['Contributor 7', ''], 
-                ['Contributor 8', ''], 
-                ['Contributor 9', '']
             ],
     mobile: [['pita', '']
             ],
@@ -72,7 +63,7 @@ const projectTeams = {
             <>
                 <p id='project-text'>
                 The sister website to CodeDevils.org, CodeDevils Academy is our content management and learning 
-                platform.  We’re excited to announce the development of our dedicated learning platform designed 
+                platform.  We&apos;re excited to announce the development of our dedicated learning platform designed 
                 to empower our community through accessible educational resources.  This project will be built 
                 from the ground up, although the designs for it are in the late stages.  Our vision for CodeDevils 
                 Academy is to create an engaging, user-friendly environment where members can easily access a wealth 
@@ -85,13 +76,13 @@ const projectTeams = {
                 </p><p id='project-text'>
                 The platform will host a variety of content formats, including written tutorials, video lessons, 
                 quizzes, and coding challenges. By offering multiple learning styles, we aim to engage all members, 
-                whether they are beginners or advanced developers.  To keep our members motivated, we’ll implement 
+                whether they are beginners or advanced developers.  To keep our members motivated, we&apos;ll implement 
                 progress tracking features that allow users to monitor their advancement through courses and tutorials. 
                 This will help them set goals and celebrate their achievements.
                 </p><p id='project-text'>
                 If you’re ready to make a difference and help us build CodeDevils Academy, we invite you to apply. 
                 Let’s create a premier learning platform that reflects our commitment to education and community. 
-                Your journey with CodeDevils starts here—let’s make something great!
+                Your journey with CodeDevils starts here—let&apos;s make something great!
                 </p>
             </>
         ), (
@@ -189,31 +180,31 @@ const projectTeams = {
         ), (
             <>
                 <p id='project-text'>
-                This is the codedevils.org project; the website you’re currently looking at.  With many features 
-                planned, and with an active rebrand going on, we’ll need some talented hands to keep this ship running.  
+                This is the codedevils.org project; the website you&apos;re currently looking at.  With many features 
+                planned, and with an active rebrand going on, we&apos;ll need some talented hands to keep this ship running.  
                 This is considered one of our core projects, meaning it is essential to the CodeDevils brand and 
                 identity.  We build our websites in Next.js and Typescript.  Next.js is a powerful framework for 
                 JavaScript/TypeScript that handles frontend and backend deployments.  One primary focus of the 
-                website’s design is to keep the code maintainable, manageable, and readable.  We will not be building 
+                website&apos;s design is to keep the code maintainable, manageable, and readable.  We will not be building 
                 web pages that are simply hard-coded in HTML, but are dynamic and rely on backend data structures to 
                 function.
                 </p><p id='project-text'>
                 We have a lot of fun features planned, many of them are just to show off our skills as programmers, 
-                but we’re here to advertise our organization and put our best foot forward to outside companies, 
+                but we&apos;re here to advertise our organization and put our best foot forward to outside companies, 
                 prospective contributors, and to the university we stand behind.  Our project is dedicated not to 
                 being flashy, but to being robust and respectable to the community at large.  We aim to create a 
                 website that is not just functional but also resonates with our audience, reflecting our dedication 
                 to quality and professionalism.
                 </p><p id='project-text'>
-                We’re seeking contributors who share our passion for technology and community. Whether you're a 
+                We&apos;re seeking contributors who share our passion for technology and community. Whether you're a 
                 seasoned developer, a creative designer, or even someone wanting to dip their toes into web design 
-                and learn from us, you’re in the right place.  If you’re ready to make a meaningful contribution, 
+                and learn from us, you&apos;re in the right place.  If you&apos;re ready to make a meaningful contribution, 
                 we invite you to join us. Whether you can dedicate a few hours or want to take on a larger role, 
-                your efforts will help shape the future of CodeDevils.org. This is more than just coding; it’s 
+                your efforts will help shape the future of CodeDevils.org. This is more than just coding; it&apos;s 
                 about building a resource that empowers our community and showcases our commitment to excellence.
                 </p><p id='project-text'>
-                Let’s work together to create a website that embodies the spirit of CodeDevils—dynamic, robust, 
-                and community-focused. Your journey with us starts here. Let’s make it remarkable!
+                Let&apos;s work together to create a website that embodies the spirit of CodeDevils—dynamic, robust, 
+                and community-focused. Your journey with us starts here. Let&apos;s make it remarkable!
                 </p>
             </>
         ), (
@@ -285,13 +276,14 @@ const projectTeams = {
                     </div>
                 </div>
                 <div>
-                    { projectTeams[projectID].map(([member, link], index) => (
-                        index > 0 ? (
-                        <div>
-                            { link ? <a key={member} href={link} target='_blank'>{member}</a>
-                                   : <p key={member}>{member}</p> }
-                        </div> ) : <></>
-                    ))}
+                { projectTeams[projectID][1] ? 
+                        ( projectTeams[projectID].map(([member, link], index) => (
+                            index > 0 ? (
+                            <div>
+                                { link ? <a key={member} href={link} target='_blank'>{member}</a>
+                                    : <p key={member}>{member}</p> }
+                            </div> ) : <></>
+                        ))) : <><div /><h3>No contributors just yet.  Be the first to apply!</h3></>}
                 </div>
             </div>
         )],
@@ -412,17 +404,134 @@ const projectTeams = {
                     </div>
                 </div>
                 <div>
-                    { projectTeams[projectID].map(([member, link], index) => (
-                        index > 0 ? (
-                        <div>
-                            { link ? <a key={member} href={link} target='_blank'>{member}</a>
-                                   : <p key={member}>{member}</p> }
-                        </div> ) : <></>
-                    ))}
+                { projectTeams[projectID][1] ? 
+                        ( projectTeams[projectID].map(([member, link], index) => (
+                            index > 0 ? (
+                            <div>
+                                { link ? <a key={member} href={link} target='_blank'>{member}</a>
+                                    : <p key={member}>{member}</p> }
+                            </div> ) : <></>
+                        ))) : <><div /><h3>No contributors just yet.  Be the first to apply!</h3></>}
                 </div>
             </div>
         )],
-        mobile: [],
+        mobile: [(
+            <div key={0} id='project-title'>
+                <h1>CodeDevils Mobile</h1>
+                <div>
+                    <Smartphone />
+                </div>
+                <div>
+                    <ApplyButton project={projectID} >Join the Project!</ApplyButton>
+                </div>
+            </div>
+        ), (
+            <>
+                <p id='project-text'>
+                Welcome to the CodeDevils Mobile project page! As part of our commitment to fostering a community of 
+                developers, we are excited to announce the development of our mobile app, CodeDevils Mobile. This project 
+                is designed to create a welcoming space for anyone interested in mobile development, whether you&apos;re a 
+                beginner looking to learn or an experienced developer eager to share your knowledge.
+                </p><p id='project-text'>
+                With CodeDevils Mobile, our vision is to build an inclusive platform that encourages exploration and 
+                collaboration in the world of mobile app development. We recognize that mobile technology is an integral 
+                part of our lives, and we want to provide a space where members can come together to learn, share ideas, 
+                and showcase their projects. By utilizing Dart/Flutter, Swift, and Kotlin, we aim to create a versatile 
+                application that caters to both iOS and Android platforms.
+                </p><p id='project-text'>
+                CodeDevils Mobile, in its current vision, will serve primarily as a community platform for CodeDevils 
+                events, Academy content, and have a contributor platform to stay up to date with the latest project 
+                announcements and changes.  Additional features will come as the project unfolds.  We have a lot of 
+                excitement for this project and we&apos;re very excited to see what it becomes.
+                </p><p id='project-text'>
+                If you have a particular interest or passion for mobile development, we encourage you to get started 
+                early on this project and make your mark!  Your influence on the direction and execution of this project 
+                will be invaluable to both your career and to the project as a whole.
+                </p>
+            </>
+        ), (
+            <div key={2} id='project-goals' >
+                <div>
+                    <div />
+                    <h2>Current Project Goals</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li>Create systems and plugins to facilitate the creation of the game</li>
+                        <li>Program and integrate multiple gameplay systems together</li>
+                        <li>Publish the game on a game distribution platform</li>
+                    </ul>
+                    <Hammer />
+                </div>
+            </div>
+        ), (
+            <div key={3} id='project-stack'>
+                <Link href="https://flutter.dev" target='_blank'>
+                    { getSVG({ svgID: 5 }) }
+                </Link>
+                <Link href="https://dart.dev" target='_blank'>
+                    { getSVG({ svgID: 6 }) }
+                </Link>
+                <Link href="https://kotlinlang.org" target='_blank'>
+                    { getSVG({ svgID: 7 }) }
+                </Link>
+                <Link href="https://www.swift.org" target='_blank'>
+                    { getSVG({ svgID: 8 }) }
+                </Link>
+            </div>
+        ), (
+            <div key={4} id='git-monitor'>
+                <div>GitHub Activity</div>
+                <div></div>
+            </div>
+        ), (
+            <div key={5} id='project-images'>
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-1.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-2.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-3.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+            </div>
+        ), (
+            <div key={6} id='project-team'>
+                <div>
+                    <div />
+                    <h2>Project Team</h2>
+                </div>
+                <div>
+                    <Image 
+                        src={ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'image'}) }
+                        alt='Project Leader&apos;s photo'
+                        width={200}
+                        height={200}
+                        />
+                    <div>
+                    <h2>{ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'name'}) }</h2>
+                    <p>{ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'bio'}) }</p>
+                    </div>
+                </div>
+                <div>
+                { projectTeams[projectID][1] ? 
+                        ( projectTeams[projectID].map(([member, link], index) => (
+                            index > 0 ? (
+                            <div>
+                                { link ? <a key={member} href={link} target='_blank'>{member}</a>
+                                    : <p key={member}>{member}</p> }
+                            </div> ) : <></>
+                        ))) : <h3>No contributors just yet.  Be the first to apply!</h3>}
+                </div>
+            </div>
+        )],
         scraper: [],
 
     }

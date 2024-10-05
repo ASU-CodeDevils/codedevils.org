@@ -1,25 +1,33 @@
-import { Section } from "src/app/components/ui/ContentWrappers"
-import Link from 'next/link'
-
-
+import { MaxWidthWrapper } from "src/app/components/ui/ContentWrappers"
+import ApplyButton from "~/src/app/components/Projects/ApplyButton"
+import getContent from "../content"
 
 const Home = () => {
+
+    const projectID = "mobile";
 
 
     return (
         <>
             <div className="h-24 w-full" />
-            <Section>
+            
+            <MaxWidthWrapper className="relative mt-16">
 
-                <h1 className="text-4xl font-bold">CodeDevils Mobile App</h1>
+                {getContent({ projectID: projectID, contentID: 0})}  {/* Title */}
+                <div className="relative px-1">
+                    {getContent({ projectID: projectID, contentID: 3})}  {/* Stack */}
+                    {getContent({ projectID: projectID, contentID: 4})}  {/* Git Monitor (large screens only) */}
+                    {getContent({ projectID: projectID, contentID: 1})}  {/* Main Content */}   
+                </div>
+                {getContent({ projectID: projectID, contentID: 5})}  {/* Project Images */}
+                {getContent({ projectID: projectID, contentID: 2})}  {/* Project Goals */}
+                {getContent({ projectID: projectID, contentID: 6})}  {/* Project Team */}
 
-                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd--0dToZAGV4MThGzuiJuSy_GCmFIoPjkgRjAbBPnk0B6MrA/viewform?usp=sf_link"
-                    target='_blank'
-                    className="flex justify-center items-center rounded-full text-xl bg-gradient-to-br 
-                        from-maroon/95 to-maroon w-48 h-20 cursor-pointer">
-                    <p className="hover:underline text-white">Apply Here!</p>
-                </Link>
-            </Section>
+                <div className="flex justify-center md:justify-start">
+                    <ApplyButton project={projectID} >Join the Project!</ApplyButton>
+                </div>
+
+            </MaxWidthWrapper>
         </>
     )
 }
