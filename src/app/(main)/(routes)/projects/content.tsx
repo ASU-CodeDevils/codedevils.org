@@ -198,7 +198,7 @@ const projectTeams = {
                 website that is not just functional but also resonates with our audience, reflecting our dedication 
                 to quality and professionalism.
                 </p><p id='project-text'>
-                We&apos;re seeking contributors who share our passion for technology and community. Whether you're a 
+                We&apos;re seeking contributors who share our passion for technology and community. Whether you&apos;re a 
                 seasoned developer, a creative designer, or even someone wanting to dip their toes into web design 
                 and learn from us, you&apos;re in the right place.  If you&apos;re ready to make a meaningful contribution, 
                 we invite you to join us. Whether you can dedicate a few hours or want to take on a larger role, 
@@ -219,7 +219,7 @@ const projectTeams = {
                     <ul>
                         <li>Add and improve features using service API&apos;s</li>
                         <li>Redesign the website&apos;s colors and design to align with CodeDevils rebranding</li>
-                        <li>Rewrite and redesign the website's content</li>
+                        <li>Rewrite and redesign the website&apos;s content</li>
                     </ul>
                     <Hammer />
                 </div>
