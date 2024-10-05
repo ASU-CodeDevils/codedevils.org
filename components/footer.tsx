@@ -16,13 +16,14 @@ const Footer = () => {
         <div className="flex flex-col justify-between gap-x-2 gap-y-8 px-8 md:flex-row">
           <div className="flex flex-col md:gap-2">
             <Link href="/" className="w-fit">
-              <Image
-                src={"/codedevils-logo.svg"}
-                alt="CodeDevils logo"
-                width={150}
-                height={150}
-                className=""
-              />
+            <div className="w-[150px] h-[150px] relative">
+                <Image
+                  src="/codedevils-logo.svg"
+                  alt="CodeDevils logo"
+                  fill
+                  className="object-cover" 
+                />
+            </div>
             </Link>
             <p className="text-sm">
               CodeDevils is a student organization at Arizona State University
