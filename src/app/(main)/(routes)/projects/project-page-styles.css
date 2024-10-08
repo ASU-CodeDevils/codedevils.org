@@ -12,7 +12,7 @@
 
 #project-title div:nth-of-type(1) > *:first-child {
     @apply text-asumaroon-900 transition-transform duration-200 hover:rotate-[-20deg]
-           w-16 h-16 ml-4 lg:block hidden
+           w-16 h-16 ml-4 lg:block hidden;
 }
 
 #project-title div:nth-of-type(2) {

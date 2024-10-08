@@ -1,23 +1,34 @@
-import { Section } from "src/app/components/ui/ContentWrappers"
-import Link from 'next/link'
-
+import '../project-page-styles.css';
+import { MaxWidthWrapper } from "src/app/components/ui/ContentWrappers"
+import ApplyButton from "~/src/app/components/Projects/ApplyButton"
+import getContent from "../content"
 
 const Home = () => {
+
+    const projectID = "scraper";
 
 
     return (
         <>
             <div className="h-24 w-full" />
-            <Section>
-                <h1 className="text-4xl font-bold">CodeDevils Job Posting Scraper</h1>
+            
+            <MaxWidthWrapper className="relative mt-16">
 
-                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfJHHugJUM3Sc_r_A7nCDjfSyaIXTepd90raUZ_zEwVZ_mEMg/viewform?usp=sf_link"
-                    target='_blank'
-                    className="flex justify-center items-center rounded-full text-xl bg-gradient-to-br 
-                        from-maroon/95 to-maroon w-48 h-20 cursor-pointer">
-                    <p className="hover:underline text-white">Apply Here!</p>
-                </Link>
-            </Section>
+                {getContent({ projectID: projectID, contentID: 0})}  {/* Title */}
+                <div className="relative px-1">
+                    {getContent({ projectID: projectID, contentID: 4})}  {/* Stack */}
+                    {getContent({ projectID: projectID, contentID: 5})}  {/* Git Monitor (large screens only) */}
+                    {getContent({ projectID: projectID, contentID: 2})}  {/* Main Content */}   
+                </div>
+                {getContent({ projectID: projectID, contentID: 6})}  {/* Project Images */}
+                {getContent({ projectID: projectID, contentID: 3})}  {/* Project Goals */}
+                {getContent({ projectID: projectID, contentID: 7})}  {/* Project Team */}
+
+                <div className="flex justify-center md:justify-start">
+                    <ApplyButton project={projectID} >Join the Project!</ApplyButton>
+                </div>
+
+            </MaxWidthWrapper>
         </>
     )
 }

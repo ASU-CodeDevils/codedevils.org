@@ -1,26 +1,36 @@
+"use client"
+
 import React from 'react';
 import type { Metadata, NextPage } from 'next';
 import Image from 'next/image';
+import styles from './project-styles';
+import styled from '@emotion/styled';
 
-import { Card } from 'src/app/components/card';
 import { Section } from 'src/app/components/ui/ContentWrappers';
 import { ExternalLink, InternalLink } from 'src/app/components/ui/buttons';
 
 import { socialLinks } from 'src/app/utils/staticdata';
+import getContent from './content';
+import { Backpack, ChevronRight, FileOutput, Gamepad2, PanelsTopLeft, Smartphone } from 'lucide-react';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Projects',
+/*export const metadata: Metadata = {
+  title: 'Projects Hub',
   description:
     'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
   openGraph: {
-    title: 'Projects',
+    title: 'Projects Hub',
     description:
       'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
   },
-};
+};*/
 
 const projectsPage: NextPage = () => {
   const { discord } = socialLinks;
+  //const projectDescs = getContent({projectID: 'all', contentID: 1 }) as React.ReactNode[];
+  //const projectTitles = getContent({projectID: 'all', contentID: 0 }) as React.ReactNode[];
+
+
   return (
     <>
       <div className='w-full h-24' />
@@ -36,11 +46,18 @@ const projectsPage: NextPage = () => {
       </Section>
         {/* Card */}
       <div
-        className='relative flex h-[40rem] items-center justify-center' // md:h-[80rem]
+        className='relative flex h-[40rem] items-center justify-center'
       >
-        <div className='flex flex-row h-full w-full gap-2'>
-          <div className='flex justify-center items-center w-full h-full rounded-3xl
-            bg-gradient-to-br from-zinc-100 to-zinc-200 text-black' >Git Activity here</div>
+        
+        <div className='flex flex-row h-full w-full gap-8 '>
+          <div className='flex flex-col'>
+            <div className='flex items-center justify-center h-[80px] w-[320px] rounded-t-lg 
+            font-semibold text-2xl shadow-xl shadow-slate-700
+            bg-gradient-to-r from-slate-950 to-zinc-800 text-white' >Git Activity</div>
+            <div className=' h-[600px] w-[320px] rounded-b-lg
+            shadow-lg shadow-slate-500
+            bg-gradient-to-br from-slate-800 to-slate-900' />
+          </div>
           <div className='flex justify-center items-center w-full h-full rounded-3xl 
             bg-gradient-to-br from-zinc-100 to-zinc-300 text-black' >Leaderboard here</div>
           
@@ -48,7 +65,7 @@ const projectsPage: NextPage = () => {
       </div>
       
 
-      <Section className='bg-gray'>
+      <Section className='bg-zinc-200 mt-16'>
         <article className='space-y-3 text-center'>
           
           <h3 className='text-4xl font-bold'>
@@ -62,95 +79,116 @@ const projectsPage: NextPage = () => {
           </p>
         </article>
 
-        <ul className='mx-auto flex max-w-screen-lg flex-col gap-y-8 md:grid md:grid-cols-3 md:gap-x-8'>
-          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
-            <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>CodeDevils&apos; Website</h4>
-              <p className='text-base text-black/90'>
-                Our rapidly-evolving website.  New features and tools are constantly being added!
-              </p>
-            </div>
-            <InternalLink
-              href='/projects/website'
-              className='mx-auto'
-            >
-              
-              <p className='sr-only'>
-                to view the CodeDevils&apos; website repository.
-              </p>
-            </InternalLink>
-          </li>
 
-          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
-            <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>CodeDevils Academy</h4>
-              <p className='text-base text-black/90'>
-                A sister website to CodeDevils.org.  A content library for users to visit and learn how to code!
-              </p>
-            </div>
-            <InternalLink
-              href='/projects/academy'
-              className='mx-auto'
-            >
-            
-              <p className='sr-only'>to view Academy repository.</p>
-            </InternalLink>
-          </li>
-
-          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
-            <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>
-                CodeDevils GameDev
-              </h4>
-              <p className='text-base text-black/90'>
-                A series of Game Development projects to implement in various places around CodeDevils!
-              </p>
-            </div>
-            <InternalLink
-              href='/projects/gamedev'
-              className='mx-auto'
-            >
-              <p className='sr-only'>
-                to view the gamedev repository.
-              </p>
-            </InternalLink>
-          </li>
-
-          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
-            <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>CodeDevils Mobile</h4>
-              <p className='text-base text-black/90'>
-                Our Mobile app!  Built for iOS and Android, helps contributors keep up to date with projects and keeps members aware of events!
-              </p>
-            </div>
-            <InternalLink
-              href='/projects/mobile'
-              className='mx-auto'
-            >
-              <p className='sr-only'>
-                to view the CodeDevils&apos; website repository.
-              </p>
-            </InternalLink>
-          </li>
-
-          <li className='flex flex-col justify-between space-y-4 rounded-lg bg-white px-6 py-12 text-center shadow-xl'>
-            <div className='space-y-2'>
-              <h4 className='text-xl font-medium'>CodeDevils Scraper</h4>
-              <p className='text-base text-black/90'>
-                A job post scraping tool built to keep our members up to date with the latest developments in the job market!
-              </p>
-            </div>
-            <InternalLink
-              href='/projects/scraper'
-              className='mx-auto'
-            >
-              <p className='sr-only'>
-                to view the CodeDevils&apos; website repository.
-              </p>
-            </InternalLink>
-          </li>
-
+        <ul className='flex flex-col gap-8'>
           
+          {/* projectDescs ? projectDescs.map((description, index) => (
+            <li key={index} className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden' >
+              <div className='w-48 h-full col-span-1' />
+              <div className='flex flex-col col-span-6 h-full z-20'>
+                <Link href="/projects/website">
+                  {projectTitles[index]}
+                </Link>
+              {description}
+              </div>
+              <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+              <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                              -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                              rounded-full' />
+            </li>
+          )) : <></>
+           implement this later... fix styles*/}
+          
+          <li className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden'>
+          <div className='w-48 h-full col-span-1' />
+            <div className='flex flex-col col-span-6 h-full z-20'>
+              <Link href="/projects/academy">
+                <Backpack className='absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
+                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
+           transition-all duration-100 hover:underline-offset-2 hover:underline
+           md:text-5xl text-3xl'>CodeDevils Academy</h1>
+              </Link>
+              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
+                A sister website to CodeDevils.org. A content library for users to visit and learn how to code!</p>
+            </div>
+            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                            rounded-full' />
+          </li>
+          <li className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden'>
+          <div className='w-48 h-full col-span-1' />
+            <div className='flex flex-col col-span-6 h-full z-20'>
+              <Link href="/projects/website">
+                <PanelsTopLeft className='absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
+                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
+           transition-all duration-100 hover:underline-offset-2 hover:underline
+           md:text-5xl text-3xl'>CodeDevils Website</h1>
+              </Link>
+              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
+                Our rapidly-evolving website. New features and tools are constantly being added!</p>
+            </div>
+            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                            rounded-full' />
+          </li>
+          <li className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden'>
+          <div className='w-48 h-full col-span-1' />
+            <div className='flex flex-col col-span-6 h-full z-20'>
+              <Link href="/projects/gamedev">
+                <Gamepad2 className='absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
+                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
+           transition-all duration-100 hover:underline-offset-2 hover:underline
+           md:text-5xl text-3xl'>CodeDevils GameDev</h1>
+              </Link>
+              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
+              A series of Game Development projects to implement in various places around CodeDevils!</p>
+            </div>
+            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                            rounded-full' />
+          </li>
+          <li className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden'>
+          <div className='w-48 h-full col-span-1' />
+            <div className='flex flex-col col-span-6 h-full z-20'>
+              <Link href="/projects/mobile">
+                <Smartphone className='absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
+                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
+           transition-all duration-100 hover:underline-offset-2 hover:underline
+           md:text-5xl text-3xl'>CodeDevils Mobile</h1>
+              </Link>
+              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
+              Our Mobile app! Built for iOS and Android, helps contributors keep up to date with projects and keeps members aware of events!</p>
+            </div>
+            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                            rounded-full' />
+          </li>
+          <li className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden'>
+          <div className='w-48 h-full col-span-1' />
+            <div className='flex flex-col col-span-6 h-full z-20'>
+              <Link href="/projects/scraper">
+                <FileOutput className='absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
+                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
+           transition-all duration-100 hover:underline-offset-2 hover:underline
+           md:text-5xl text-3xl'>CodeDevils Scraper</h1>
+              </Link>
+              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
+              A job post scraping tool built to keep our members up to date with the latest developments in the job market!</p>
+            </div>
+            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer' />
+            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
+                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
+                            rounded-full' />
+          </li>
         </ul>
       </Section>
 
@@ -236,38 +274,7 @@ const projectsPage: NextPage = () => {
         </div>
       </Section>
 
-      <Section>
-        <div className='flex flex-col items-center gap-6 md:grid md:grid-cols-2'>
-          <article className='space-y-3 text-left'>
-            <h2 className='text-2xl text-maroon'>Have a project idea?</h2>
-            <h3 className='text-4xl font-bold'>
-              Want to start a project with us?
-            </h3>
-            <p className='text-base'>
-              We are always looking for new project ideas to work on. If you
-              have a project idea that you want to work on with us, let us know
-              and we can help you get started.
-            </p>
-            <ExternalLink
-              href={
-                'https://codedevils.notion.site/Project-Proposal-Guide-3d0fd1768faa4afa81a880a18e0d60bc?pvs=4'
-              }
-            >
-              Learn more
-              <p className='sr-only'>
-                about how you can propose a project idea to us.
-              </p>
-            </ExternalLink>
-          </article>
-          <Image
-            src='/images/WEVHIK.png'
-            alt='Project Idea'
-            width={500}
-            height={500}
-            className='rounded-lg object-cover'
-          />
-        </div>
-      </Section>
+      
 
     </>
   );

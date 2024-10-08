@@ -1,5 +1,4 @@
-import { Gamepad2, Hammer, PanelsTopLeft, Smartphone } from 'lucide-react';
-import './project-styles.css'
+import { Backpack, Gamepad2, Hammer, PanelsTopLeft, Smartphone, FileOutput } from 'lucide-react';
 import getSVG from '~/public/svg-data';
 import Link from 'next/link';
 import Image from 'next/image'
@@ -8,11 +7,16 @@ import { getMember } from '~/src/app/components/members';
 import { MemberID } from '~/src/app/components/members';
 
 
-export type ProjectID = 'academy' | 
-                        'website' | 
-                        'gamedev' | 
-                        'mobile'  | 
-                        'scraper' ;
+const projectIDs = [
+    'academy',
+    'website',
+    'gamedev',
+    'mobile',
+    'scraper',
+    
+] as const;
+
+export type ProjectID = typeof projectIDs[number];
 
 
 export const projectApplicationLinks = {
@@ -28,7 +32,7 @@ export const projectApplicationLinks = {
     //         two string literals.  First element is the contributor's name, second is an optional link.
     
 const projectTeams = {
-    academy: [['pita']
+    academy: [['pita'],
             ],
     website: [  ['pita'],
                 ['David Fales']
@@ -45,7 +49,7 @@ const projectTeams = {
 
 
 
-    const getContent = ({projectID, contentID}:{
+    const processContent = ({projectID, contentID}:{
         projectID: ProjectID,
         contentID: number,
     }) => {
@@ -55,12 +59,14 @@ const projectTeams = {
             <div key={0} id='project-title'>
                 <h1>CodeDevils Academy</h1>
                 <div>
-                    <PanelsTopLeft />
+                    <Backpack />
                 </div>
                 <div>
                     <ApplyButton project={projectID} >Join the Project!</ApplyButton>
                 </div>
             </div>
+        ), (
+            <p key={1} id='project-description'>A sister website to CodeDevils.org. A content library for users to visit and learn how to code!</p>
         ), (
             <>
                 <p id='project-text'>
@@ -88,7 +94,7 @@ const projectTeams = {
                 </p>
             </>
         ), (
-            <div key={2} id='project-goals' >
+            <div key={3} id='project-goals' >
                 <div>
                     <div />
                     <h2>Current Project Goals</h2>
@@ -103,7 +109,7 @@ const projectTeams = {
                 </div>
             </div>
         ), (
-            <div key={3} id='project-stack'>
+            <div key={4} id='project-stack'>
                 <Link href="https://www.typescriptlang.org/" target='_blank'>
                     { getSVG({ svgID: 3 }) }
                 </Link>
@@ -115,12 +121,12 @@ const projectTeams = {
                 </Link>
             </div>
         ), (
-            <div key={4} id='git-monitor'>
+            <div key={5} id='git-monitor'>
                 <div>GitHub Activity</div>
                 <div></div>
             </div>
         ), (
-            <div key={5} id='project-images'>
+            <div key={6} id='project-images'>
                 <Image 
                     src={`/assets/projects/${projectID}/project-image-1.png`}
                     alt='project image'
@@ -138,7 +144,7 @@ const projectTeams = {
                     height={200} />
             </div>
         ), (
-            <div key={6} id='project-team'>
+            <div key={7} id='project-team'>
                 <div>
                     <div />
                     <h2>Project Team</h2>
@@ -180,6 +186,8 @@ const projectTeams = {
                 </div>
             </div>
         ), (
+            <p key={1} id='project-description'>Our rapidly-evolving website. New features and tools are constantly being added!</p>
+        ), (
             <>
                 <p id='project-text'>
                 This is the codedevils.org project; the website you&apos;re currently looking at.  With many features 
@@ -210,7 +218,7 @@ const projectTeams = {
                 </p>
             </>
         ), (
-            <div key={2} id='project-goals' >
+            <div key={3} id='project-goals' >
                 <div>
                     <div />
                     <h2>Current Project Goals</h2>
@@ -225,7 +233,7 @@ const projectTeams = {
                 </div>
             </div>
         ), (
-            <div key={3} id='project-stack'>
+            <div key={4} id='project-stack'>
                 <Link href="https://www.typescriptlang.org/" target='_blank'>
                     { getSVG({ svgID: 3 }) }
                 </Link>
@@ -237,12 +245,12 @@ const projectTeams = {
                 </Link>
             </div>
         ), (
-            <div key={4} id='git-monitor'>
+            <div key={5} id='git-monitor'>
                 <div>GitHub Activity</div>
                 <div></div>
             </div>
         ), (
-            <div key={5} id='project-images'>
+            <div key={6} id='project-images'>
                 <Image 
                     src={`/assets/projects/${projectID}/project-image-1.png`}
                     alt='project image'
@@ -260,7 +268,7 @@ const projectTeams = {
                     height={200} />
             </div>
         ), (
-            <div key={6} id='project-team'>
+            <div key={7} id='project-team'>
                 <div>
                     <div />
                     <h2>Project Team</h2>
@@ -302,6 +310,8 @@ const projectTeams = {
                 </div>
             </div>
         ), (
+            <p key={1} id='project-description'>A series of Game Development projects to implement in various places around CodeDevils!</p>
+        ), (
             <>
                 <p id='project-text'>
                 Do you want to learn more about game development? Then the CD-GameDev project is for you. 
@@ -341,7 +351,7 @@ const projectTeams = {
                 </p>
             </>
         ), (
-            <div key={2} id='project-goals' >
+            <div key={3} id='project-goals' >
                 <div>
                     <div />
                     <h2>Current Project Goals</h2>
@@ -356,7 +366,7 @@ const projectTeams = {
                 </div>
             </div>
         ), (
-            <div key={3} id='project-stack'>
+            <div key={4} id='project-stack'>
                 <Link href="https://www.rust-lang.org" target='_blank'>
                     { getSVG({ svgID: 0 }) }
                 </Link>
@@ -365,12 +375,12 @@ const projectTeams = {
                 </Link>
             </div>
         ), (
-            <div key={4} id='git-monitor'>
+            <div key={5} id='git-monitor'>
                 <div>GitHub Activity</div>
                 <div></div>
             </div>
         ), (
-            <div key={5} id='project-images'>
+            <div key={6} id='project-images'>
                 <Image 
                     src={`/assets/projects/${projectID}/project-image-1.png`}
                     alt='project image'
@@ -388,7 +398,7 @@ const projectTeams = {
                     height={200} />
             </div>
         ), (
-            <div key={6} id='project-team'>
+            <div key={7} id='project-team'>
                 <div>
                     <div />
                     <h2>Project Team</h2>
@@ -428,6 +438,8 @@ const projectTeams = {
                 </div>
             </div>
         ), (
+            <p key={1} id='project-description'>Our Mobile app! Built for iOS and Android, helps contributors keep up to date with projects and keeps members aware of events!</p>
+        ), (
             <>
                 <p id='project-text'>
                 Welcome to the CodeDevils Mobile project page! As part of our commitment to fostering a community of 
@@ -452,7 +464,7 @@ const projectTeams = {
                 </p>
             </>
         ), (
-            <div key={2} id='project-goals' >
+            <div key={3} id='project-goals' >
                 <div>
                     <div />
                     <h2>Current Project Goals</h2>
@@ -467,7 +479,7 @@ const projectTeams = {
                 </div>
             </div>
         ), (
-            <div key={3} id='project-stack'>
+            <div key={4} id='project-stack'>
                 <Link href="https://flutter.dev" target='_blank'>
                     { getSVG({ svgID: 5 }) }
                 </Link>
@@ -482,12 +494,12 @@ const projectTeams = {
                 </Link>
             </div>
         ), (
-            <div key={4} id='git-monitor'>
+            <div key={5} id='git-monitor'>
                 <div>GitHub Activity</div>
                 <div></div>
             </div>
         ), (
-            <div key={5} id='project-images'>
+            <div key={6} id='project-images'>
                 <Image 
                     src={`/assets/projects/${projectID}/project-image-1.png`}
                     alt='project image'
@@ -505,7 +517,7 @@ const projectTeams = {
                     height={200} />
             </div>
         ), (
-            <div key={6} id='project-team'>
+            <div key={7} id='project-team'>
                 <div>
                     <div />
                     <h2>Project Team</h2>
@@ -534,7 +546,114 @@ const projectTeams = {
                 </div>
             </div>
         )],
-        scraper: [],
+        scraper: [(
+            <div key={0} id='project-title'>
+                <h1>CodeDevils Scraper</h1>
+                <div>
+                    <FileOutput />
+                </div>
+                <div>
+                    <ApplyButton project={projectID} >Join the Project!</ApplyButton>
+                </div>
+            </div>
+        ), (
+            <p key={1} id='project-description'>A job post scraping tool built to keep our members up to date with the latest developments in the job market!</p>
+        ), (
+            <>
+                <p id='project-text'>
+                CD-Scraper is a project designed to teach the fundamentals of web scaping and the tools to make that happen. 
+                The goal is to design a system for scraping job posting from various websites and serving the collected data 
+                through an API build using SpringBoot. As this project is going to be based fully in Java, it is friendly to 
+                those that are just starting off their programming journey. 
+                </p><p id='project-text'>
+                Each contributor will be responsible for implementing a script to scrape different job posting websites 
+                (i.e. Indeed, LinkedIn). Through this process, you will, hopefully, have a grasp on the some fundamental 
+                HTML parsing. 
+                </p><p id='project-text'>
+                In this project, you will NOT be working with APIs or any web related technology. Those will be managed 
+                by staff to ensure this project is easy to pick up for those new to programming, but wanting to contribute 
+                to a more complex project outside of school assignments. Also, you will NOT be working with any data and 
+                their persistence (i.e. databases).
+                </p><p id='project-text'>
+                If you want to apply what you have learned about Java in class into a project that is more tangible, 
+                join our beginner-friendly project by filling out our application. Your project lead will reach out to you 
+                within the week. Let&apos;s learn to code by building something meaningful and fun!
+                </p>
+            </>
+        ), (
+            <div key={3} id='project-goals' >
+                <div>
+                    <div />
+                    <h2>Current Project Goals</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li>Learn about web scraping</li>
+                        <li>Take Java skills from school and implement them into a tangible project</li>
+                        <li>Gain confidence to start your own personal projects</li>
+                    </ul>
+                    <Hammer />
+                </div>
+            </div>
+        ), (
+            <div key={4} id='project-stack'>
+                <Link href="https://www.java.com/en/" target='_blank'>
+                    { getSVG({ svgID: 9 }) }
+                </Link>
+            </div>
+        ), (
+            <div key={5} id='git-monitor'>
+                <div>GitHub Activity</div>
+                <div></div>
+            </div>
+        ), (
+            <div key={6} id='project-images'>
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-1.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-2.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+                <Image 
+                    src={`/assets/projects/${projectID}/project-image-3.png`}
+                    alt='project image'
+                    width={300}
+                    height={200} />
+            </div>
+        ), (
+            <div key={7} id='project-team'>
+                <div>
+                    <div />
+                    <h2>Project Team</h2>
+                </div>
+                <div>
+                    <Image 
+                        src={ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'image'}) }
+                        alt='Project Leader&apos;s photo'
+                        width={200}
+                        height={200}
+                        />
+                    <div>
+                    <h2>{ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'name'}) }</h2>
+                    <p>{ getMember({memberID: projectTeams[projectID][0]?.[0] as MemberID, memberData: 'bio'}) }</p>
+                    </div>
+                </div>
+                <div>
+                { projectTeams[projectID][1] ? 
+                        ( projectTeams[projectID].map(([member, link], index) => (
+                            index > 0 ? (
+                            <div key={index}>
+                                { link ? <a key={member} href={link} target='_blank'>{member}</a>
+                                    : <p key={member}>{member}</p> }
+                            </div> ) : <></>
+                        ))) : <h3>No contributors just yet.  Be the first to apply!</h3>}
+                </div>
+            </div>
+        )],
 
     }
 
@@ -544,6 +663,14 @@ const projectTeams = {
 
     return (content[projectID][contentID]);
 
+}
+
+const getContent = ({projectID, contentID}:{
+    projectID: ProjectID | 'all',
+    contentID: number
+}) => {
+    if (projectID === 'all') { return projectIDs.map(id => processContent({projectID: id, contentID })); }
+    return processContent({projectID: projectID, contentID: contentID});
 }
 
 export default getContent;
