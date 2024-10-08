@@ -40,6 +40,9 @@ const config: Config = {
         "hero-pattern":
           "linear-gradient(0deg, hsla(341, 66%, 33%, 0.05) 0%, rgba(131, 79, 96, 0) 100%)",
       },
+      fontFamily: {
+        bebas: ['var(--font-bebas-neue)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
