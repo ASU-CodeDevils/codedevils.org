@@ -23,15 +23,14 @@ export const officers = [
     position: 'Vice President',
     avatar: '/images/officers/Remi-Godin.png',
     links: {
-      portfolio_url:
-        'https://codedevils.notion.site/Remi-Godin-282225e0b6fe4b01948e707cf1a793f4?pvs=4',
+      portfolio_url: 'https://codedevils.notion.site/Remi-Godin-282225e0b6fe4b01948e707cf1a793f4?pvs=4',
       linkedin: 'https://www.linkedin.com/in/remi-godin-179719282/',
     },
   },
   {
     name: 'Pita Sherwood',
     position: 'Technical Project Manager',
-    avatar: '',
+    avatar: '/assets/people/Pita_Sherwood.png',
     links: {
       portfolio_url: 'https://pita.blue',
       linkedin: 'https://www.linkedin.com/in/pita/',
