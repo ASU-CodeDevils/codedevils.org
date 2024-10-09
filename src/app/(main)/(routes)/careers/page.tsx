@@ -1,4 +1,4 @@
-import type { Metadata, NextPage } from 'next';
+import type { Metadata } from 'next';
 
 import Image from 'next/image';
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CareersPage: NextPage = () => {
+const CareersPage = () => {
   return (
     <>
       <div className='w-full h-24' />

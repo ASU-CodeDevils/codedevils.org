@@ -1,4 +1,4 @@
-import type { Metadata, NextPage } from 'next';
+import type { Metadata } from 'next';
 
 import { Hero, Section } from 'src/app/components/ui/ContentWrappers';
 import { ExternalLink } from 'src/app/components/ui/buttons';
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-const getStarted: NextPage = () => {
+const getStarted = () => {
   const { discord, sundevilsync, github } = socialLinks;
   return (
     <>

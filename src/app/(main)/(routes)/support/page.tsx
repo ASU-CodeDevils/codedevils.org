@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NextPage, Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-const ContactPage: NextPage = () => {
+const ContactPage = () => {
   const { discord, instagram, sundevilsync } = socialLinks;
 
   return (

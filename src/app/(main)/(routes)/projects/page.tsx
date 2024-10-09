@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import type { Metadata, NextPage } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './project-styles';
 import styled from '@emotion/styled';
@@ -25,7 +25,7 @@ import Link from 'next/link';
   },
 };*/
 
-const projectsPage: NextPage = () => {
+const projectsPage = () => {
   const { discord } = socialLinks;
   //const projectDescs = getContent({projectID: 'all', contentID: 1 }) as React.ReactNode[];
   //const projectTitles = getContent({projectID: 'all', contentID: 0 }) as React.ReactNode[];
