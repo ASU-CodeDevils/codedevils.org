@@ -566,6 +566,12 @@ const projectTeams = {
                 through an API build using SpringBoot. As this project is going to be based fully in Java, it is friendly to 
                 those that are just starting off their programming journey. 
                 </p><p id='project-text'>
+                Throughout this project, contributors will have the opportunity to collaborate with peers, share insights, 
+                and learn from each other. This team-oriented approach fosters a supportive environment where beginners can 
+                ask questions and gain confidence in their coding abilities. You&apos;ll not only develop your technical skills 
+                but also engage in problem-solving and critical thinking as you navigate the challenges of web scraping 
+                together.
+                </p><p id='project-text'>    
                 Each contributor will be responsible for implementing a script to scrape different job posting websites 
                 (i.e. Indeed, LinkedIn). Through this process, you will, hopefully, have a grasp on the some fundamental 
                 HTML parsing. 
