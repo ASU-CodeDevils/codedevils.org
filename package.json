@@ -2,6 +2,7 @@
   "name": "codedevils.org",
   "version": "2.0.0",
   "private": true,
+  "packageManager": "pnpm@9.12.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +10,6 @@
     "lint": "next lint",
     "format": "prettier --write ."
   }, 
-
-  "packageManager": "npm@10.9.0",
-
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
     "@react-three/drei": "^9.102.5",
