@@ -2,14 +2,24 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        maroon: "#8c1d40",
+        asumaroon: {
+          DEFAULT: '#8C1D40',
+          100: '#E3C7D0',
+          200: '#D5ABB8',
+          300: '#C68EA0',
+          400: '#B87288',
+          500: '#A95670',
+          600: '#9B3A58',
+          700: '#8C1D40',
+          800: '#61142D',
+          900: '#360B19',
+          950: '#20070F',
+        },
         black: "#000000",
         white: "#ffffff",
         gray: "#f9f9fa",
@@ -29,6 +39,9 @@ const config: Config = {
       backgroundImage: {
         "hero-pattern":
           "linear-gradient(0deg, hsla(341, 66%, 33%, 0.05) 0%, rgba(131, 79, 96, 0) 100%)",
+      },
+      fontFamily: {
+        bebas: ['var(--font-bebas-neue)', 'sans-serif'],
       },
     },
   },
