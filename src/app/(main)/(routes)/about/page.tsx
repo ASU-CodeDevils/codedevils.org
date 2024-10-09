@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, NextPage } from 'next';
 
 import { HoverEffect } from 'src/app/components/ui/card-hover-effect';
 import { Hero, Section } from 'src/app/components/ui/ContentWrappers';
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-const AboutPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <>
       <Hero className='bg-gray'>

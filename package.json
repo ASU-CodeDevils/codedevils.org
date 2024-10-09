@@ -10,7 +10,7 @@
     "format": "prettier --write ."
   }, 
 
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "npm@10.9.0",
 
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
