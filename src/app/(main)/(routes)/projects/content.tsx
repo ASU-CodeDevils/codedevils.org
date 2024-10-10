@@ -35,7 +35,8 @@ const projectTeams = {
     academy: [['pita'],
             ],
     website: [  ['pita'],
-                ['David Fales']
+                ['David Fales'],
+                ['Juliana Bush']
             ],
     gamedev: [  ['remi'],
                 ['Autumn O'],
