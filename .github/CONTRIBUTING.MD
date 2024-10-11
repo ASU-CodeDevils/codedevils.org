@@ -7,10 +7,11 @@ This document plans to outline the following for _all_ contributors of the CodeD
 1. [Chain of Command](#chain-of-command)
 1. [Git Flow](#git-flow)
    - [Workflow Overview](#Overview)
-   - [Workflow Contribution Requirements](#contribution-requirements)
-   - [Workflow Examples](#workflow-examples)
+   - [Available Issues](#Available-Issues)
+   - [Issue Branch](#Issue-Branch)
+   - [Commits and Pull Requests](#commits-and-pull-requests)
+   - [Main vs Dev Branch](#main-vs-dev-branch)
 1. [Setup Development Environment](#setup-development-environment)
-1. [Git Cheatsheet](#git-cheatsheet)
 1. [Other Resources](#other-resources)
 
 ---
@@ -51,7 +52,9 @@ Your branch's TYPE must be one of the following:
 
 Some example branch names:
 
-```refactor/102/optimize-api-code feature/89/add-welcome-section fix/110/fix-org-link ```
+```refactor/102/optimize-api-code```
+```feature/89/add-welcome-section```
+```fix/110/fix-org-link ```
 
 
 #### Commits and Pull Requests
