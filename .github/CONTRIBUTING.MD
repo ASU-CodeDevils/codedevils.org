@@ -53,7 +53,9 @@ Your branch's TYPE must be one of the following:
 Some example branch names:
 
 ```refactor/102/optimize-api-code```
+
 ```feature/89/add-welcome-section```
+
 ```fix/110/fix-org-link ```
 
 
