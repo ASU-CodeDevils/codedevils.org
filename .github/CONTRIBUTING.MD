@@ -19,9 +19,9 @@ This document plans to outline the following for _all_ contributors of the CodeD
 
 # Chain of Command
 
-The CodeDevils Website project managers are Ian Castellanos ([@IMBCIT](https://github.com/imbcit)). He controls the day-to-day operation of this project, with oversight and policy dictated by the CodeDevil Officers.
+The CodeDevils Website project managers are Pita Sherwood ([@PitaFLAME](https://github.com/PitaFLAME)) and Frankie Lin ([@frankjlin16](https://github.com/frankjlin16)). They control the day-to-day operation of this project, with oversight and policy dictated by the CodeDevil Officers.
 
-> To see your CodeDevil officers, visit the `#info` channel in the CodeDevils Discord server.
+> To check out the projects and project leads, check out codedevils.org/projects
 
 <br/>
 
@@ -31,45 +31,40 @@ Forking is not necessary - use the origin repo's branches for your own code base
 
 ## Overview
 
-#### Personal Branch
+#### Available Issues
 
-This is your own branch. You can call it whatever you want locally and push it into the remote repository. Your working commits will be on this branch and when you are ready to create a pull request (PR) for a specific GitHub issue you will use your personal branch for that PR.
+When you want to work on the project, start with the GitHub Issues page.  This is where we'll post available work for contributors.  Each issue will have difficulty and field tags, as well as what the actual changes will entail.  
 
-#### Main Branch
+If you see an issue that you'd like to work on, go to the issue and comment on it saying that you'd like to work it.  If you've done that, you've essentially 'claimed' the issue.  The project lead will assign the issue to you, and you can begin working on the issue!
 
-The `main` branch is the _production code_ that CodeDevils Website is currently operating on. Whatever is in `main` is what will be on the internet. PRs from personal branches to `main` will **require an approved code review from a project manager**.
+#### Issue Branch
 
-## Contribution Requirements
+When you have an issue that you are working, you must start by creating an Issue Branch.  When naming the branch, follow this naming convention:
+``` <TYPE>/<ISSUE-ID>/<SHORT-DESCRIPTION> ```
 
-Observe the following in your git flow:
+Your branch's TYPE must be one of the following:
+- Fix - for issues that address errors, bugs, or broken things
+- Update - for changes and maintenance
+- Feature - for issues that request new content
+- Refactor - for issues that optimize the code
+- Style - for issues that make the code more readable, clean, or otherwise pretty
 
-- Make an Issue prior to working on your code. We don't want you to work on something that is actually banned or already implemented!
-- Your personal development branches must start with your name and be consistent. E.g., `bobby-dev`, `bobby-new-feature-here`
-- Though there is no limit to the number of reviewers you request, your pull requests to `main` **must** at least include **a project manager**.
-- Comment in your code following the functionality and process within it.
-- Make sure that you have tested your code using your personal AWS account and personal Slack development bot. Be sure to include in your PR a link to a screen capture of you testing your feature. **NO CODE WILL BE APPROVED WITHOUT BEING TESTED FIRST**.
+Some example branch names:
 
-## Workflow Examples
+```refactor/102/optimize-api-code feature/89/add-welcome-section fix/110/fix-org-link ```
 
-### Marlee's Quick Patch (Simple)
 
-> My name is Marlee, and I noticed a misspelling in the README.
->
-> I would create a GitHub issue for this, then create a branch called `marlee-hotfix`, make the correction, then submit a pull request to `main` making sure to request review from [@IMBCIT](https://github.com/imbcit).
+#### Commits and Pull Requests
 
-Good job Marlee!
+After you have finished working on an Issue and you have a finished version of your code, commit it to your branch, and create a Pull Request to merge your Issue Branch to `dev`.
 
-### Clyde & Darryl's Calendar (Collab)
+To the best of your ability, please try to keep the commits to your Issue Branch as few as possible.  If there end up being a lot of commits on your branch, please squash them before you create your Pull Request.
 
-> My name is Clyde, and I'm working with Darryl on a sweet new command that allows something to do with calendars.
->
-> I would create a GitHub issue for the new feature, then checkout a new branch entitled `calendar-dev`, acting as the default branch for the calendar between Darryl and I, making sure to keep it updated with `main`. Darryl and I would then have our own branches whatever we want to call them following the guideline, say `darryl-calendar` and `clyde-dev`. We push and pull from `calendar-dev` for development.
->
-> When our cool new command is done, _making sure to pull `calendar-dev` from `main` so that there are not merge conflicts_, I would then make a pull request on `main`. Billy-Bob is good with calendars, so I would like his review too. I would request review from `@BillyBobUSA` along with a project manager such as [@IMBCIT](https://github.com/imbcit).
+#### Main vs Dev Branch
 
-Nicely done!
+The `main` branch is the _production code_ that CodeDevils Website is currently operating on. Whatever is in `main` is what will be on the internet. Contributors should never make a Pull Request to merge directly to `main`.
 
----
+The `dev` branch is where all Pull Requests should point to.  When creating a new branch, stem from `dev`.  When creating a Pull Request, merge to `dev`.  After enough time, or after a sprint, the changes in `dev` will be merged to `main` by the Project Lead.
 
 <br/>
 
@@ -126,43 +121,6 @@ pnpm dev
 
 <br/>
 
-# Git Cheatsheet
-
-#### Checkout Existing Branch
-
-```
-git checkout existing-branch
-```
-
-#### Checkout a New Branch
-
-```
-git checkout -B your-new-branch
-```
-
-#### Push to Repo
-
-```
-git push origin destination-branch
-```
-
-Pro-tip: add `-u` to skip the naming of the branch in future pushes.
-
-#### Update Current Branch from Repo
-
-```
-git fetch && git pull
-```
-
-#### Update Current Branch from Target Branch
-
-```
-git fetch ; git merge target-branch
-```
-
-Use Case: Your development branch (current branch) is behind `dev` and you want to update your branch with the code from `dev` (or some other target branch).
-
----
 
 ## Other Resources
 
