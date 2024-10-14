@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write ."
-  }, 
+  },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
     "@react-three/drei": "^9.102.5",
