@@ -31,3 +31,8 @@ Installing the project:
 ## Contributing
 
 [Check out our Contribution Guide here!](https://github.com/ASU-CodeDevils/codedevils.org/blob/main/.github/CONTRIBUTING.MD)
+
+
+## Creating Issues
+
+[Check out our Issue Creation Guide here!](https://github.com/ASU-CodeDevils/codedevils.org/blob/main/.github/ISSUE_GUIDE.MD)
