@@ -76,6 +76,7 @@ Your Pull Requests have some requirements for documentation.  They must include:
    - For issues tagged "complex", you MUST explain why you made any choices that you did for how you approached the issue, in addition to a reasonable explanation for your changes.
 - You must link the issue that you are working on at the end of the Pull Request.  To do this, you must type a '#' character, and follow it with the Issue Number.  This will indicate on the Issue itself that this Pull Request resolves it.  For example, if you are working issue 99, you need to end your Pull Request with '#99'
 
+
 #### Main vs Dev Branch
 
 The `main` branch is the _production code_ that CodeDevils Website is currently operating on. Whatever is in `main` is what will be on the internet. Contributors should never make a Pull Request to merge directly to `main`.
