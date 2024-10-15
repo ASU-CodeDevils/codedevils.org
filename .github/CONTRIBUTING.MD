@@ -59,11 +59,23 @@ Some example branch names:
 ```fix/110/fix-org-link ```
 
 
-#### Commits and Pull Requests
+#### Commits
+
+To the best of your ability, please try to keep the commits to your Issue Branch as few as possible.  If there end up being a lot of commits on your branch, please squash them before you create your Pull Request.
+
+Your Commits do not have any requirements for their naming convention, other than being vaguely relevant to the actions taken.  They need not be anything more than a short description of your changes
+
+#### Pull Requests
 
 After you have finished working on an Issue and you have a finished version of your code, commit it to your branch, and create a Pull Request to merge your Issue Branch to `dev`.
 
-To the best of your ability, please try to keep the commits to your Issue Branch as few as possible.  If there end up being a lot of commits on your branch, please squash them before you create your Pull Request.
+Your Pull Requests have some requirements for documentation.  They must include:
+- An explanation of the changes you made.
+   - For issues tagged "simple", this need not be very detailed, but just a note of what you did.
+   - For issues with no complexity tag, give a reasonable explanation for the changes you made.  It should be comprehensive.  You are welcome to mention anything interesting about your solution.
+   - For issues tagged "complex", you MUST explain why you made any choices that you did for how you approached the issue, in addition to a reasonable explanation for your changes.
+- You must link the issue that you are working on at the end of the Pull Request.  To do this, you must type a '#' character, and follow it with the Issue Number.  This will indicate on the Issue itself that this Pull Request resolves it.  For example, if you are working issue 99, you need to end your Pull Request with '#99'
+
 
 #### Main vs Dev Branch
 
