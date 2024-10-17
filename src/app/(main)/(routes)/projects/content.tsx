@@ -42,7 +42,10 @@ const projectTeams = {
                 ['Autumn O'],
                 ['Pita Sherwood', 'https://pita.blue'],
             ],
-    mobile: [['pita']
+    mobile: [['pita'],
+            ['John Miller'],
+            ['Alejandro Jimenez'],
+            ['Korbin Hillan'],
             ],
     scraper: [['frankie']
             ]
