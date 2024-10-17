@@ -44,7 +44,7 @@ const projectTeams = {
     mobile: [['pita'],
             ['John Miller'],
             ['Alejandro Jimenez'],
-            ['Korbin Hillan']
+            ['Korbin Hillan'],
             ],
     scraper: [['frankie']
             ]
