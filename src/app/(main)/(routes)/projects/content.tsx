@@ -41,6 +41,12 @@ const projectTeams = {
     gamedev: [  ['remi'],
                 ['Autumn O'],
                 ['Pita Sherwood', 'https://pita.blue'],
+                ['John Miller'],
+                ['Alejandro Jimenez'],
+                ['Josh Walker'],
+                ['Carter Hollman'],
+                ['Jaith Darrah', 'https://www.jaithdarrah.com/'],
+                ['Krishnaprasad Sreekum']
             ],
     mobile: [['pita'],
             ['John Miller'],
