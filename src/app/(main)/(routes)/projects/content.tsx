@@ -36,7 +36,11 @@ const projectTeams = {
             ],
     website: [  ['pita'],
                 ['Juliana Bush'],
-                ['Ella Rushing']
+                ['Ella Rushing'],
+                ['Logan Wright'],
+                ['Carter Hollman'],
+                ['Derrick Berko'],
+                ['Michael Ellmer']
             ],
     gamedev: [  ['remi'],
                 ['Autumn O'],
