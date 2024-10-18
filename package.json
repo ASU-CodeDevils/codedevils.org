@@ -24,12 +24,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.5",
-    "react^10.4.3": "link:@trpc/react^10.4.3",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/eslint": "^8.44.0",
     "@types/node": "20.12.7",
