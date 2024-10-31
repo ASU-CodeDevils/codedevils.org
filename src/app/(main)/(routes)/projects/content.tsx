@@ -40,7 +40,15 @@ const projectTeams = {
                 ['Logan Wright'],
                 ['Carter Hollman'],
                 ['Derrick Berko'],
-                ['Michael Ellmer']
+                ['Michael Ellmer'],
+                ['Boubacar S Diiallo'],
+                ['John Miller'],
+                ['Rhett Harrison'],
+                ['David Nevarez', 'https://davidnevarez.info/'],
+                ['Alejandro Jimenez'],
+                ['Darshan Phaldesai'],
+                ['Jaith Darrah'],
+                ['Tyler Wallace']
             ],
     gamedev: [  ['remi'],
                 ['Autumn O'],
