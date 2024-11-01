@@ -36,13 +36,34 @@ const projectTeams = {
             ],
     website: [  ['pita'],
                 ['Juliana Bush'],
-                ['Ella Rushing']
+                ['Ella Rushing'],
+                ['Logan Wright'],
+                ['Carter Hollman'],
+                ['Derrick Berko'],
+                ['Michael Ellmer'],
+                ['Boubacar S Diiallo'],
+                ['John Miller'],
+                ['Rhett Harrison'],
+                ['David Nevarez', 'https://davidnevarez.info/'],
+                ['Alejandro Jimenez'],
+                ['Darshan Phaldesai'],
+                ['Jaith Darrah'],
+                ['Tyler Wallace']
             ],
     gamedev: [  ['remi'],
                 ['Autumn O'],
                 ['Pita Sherwood', 'https://pita.blue'],
+                ['John Miller'],
+                ['Alejandro Jimenez'],
+                ['Josh Walker'],
+                ['Carter Hollman'],
+                ['Jaith Darrah', 'https://www.jaithdarrah.com/'],
+                ['Krishnaprasad Sreekum']
             ],
-    mobile: [['pita']
+    mobile: [['pita'],
+            ['John Miller'],
+            ['Alejandro Jimenez'],
+            ['Korbin Hillan'],
             ],
     scraper: [['frankie']
             ]

@@ -3,8 +3,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import styles from './project-styles';
-import styled from '@emotion/styled';
 
 import { Section } from 'src/app/components/ui/ContentWrappers';
 import { ExternalLink, InternalLink } from 'src/app/components/ui/buttons';
