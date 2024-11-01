@@ -37,10 +37,6 @@ const projectTeams = {
     website: [  ['pita'],
                 ['Juliana Bush'],
                 ['Ella Rushing'],
-                ['Logan Wright'],
-                ['Carter Hollman'],
-                ['Derrick Berko'],
-                ['Michael Ellmer'],
                 ['Boubacar S Diiallo'],
                 ['John Miller'],
                 ['Rhett Harrison'],
@@ -65,7 +61,12 @@ const projectTeams = {
             ['Alejandro Jimenez'],
             ['Korbin Hillan'],
             ],
-    scraper: [['frankie']
+    scraper: [
+                ['frankie'],
+                ['Logan Wright'],
+                ['Carter Hollman'],
+                ['Derrick Berko'],
+                ['Michael Ellmer']
             ]
 }
 
