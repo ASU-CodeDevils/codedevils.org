@@ -53,8 +53,7 @@ const projectTeams = {
                 ['Alejandro Jimenez'],
                 ['Darshan Phaldesai'],
                 ['Jaith Darrah'],
-                ['Tyler Wallace'],
-                ['Sai Rithwik Kukunuri','https://simplyrithwik.netlify.app/'],
+                ['Tyler Wallace']
             ],
     gamedev: [  ['remi'],
                 ['Autumn O'],
