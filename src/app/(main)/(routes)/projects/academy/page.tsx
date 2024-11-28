@@ -2,6 +2,7 @@ import '../project-page-styles.css'
 import { MaxWidthWrapper } from "src/app/components/ui/ContentWrappers"
 import ApplyButton from "~/src/app/components/Projects/ApplyButton"
 import getContent from "../content"
+import { gitreporslinks } from "../content"
 
 const Home = () => {
 
@@ -26,6 +27,15 @@ const Home = () => {
 
                 <div className="flex justify-center md:justify-start">
                     <ApplyButton project={projectID} >Join the Project!</ApplyButton>
+                </div>
+
+                <div className="flex justify-center md:justify-end items-center mt-3 md:mt-[-77px] mb-10">
+                    <a href={gitreporslinks.academy}
+                    target="_blank" 
+                    rel="noreferrer noopener" 
+                    className=" bg-asumaroon-700 text-white text-lg font-semibold py-5 px-10 rounded-2xl shadow-md shadow-zinc-500 duration-300 hover:bg-asumaroon-600">
+                    View GitHub Repository
+                    </a>
                 </div>
 
             </MaxWidthWrapper>
