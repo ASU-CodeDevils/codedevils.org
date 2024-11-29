@@ -1,18 +1,16 @@
-"use client"
-
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
+import './project-styles.css';
 import { Section } from 'src/app/components/ui/ContentWrappers';
 import { ExternalLink, InternalLink } from 'src/app/components/ui/buttons';
-
 import { socialLinks } from 'src/app/utils/staticdata';
 import getContent from './content';
 import { Backpack, ChevronRight, FileOutput, Gamepad2, PanelsTopLeft, Smartphone, Square } from 'lucide-react';
 import Link from 'next/link';
 
-/*export const metadata: Metadata = {
+export const metadata: Metadata = {
   title: 'Projects Hub',
   description:
     'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
@@ -21,12 +19,12 @@ import Link from 'next/link';
     description:
       'Discover open source projects at CodeDevils and learn how to get involved. Collaborate with fellow developers, gain real-world experience, and make a meaningful impact through open source contributions.',
   },
-};*/
+};
 
 const projectsPage = () => {
   const { discord } = socialLinks;
-  //const projectDescs = getContent({projectID: 'all', contentID: 1 }) as React.ReactNode[];
-  //const projectTitles = getContent({projectID: 'all', contentID: 0 }) as React.ReactNode[];
+  const projectDescs = getContent({projectID: 'all', contentID: 1, pageID: "project-hub" }) as React.ReactNode[];
+  const projectTitles = getContent({projectID: 'all', contentID: 0, pageID: "project-hub" }) as React.ReactNode[];
 
 
   return (
@@ -133,7 +131,7 @@ const projectsPage = () => {
 
         <ul className='flex flex-col gap-8'>
           
-          {/* projectDescs ? projectDescs.map((description, index) => (
+          { projectDescs ? projectDescs.map((description, index) => (
             <li key={index} className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden' >
               <div className='w-48 h-full col-span-1' />
               <div className='flex flex-col col-span-6 h-full z-20'>
@@ -147,10 +145,9 @@ const projectsPage = () => {
                               -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
                               rounded-full' />
             </li>
-          )) : <></>
-           implement this later... fix styles*/}
+          )) : <></> }
           
-          <li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
+          {/*<li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
           <div className='w-48 h-full col-span-1' />
             <div className='flex flex-col col-span-6 h-full z-20'>
               <Link href="/projects/academy">
@@ -244,7 +241,7 @@ const projectsPage = () => {
             <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
                             -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
                             rounded-full' />
-          </li>
+          </li>*/}
         </ul>
       </Section>
 
