@@ -6,7 +6,7 @@ import './project-styles.css';
 import { Section } from 'src/app/components/ui/ContentWrappers';
 import { ExternalLink, InternalLink } from 'src/app/components/ui/buttons';
 import { socialLinks } from 'src/app/utils/staticdata';
-import getContent from './content';
+import getContent, { projectIDs } from './content';
 import { Backpack, ChevronRight, FileOutput, Gamepad2, PanelsTopLeft, Smartphone, Square } from 'lucide-react';
 import Link from 'next/link';
 
@@ -136,7 +136,8 @@ const projectsPage = () => {
             <li key={index} className='relative grid grid-cols-7 items-center bg-white h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden' >
               <div className='w-48 h-full col-span-1' />
               <div className='flex flex-col col-span-6 h-full z-20'>
-                <Link href="/projects/website">
+                
+                <Link href={`/projects/` + projectIDs[index]}>
                   {projectTitles[index]}
                 </Link>
               {description}

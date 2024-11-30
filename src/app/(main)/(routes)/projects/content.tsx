@@ -7,7 +7,7 @@ import { getMember } from '~/src/app/components/members';
 import { MemberID } from '~/src/app/components/members';
 
 
-const projectIDs = [
+export const projectIDs = [
     'academy',
     'website',
     'gamedev',
