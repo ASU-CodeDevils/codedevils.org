@@ -4,7 +4,7 @@ This document plans to outline the following for _all_ contributors of the CodeD
 
 ### Table of Contents
 
-1. [Chain of Command](#chain-of-command)
+1. [Leadership](#leadership)
 1. [Git Flow](#git-flow)
    - [Workflow Overview](#Overview)
    - [Available Issues](#Available-Issues)
@@ -18,7 +18,7 @@ This document plans to outline the following for _all_ contributors of the CodeD
 
 <br/>
 
-# Chain of Command
+# Leadership
 
 The CodeDevils Website project managers are Pita Sherwood ([@PitaFLAME](https://github.com/PitaFLAME)) and Frankie Lin ([@frankjlin16](https://github.com/frankjlin16)). They control the day-to-day operation of this project, with oversight and policy dictated by the CodeDevil Officers.
 
@@ -94,38 +94,12 @@ The `dev` branch is where all Pull Requests should point to.  When creating a ne
 
 Alternatively, you can install both requirements with a package manager - [homebrew](https://brew.sh/) (macOS) or [chocolatey](https://chocolatey.org/) (Windows).
 
-## Environment Variables
-
-You need to create a `.env` file in root directory with the following environment variables:
-
-```
-# Prisma
-DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE
-
-# Discord Secret
-DISCORD_CLIENT_ID=<Client ID>
-DISCORD_CLIENT_SECRET=<Client Secret>
-
-# Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=*******************************************************
-CLERK_SECRET_KEY=sk_test_******************************************
-
-```
-
-To aquire the **discord client id and secret**, you need to create a new application through the [discord developer portal](https://discord.com/developers/applications). Refer to [NextAuth's documentation](https://next-auth.js.org/providers/discord) for additional information.
-
 ## Getting Started
 
-Once you have the local environment variables set, it is time to install the packages/dependencies.
+Once you have node.js and a package manager installed, it is time to install the packages/dependencies.
 
 ```
 pnpm install
-```
-
-Once the packages/dependencies have been installed, you need to initialize the database with `prisma`.
-
-```
-pnpm prisma db push
 ```
 
 Now you can start the development server with the following command:
@@ -133,8 +107,10 @@ Now you can start the development server with the following command:
 ```
 pnpm dev
 ```
+Any changes you make to the code will be reflected in your local deployment.
 
 ---
+
 
 <br/>
 
@@ -144,3 +120,9 @@ pnpm dev
 - Installing Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - Git Basics: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 - GitHub - Creating a Pull Request: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+- A full project guide that uses our stack: https://www.youtube.com/watch?v=SG82Aqcaaa0
+- Learn React: https://www.youtube.com/watch?v=Rh3tobg7hEo
+- Learn TailwindCSS: https://www.youtube.com/watch?v=24hFVa3hgVw
+- Learn Next.js: https://www.youtube.com/watch?v=ZjAqacIC_3c
+- Learn Next.js: https://www.youtube.com/watch?v=eZJJ189JTks
+- Learn MongoDB: https://www.youtube.com/watch?v=_8SN9jw9MJo
