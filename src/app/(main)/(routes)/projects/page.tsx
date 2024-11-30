@@ -129,6 +129,7 @@ const projectsPage = () => {
         </article>
 
 
+        {/* List of Project Titles.  Dynamically generated. */}
         <ul className='flex flex-col gap-8'>
           
           { projectDescs ? projectDescs.map((description, index) => (
@@ -147,103 +148,10 @@ const projectsPage = () => {
             </li>
           )) : <></> }
           
-          {/*<li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
-          <div className='w-48 h-full col-span-1' />
-            <div className='flex flex-col col-span-6 h-full z-20'>
-              <Link href="/projects/academy">
-                <Backpack className='absolute text-asumaroon-800 transition-transform duration-200 group group-hover:rotate-[-10deg] group-hover:scale-110
-           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
-                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
-           transition-all duration-100 hover:underline-offset-2 hover:underline
-           md:text-5xl text-3xl'>CodeDevils Academy</h1>
-                <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer md:hidden' />
-              </Link>
-              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
-                A sister website to CodeDevils.org. A content library for users to visit and learn how to code!</p>
-            </div>
-            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer hidden md:block' />
-            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
-                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
-                            rounded-full' />
-          </li>
-          <li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
-          <div className='w-48 h-full col-span-1' />
-            <div className='flex flex-col col-span-6 h-full z-20'>
-              <Link href="/projects/website">
-                <PanelsTopLeft className='absolute text-asumaroon-800 transition-transform duration-200 group group-hover:rotate-[-10deg] group-hover:scale-110
-           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
-                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
-           transition-all duration-100 hover:underline-offset-2 hover:underline
-           md:text-5xl text-3xl'>CodeDevils Website</h1>
-                <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer md:hidden' />
-              </Link>
-              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
-                Our rapidly-evolving website. New features and tools are constantly being added!</p>
-            </div>
-            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer hidden md:block' />
-            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
-                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
-                            rounded-full' />
-          </li>
-          <li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
-          <div className='w-48 h-full col-span-1' />
-            <div className='flex flex-col col-span-6 h-full z-20'>
-              <Link href="/projects/gamedev">
-                <Gamepad2 className='absolute text-asumaroon-800 transition-transform duration-200 group group-hover:rotate-[-10deg] group-hover:scale-110
-           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
-                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
-           transition-all duration-100 hover:underline-offset-2 hover:underline
-           md:text-5xl text-3xl'>CodeDevils GameDev</h1>
-                <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer md:hidden' />
-              </Link>
-              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
-              A series of Game Development projects to implement in various places around CodeDevils!</p>
-            </div>
-            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer hidden md:block' />
-            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
-                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
-                            rounded-full' />
-          </li>
-          <li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
-          <div className='w-48 h-full col-span-1' />
-            <div className='flex flex-col col-span-6 h-full z-20'>
-              <Link href="/projects/mobile">
-                <Smartphone className='absolute text-asumaroon-800 transition-transform duration-200 group group-hover:rotate-[-10deg] group-hover:scale-110
-           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
-                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
-           transition-all duration-100 hover:underline-offset-2 hover:underline
-           md:text-5xl text-3xl'>CodeDevils Mobile</h1>
-                <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer md:hidden' />
-              </Link>
-              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
-              Our Mobile app! Built for iOS and Android, helps contributors keep up to date with projects and keeps members aware of events!</p>
-            </div>
-            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer hidden md:block' />
-            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
-                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
-                            rounded-full' />
-          </li>
-          <li className='relative grid grid-cols-7 items-center bg-white md:h-36 px-4 py-4 rounded-3xl pr-20 group overflow-x-hidden group'>
-          <div className='w-48 h-full col-span-1' />
-            <div className='flex flex-col col-span-6 h-full z-20'>
-              <Link href="/projects/scraper">
-                <FileOutput className='absolute text-asumaroon-800 transition-transform duration-200 group group-hover:rotate-[-10deg] group-hover:scale-110
-           w-24 h-24 lg:block hidden left-8 top-6 cursor-pointer;' />
-                <h1 className='font-semibold text-asumaroon-900 cursor-pointer
-           transition-all duration-100 hover:underline-offset-2 hover:underline
-           md:text-5xl text-3xl'>CodeDevils Scraper</h1>
-                <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer md:hidden' />
-              </Link>
-              <p className='text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight'>
-              A job post scraping tool built to keep our members up to date with the latest developments in the job market!</p>
-            </div>
-            <ChevronRight className='absolute h-16 w-16 text-asumaroon-800 right-2 cursor-pointer hidden md:block' />
-            <div className='absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent to-asumaroon/30
-                            -translate-x-[100%] group group-hover:-translate-x-16 transition-transform duration-500
-                            rounded-full' />
-          </li>*/}
+          
         </ul>
       </Section>
+
 
       <Section>
         <article className='space-y-3 text-center'>
