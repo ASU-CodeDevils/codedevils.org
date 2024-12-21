@@ -5,7 +5,7 @@ import Image from 'next/image'
 import ApplyButton from '~/src/app/components/Projects/ApplyButton';
 import { getMember } from '~/src/app/components/members';
 import { MemberID } from '~/src/app/components/members';
-
+import { ExternalLink } from 'lucide-react';
 
 export const projectIDs = [
     'academy',
@@ -26,6 +26,14 @@ export const projectApplicationLinks = {
     mobile:  'https://docs.google.com/forms/d/e/1FAIpQLSd--0dToZAGV4MThGzuiJuSy_GCmFIoPjkgRjAbBPnk0B6MrA/viewform?usp=sf_link',
     scraper: 'https://docs.google.com/forms/d/e/1FAIpQLSfJHHugJUM3Sc_r_A7nCDjfSyaIXTepd90raUZ_zEwVZ_mEMg/viewform?usp=sf_link',
     }
+
+export const gitRepoLinks = {
+    academy: "https://github.com/ASU-CodeDevils/CD-Academy",
+    website: "https://github.com/ASU-CodeDevils/codedevils.org",
+    gamedev: "https://github.com/ASU-CodeDevils/CD-GameDev",
+    mobile:  "https://github.com/ASU-CodeDevils/CD-Mobile",
+    scraper: "https://github.com/ASU-CodeDevils/scraper.codedevils.org",
+    };
 
 
     // format: element [0] must be of type MemberID all other elements must be an array of one or
@@ -196,8 +204,18 @@ const projectTeams = {
                         ))) : <><div /><h3>No contributors just yet.  Be the first to apply!</h3></>}
                 </div>
             </div>
-        )],
-
+        ),
+        (
+        <div key={8} id='project-page' className={pageID}>
+            <div id="git-link">
+                <a href={gitRepoLinks.academy} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                    View GitHub Repository
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                </a>
+            </div>
+        </div>
+        )
+        ],
 
         website: [(
             <div key={0} id='project-title' className={pageID}>
@@ -320,8 +338,18 @@ const projectTeams = {
                         ))) : <><div /><h3>No contributors just yet.  Be the first to apply!</h3></>}
                 </div>
             </div>
-        )],
-
+        ),
+        (
+        <div key={8} id='project-page' className={pageID}>
+            <div id="git-link">
+                <a href={gitRepoLinks.website} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                    View GitHub Repository
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                </a>
+            </div>
+        </div>
+        )
+        ],
 
         gamedev: [(
             <div key={0} id='project-title' className={pageID}>
@@ -450,7 +478,19 @@ const projectTeams = {
                         ))) : <><div /><h3>No contributors just yet.  Be the first to apply!</h3></>}
                 </div>
             </div>
-        )],
+        ),
+        (
+        <div key={8} id='project-page' className={pageID}>
+            <div id="git-link">
+                <a href={gitRepoLinks.gamedev} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                    View GitHub Repository
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                </a>
+            </div>
+        </div>
+        )
+        ],
+
         mobile: [(
             <div key={0} id='project-title' className={pageID}>
                 <h1>CodeDevils Mobile</h1>
@@ -569,7 +609,19 @@ const projectTeams = {
                         ))) : <h3>No contributors just yet.  Be the first to apply!</h3>}
                 </div>
             </div>
-        )],
+        ),
+        (
+        <div key={8} id='project-page' className={pageID}>
+            <div id="git-link">
+                <a href={gitRepoLinks.mobile} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                    View GitHub Repository
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                </a>
+            </div>
+        </div>
+        )
+        ],
+
         scraper: [(
             <div key={0} id='project-title' className={pageID}>
                 <h1>CodeDevils Scraper</h1>
@@ -683,7 +735,18 @@ const projectTeams = {
                         ))) : <h3>No contributors just yet.  Be the first to apply!</h3>}
                 </div>
             </div>
-        )],
+        ),
+        (
+        <div key={8} id='project-page' className={pageID}>
+            <div id="git-link">
+                <a href={gitRepoLinks.scraper} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                    View GitHub Repository
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                </a>
+            </div>
+        </div>
+        )
+        ],
 
     }
 
