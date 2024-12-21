@@ -27,6 +27,14 @@ export const projectApplicationLinks = {
     scraper: 'https://docs.google.com/forms/d/e/1FAIpQLSfJHHugJUM3Sc_r_A7nCDjfSyaIXTepd90raUZ_zEwVZ_mEMg/viewform?usp=sf_link',
     }
 
+export const gitRepoLinks = {
+    academy: "https://github.com/ASU-CodeDevils/CD-Academy",
+    website: "https://github.com/ASU-CodeDevils/codedevils.org",
+    gamedev: "https://github.com/ASU-CodeDevils/CD-GameDev",
+    mobile:  "https://github.com/ASU-CodeDevils/CD-Mobile",
+    scraper: "https://github.com/ASU-CodeDevils/scraper.codedevils.org",
+    };
+
 
     // format: element [0] must be of type MemberID all other elements must be an array of one or
     //         two string literals.  First element is the contributor's name, second is an optional link.

@@ -208,3 +208,11 @@
 #project-description.project-hub {
     @apply text-lg text-zinc-700 font-medium mt-2 ml-4 leading-tight;
 }
+
+.git-link-container {
+    @apply flex justify-center md:justify-end items-center mt-3 md:mt-[-77px] mb-10 w-full;
+}
+  
+.git-link {
+    @apply text-lg font-light text-asumaroon-500 duration-300 hover:text-asumaroon-950 hover:font-medium underline flex items-center cursor-pointer;
+}
