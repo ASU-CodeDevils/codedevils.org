@@ -27,6 +27,7 @@ const Home = () => {
                 <div className="flex justify-center md:justify-start">
                     <ApplyButton project={projectID} >Join the Project!</ApplyButton>
                 </div>
+                {getContent({ projectID: projectID, contentID: 8, pageID: "project-page" })} {/* Git Repo Link */}
 
             </MaxWidthWrapper>
         </>
