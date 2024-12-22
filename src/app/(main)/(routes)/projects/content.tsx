@@ -208,7 +208,7 @@ const projectTeams = {
         (
         <div key={8} id='project-page' className={pageID}>
             <div id="git-link">
-                <a href={gitRepoLinks.academy} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                <a href={gitRepoLinks.academy} target="_blank" rel="noreferrer noopener">
                     View GitHub Repository
                     <ExternalLink className="ml-2 w-5 h-5" />
                 </a>
@@ -342,7 +342,7 @@ const projectTeams = {
         (
         <div key={8} id='project-page' className={pageID}>
             <div id="git-link">
-                <a href={gitRepoLinks.website} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                <a href={gitRepoLinks.website} target="_blank" rel="noreferrer noopener">
                     View GitHub Repository
                     <ExternalLink className="ml-2 w-5 h-5" />
                 </a>
@@ -482,7 +482,7 @@ const projectTeams = {
         (
         <div key={8} id='project-page' className={pageID}>
             <div id="git-link">
-                <a href={gitRepoLinks.gamedev} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                <a href={gitRepoLinks.gamedev} target="_blank" rel="noreferrer noopener">
                     View GitHub Repository
                     <ExternalLink className="ml-2 w-5 h-5" />
                 </a>
@@ -613,7 +613,7 @@ const projectTeams = {
         (
         <div key={8} id='project-page' className={pageID}>
             <div id="git-link">
-                <a href={gitRepoLinks.mobile} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                <a href={gitRepoLinks.mobile} target="_blank" rel="noreferrer noopener">
                     View GitHub Repository
                     <ExternalLink className="ml-2 w-5 h-5" />
                 </a>
@@ -739,7 +739,7 @@ const projectTeams = {
         (
         <div key={8} id='project-page' className={pageID}>
             <div id="git-link">
-                <a href={gitRepoLinks.scraper} target="_blank" rel="noreferrer noopener" id='git-link a'>
+                <a href={gitRepoLinks.scraper} target="_blank" rel="noreferrer noopener">
                     View GitHub Repository
                     <ExternalLink className="ml-2 w-5 h-5" />
                 </a>
