@@ -40,7 +40,11 @@ export const gitRepoLinks = {
     //         two string literals.  First element is the contributor's name, second is an optional link.
     
 const projectTeams = {
-    academy: [['pita'],
+    academy: [  ["pita"],
+                ["Allie Betlewicz"],
+                ["John Miller"],
+                ["Jacob Kobrick"],
+                ["Adrian Parra"],
             ],
     website: [  ['pita'],
                 ['Juliana Bush'],
