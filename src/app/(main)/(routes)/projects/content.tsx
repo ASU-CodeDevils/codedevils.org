@@ -41,7 +41,11 @@ export const gitRepoLinks = {
     
 const projectTeams = {
     academy: [['pita'],
-            ],
+              ['Allie Betlewicz'],
+              ['John Miller'],
+              ['Jacob Kobrick'],
+              ['Adrian Parra'],
+             ],
     website: [  ['pita'],
                 ['Juliana Bush'],
                 ['Ella Rushing'],
