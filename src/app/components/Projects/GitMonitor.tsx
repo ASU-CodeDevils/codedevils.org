@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
 import {
   User,
   GitCommit,
@@ -91,18 +93,13 @@ const GitMonitor = ({
     selectedRepo === "all"
       ? recentActivity
       : recentActivity.filter((activity) => {
-          // Get the short name from the selected repo (e.g., "scraper.codedevils.org" from "ASU-CodeDevils/scraper.codedevils.org")
           const selectedRepoShortName = selectedRepo.split("/")[1] || "";
-          console.log(
-            `Activity repo: ${activity.repo}, Selected repo: ${selectedRepoShortName}`
-          );
           // Compare with the activity's repo field
           return activity.repo === selectedRepoShortName;
         });
 
   return (
     <div className={`flex flex-col ${className}`}>
-      {/* IMPORTANT: Always keep the header div for CSS structure, but conditionally hide its contents */}
       <div
         className={`flex items-center justify-between h-[80px] w-full rounded-t-xl
              font-semibold text-2xl shadow-xl shadow-slate-700
@@ -217,9 +214,11 @@ const GitMonitor = ({
                   key={activity.id} // Using commit SHA as key
                   className="relative flex items-center w-full py-3 px-2 border-b border-slate-700/40 hover:bg-slate-700/20 transition-colors"
                 >
-                  <img
+                  <Image
                     src={activity.avatar}
                     alt={activity.username}
+                    width={32}
+                    height={32}
                     className="h-8 w-8 rounded-full mr-3"
                   />
                   <div className="flex-1 min-w-0">

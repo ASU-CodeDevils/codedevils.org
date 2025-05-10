@@ -58,7 +58,7 @@ const projectsPage = () => {
       <div className="relative flex h-[40rem] items-center justify-center">
         <div className="flex flex-row h-full w-full gap-8">
           <div className="md:flex hidden flex-col ">
-            <GitMonitor className="h-full w-full" remove_selection={false} />
+            <GitMonitor className="h-full w-full" />
           </div>
           <div
             className="relative flex flex-col justify-center items-center w-full h-full overflow-hidden
