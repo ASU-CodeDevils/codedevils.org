@@ -132,7 +132,7 @@ const GitLeaderboard = ({
                             href={contributor.profileUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center hover:underline text-blue-700"
+                            className="flex items-center hover:underline"
                           >
                             {contributor.avatar && (
                               <Image
@@ -163,7 +163,7 @@ const GitLeaderboard = ({
                                     href={repoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-blue-500 hover:bg-blue-600 text-white text-xs px-2 py-1 rounded transition-colors duration-200"
+                                    className="bg-asumaroon-500 hover:bg-asumaroon-600 text-white text-xs px-2 py-1 rounded transition-colors duration-200"
                                     title={`${commits} commits to ${repo}`}
                                   >
                                     {repoName} ({commits})
