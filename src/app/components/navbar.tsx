@@ -8,7 +8,6 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import CodeDevilsLogo from "public/codedevils-logo.svg";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
-
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
@@ -45,8 +44,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-
-
           <div
             className={`${
               showMobileNav ? "flex" : "hidden md:block"
@@ -74,8 +71,6 @@ const Navbar = () => {
             </div>
 
             <Menu>
-
-
               <Dropdown
                 setActive={setActive}
                 active={active}
@@ -102,10 +97,14 @@ const Navbar = () => {
                   >
                     Opportunities
                   </DropdownItem>
+                  <DropdownItem
+                    href="projects/how-it-works"
+                    onClick={() => setShowMobileNav(!showMobileNav)}
+                  >
+                    Contributing
+                  </DropdownItem>
                 </div>
               </Dropdown>
-
-
 
               <MenuItem
                 href="/projects"
@@ -114,9 +113,8 @@ const Navbar = () => {
                 Projects
               </MenuItem>
 
-
-
-              <MenuItem className="bg-asumaroon text-white py-2 px-4 rounded-xl 
+              <MenuItem
+                className="bg-asumaroon text-white py-2 px-4 rounded-xl 
                 hover:bg-gradient-to-br hover:from-asumaroon-600 hover:to-asumaroon-800"
                 href="/get-started"
                 onClick={() => setShowMobileNav(!showMobileNav)}
@@ -124,8 +122,6 @@ const Navbar = () => {
                 Get Started
                 <ChevronRight className="ml-1 w-5 h-5" />
               </MenuItem>
-
-
             </Menu>
           </div>
         </div>
@@ -142,11 +138,16 @@ export const Menu = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const MenuItem = ({children, href, onClick, className}: {
-  children: ReactNode
-  className?: string
-  href: string
-  onClick: () => void
+export const MenuItem = ({
+  children,
+  href,
+  onClick,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+  href: string;
+  onClick: () => void;
 }) => {
   return (
     <div className={`${className} relative`} onClick={onClick}>
@@ -188,7 +189,7 @@ export const Dropdown = ({
         <p className="text-black">{item}</p>
         <ChevronDown
           className={`h-5 w-5
-            transform ${ show ? "rotate-180" : "rotate-0"} 
+            transform ${show ? "rotate-180" : "rotate-0"} 
             mx-4 transition-transform duration-200 md:mx-0`}
         />
       </button>
