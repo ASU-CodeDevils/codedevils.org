@@ -165,7 +165,7 @@
 }
 
 #project-title.project-hub div:nth-of-type(1) > *:first-child {
-  @apply absolute text-asumaroon-800 transition-transform duration-200 hover:rotate-[-10deg] hover:scale-110
+  @apply absolute text-asumaroon-800 transition-transform duration-200 
            w-24 h-24 lg:block hidden order-1 left-8 top-6 cursor-pointer;
 }
 
