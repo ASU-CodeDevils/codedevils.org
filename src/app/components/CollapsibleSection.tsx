@@ -24,7 +24,7 @@ const CollapsibleSection = ({
 
   return (
     <div
-      className={`mx-auto w-full mb-6 bg-slate-200 border-2 rounded-md overflow-hidden ${className}`}
+      className={`mx-auto w-full mb-6 bg-gray border rounded-md overflow-hidden ${className}`}
     >
       {/* Header */}
       <div
