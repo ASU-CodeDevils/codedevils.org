@@ -2,13 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import {
-  User,
-  GitCommit,
-  Activity,
-  AlertTriangle,
-  CheckCircle,
-} from "lucide-react";
+import { Activity } from "lucide-react";
 import {
   CommitActivity,
   ContributorStats,
@@ -37,12 +31,11 @@ const GitMonitor = ({
   const [contributors, setContributors] = useState<ContributorStats[]>([]);
   const [selectedRepo, setSelectedRepo] = useState<string>("all");
   const [usingAuth, setUsingAuth] = useState<boolean>(false);
-  const [rateLimit, setRateLimit] = useState<{
+  const [setRateLimit] = useState<{
     limit: number;
     remaining: number;
     reset: string;
   } | null>(null);
-  const [showRepoStatus, setShowRepoStatus] = useState<boolean>(false);
 
   // Function to fetch data from our API endpoint
   useEffect(() => {
@@ -71,11 +64,6 @@ const GitMonitor = ({
 
         // Use the authentication status directly from the API response
         setUsingAuth(data.usingAuthentication || false);
-
-        // Set rate limit info if available
-        if (data.rateLimit) {
-          setRateLimit(data.rateLimit);
-        }
 
         setLoading(false);
       } catch (err) {

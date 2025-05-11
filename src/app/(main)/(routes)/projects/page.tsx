@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import GitMonitor from "../../../components/Projects/GitMonitor";
+import GitLeaderboard from "../../../components/Projects/GitLeaderboard";
 
 export const metadata: Metadata = {
   title: "Projects Hub",
@@ -62,87 +63,9 @@ const projectsPage = () => {
           </div>
           <div
             className="relative flex flex-col justify-center items-center w-full h-full overflow-hidden
-            bg-gradient-to-br from-zinc-100 to-zinc-200 text-black"
+            bg-gradient-to-br from-zinc-100 to-zinc-200 text-black rounded-xl"
           >
-            <p className="text-xl font-semibold">Contributor Leaderboard</p>
-            <p className="text-xl font-light">Coming Soon...</p>
-            <Link
-              href="/projects/website"
-              className="absolute flex group justify-center items-center rounded-2xl text-xl w-72 h-16 mb-4
-                hover:bg-gradient-to-br hover:from-asumaroon-600 hover:to-asumaroon-800 bg-asumaroon
-                cursor-pointer shadow-md shadow-zinc-500 mt-48 scale-75"
-            >
-              <p className="text-white text-center hover:underline">
-                Be a part of the Project!
-              </p>
-            </Link>
-
-            <div className="absolute flex gap-2 justify-center items-center bg-[#f3bb0b] w-[140%] h-10 rotate-3 top-20 flex-wrap overflow-hidden">
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-            </div>
-            <div className="absolute flex gap-2 justify-center items-center bg-[#f3bb0b] w-[140%] -translate-x-8 h-10 -rotate-2 bottom-12 flex-wrap overflow-hidden">
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-              <Square className="text-black fill-black h-2" />
-              <p className="text-black font-bebas text-2xl">
-                Under Construction
-              </p>
-            </div>
+            <GitLeaderboard className="h-full w-full" />
           </div>
         </div>
       </div>

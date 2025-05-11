@@ -37,6 +37,7 @@ export type ContributorStats = {
   username: string;
   avatar: string;
   totalCommits: number;
+  profileUrl?: string;
   repositories: {
     [repo: string]: number;
   };
