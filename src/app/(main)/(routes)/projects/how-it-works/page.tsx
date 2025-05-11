@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLink, InternalLink } from "src/app/components/ui/buttons";
 import { Hero, Section } from "src/app/components/ui/ContentWrappers";
-import { ChevronRight } from "lucide-react";
+import {
+  ChevronRight,
+  Users,
+  GitBranch,
+  TerminalSquare,
+  BookOpen,
+} from "lucide-react";
 import Link from "next/link";
 import CopyCommand from "src/app/components/copycommand";
 
@@ -39,13 +45,13 @@ const ContributingPage = () => {
           <h2 className="text-2xl font-bold text-maroon mb-8 text-center ">
             Quick Navigation
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-slate-100 bg-opacity-40">
             <Link
               href="#leadership"
-              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all"
+              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gradient-to-br hover:from-gray-50 hover:to-maroon/5 transition-all transform hover:-translate-y-1 hover:shadow-md group"
             >
               <div className="rounded-full bg-maroon/10 p-3 mb-4">
-                <ChevronRight className="h-6 w-6 text-maroon" />
+                <Users className="h-6 w-6 text-maroon" />
               </div>
               <h3 className="font-semibold text-lg">Leadership</h3>
               <p className="text-sm text-center text-gray-600 mt-2">
@@ -54,10 +60,10 @@ const ContributingPage = () => {
             </Link>
             <Link
               href="#git-flow"
-              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all"
+              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gradient-to-br hover:from-gray-50 hover:to-maroon/5 transition-all transform hover:-translate-y-1 hover:shadow-md group"
             >
               <div className="rounded-full bg-maroon/10 p-3 mb-4">
-                <ChevronRight className="h-6 w-6 text-maroon" />
+                <GitBranch className="h-6 w-6 text-maroon" />
               </div>
               <h3 className="font-semibold text-lg">Git Flow</h3>
               <p className="text-sm text-center text-gray-600 mt-2">
@@ -67,10 +73,10 @@ const ContributingPage = () => {
             </Link>
             <Link
               href="#setup"
-              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all"
+              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gradient-to-br hover:from-gray-50 hover:to-maroon/5 transition-all transform hover:-translate-y-1 hover:shadow-md group"
             >
               <div className="rounded-full bg-maroon/10 p-3 mb-4">
-                <ChevronRight className="h-6 w-6 text-maroon" />
+                <TerminalSquare className="h-6 w-6 text-maroon" />
               </div>
               <h3 className="font-semibold text-lg">Setup</h3>
               <p className="text-sm text-center text-gray-600 mt-2">
@@ -79,10 +85,10 @@ const ContributingPage = () => {
             </Link>
             <Link
               href="#resources"
-              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all"
+              className="flex flex-col items-center p-6 rounded-lg bg-gray-50 hover:bg-gradient-to-br hover:from-gray-50 hover:to-maroon/5 transition-all transform hover:-translate-y-1 hover:shadow-md group"
             >
               <div className="rounded-full bg-maroon/10 p-3 mb-4">
-                <ChevronRight className="h-6 w-6 text-maroon" />
+                <BookOpen className="h-6 w-6 text-maroon" />
               </div>
               <h3 className="font-semibold text-lg">Resources</h3>
               <p className="text-sm text-center text-gray-600 mt-2">
